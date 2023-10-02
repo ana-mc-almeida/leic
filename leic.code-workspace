@@ -1,0 +1,33 @@
+{
+    "folders": [
+      {
+        "name": "✨ LEIC",
+        "path": "."
+      },
+      {
+        "name": "Aprendizagem",
+        "path": "machine_learning"
+      },
+      {
+        "name": "OC",
+        "path": "computer_organization"
+      }
+    ],
+    "settings": {
+      "files.exclude": {
+        "computer_organization/": true,
+        "machine_learning/": true
+      },
+      // "jest.autoRun": "off",
+      // "jest.disabledWorkspaceFolders": ["✨ Cologne", "Frontend"],
+      // "editor.codeActionsOnSave": {
+      //   "source.fixAll.eslint": true
+      // },
+      // "editor.wordWrap": "on",
+      // "editor.tabSize": 2,
+      // "editor.formatOnSave": false,
+      // "stylelint.enable": true,
+      // "stylelint.validate": ["scss", "css", "postcss", "vue"]
+    },
+  }
+  
