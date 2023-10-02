@@ -1,10 +1,12 @@
-#include "SimpleCache.h"
+#include "L1Cache.h"
 
 unsigned char L1Cache[L1_SIZE];
 unsigned char L2Cache[L2_SIZE];
 unsigned char DRAM[DRAM_SIZE];
 unsigned int time;
 Cache SimpleCache;
+
+// TODO: NUM_LINES?
 
 /**************** Time Manipulation ***************/
 void resetTime() { time = 0; }
@@ -13,6 +15,8 @@ unsigned int getTime() { return time; }
 
 /****************  RAM memory (byte addressable) ***************/
 void accessDRAM(int address, unsigned char *data, int mode) {
+
+  // void *memcpy(void *dest, const void * src, size_t n)
 
   if (address >= DRAM_SIZE - WORD_SIZE + 1)
     exit(-1);
@@ -49,6 +53,8 @@ void accessL1(int address, unsigned char *data, int mode) {
 
   MemAddress = address >> 3; // again this....!
   MemAddress = address << 3; // address of the block in memory
+
+  // TODO calculute index (adress % NUM_LINES)
 
   /* access Cache*/
 
