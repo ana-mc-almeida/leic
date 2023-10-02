@@ -18,12 +18,12 @@ void accessL1(int, unsigned char *, int);
 typedef struct CacheLine {
   unsigned char Valid;
   unsigned char Dirty;
-  unsigned int Tag;
+  unsigned int Tag; // TODO index
 } CacheLine;
 
 typedef struct Cache {
   int init;
-  CacheLine line;
+  CacheLine line; // TODO multiple lines
 } Cache;
 
 /*********************** Interfaces *************************/
