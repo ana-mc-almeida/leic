@@ -11,6 +11,10 @@
       {
         "name": "OC",
         "path": "computer_organization"
+      },
+      {
+        "name": "Mundos Alternativos",
+        "path": "alternative_worlds"
       }
     ],
     "settings": {
