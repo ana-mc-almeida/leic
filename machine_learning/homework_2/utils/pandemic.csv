@@ -1,0 +1,9 @@
+gender,age,BMI,hemoglobine,vaccination_status,hospitalization,UCI_admission,hosp_days,therapy,status
+M,22,24,13,C,N,N,0,no,recovery
+M,42,33,15,B,Y,Y,18,invasive,death
+M,61,15,11,A,Y,Y,32,oxygen,recovery
+M,69,21,16,A,Y,N,3,oxygen,recovery
+F,34,33,9,D,Y,Y,5,oxygen,recovery
+F,56,20,11,A,N,N,0,no,recovery
+F,59,29,16,no,Y,Y,22,invasive,death
+F,63,22,15,B,Y,N,9,oxygen,recovery
