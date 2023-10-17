@@ -1,0 +1,5 @@
+T4: version 2 corrects typo in slides 13 and 20
+T6: slide 35 removed, typo corrected in slide 23
+(new) T6 slide 24: exp(-1) is the correct answer for the Euclidean norm; exp(-2) is achieved using the l1/Manhattan norm
+(new) T9 slide 33: "a2b4" should be replaced by "a4b4"
+Data profiling examples and Gaussian programming facilities in this notebook (and accompanying data)
