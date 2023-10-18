@@ -1,1 +1,1 @@
-Z:\home\ana\repos\leic\computer_organization\labs\lab3\prog_2_3.s
+Z:\home\ana\repos\leic\computer_organization\labs\lab3\prog_2_4.s
