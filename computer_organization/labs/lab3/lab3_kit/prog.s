@@ -11,15 +11,14 @@ mult:   .word   0
         daddi   $1, $1, 8      ;
 
 loop:   lw      $12, 0($1)     ; $12 = A[i]
-        daddi   $5, $5, 1      ; i++
         dmul    $12, $12, $9   ; $12 = $12*$9 ;; $12 = A[i]*mult
-        daddi   $1, $1, 8      ; 
         dadd    $9, $9, $12    ; $9 = $9 + $12  ;; mult = mult + A[i]*mult
 
+        daddi   $5, $5, 1      ; i++
+        daddi   $1, $1, 8      ; 
         bne     $6, $5, loop   ; Exit loop if i == N
         
         sw      $9, mult($0)   ; Store result
         halt
 
 ;; Expected result: mult = f6180 (hex), 1008000 (dec)
-
