@@ -20,7 +20,8 @@
     "settings": {
       "files.exclude": {
         "computer_organization/": true,
-        "machine_learning/": true
+        "machine_learning/": true,
+        "alternative_worlds/": true
       },
       // "jest.autoRun": "off",
       // "jest.disabledWorkspaceFolders": ["✨ Cologne", "Frontend"],
