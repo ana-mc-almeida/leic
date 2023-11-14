@@ -23,6 +23,10 @@
       {
         "name": "RC",
         "path": "computer_networks"
+      },
+      {
+        "name": "TS",
+        "path": "technology_and_society"
       }
     ],
     "settings": {
@@ -31,7 +35,8 @@
         "machine_learning/": true,
         "alternative_worlds/": true,
         "systems_analysis_and_modeling/": true,
-        "computer_networks/": true
+        "computer_networks/": true,
+        "technology_and_society/":true
       },
       // "jest.autoRun": "off",
       // "jest.disabledWorkspaceFolders": ["✨ Cologne", "Frontend"],
