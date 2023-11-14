@@ -15,13 +15,18 @@
       {
         "name": "Mundos Alternativos",
         "path": "alternative_worlds"
+      },
+      {
+        "name": "AMS",
+        "path": "systems_analysis_and_modeling"
       }
     ],
     "settings": {
       "files.exclude": {
         "computer_organization/": true,
         "machine_learning/": true,
-        "alternative_worlds/": true
+        "alternative_worlds/": true,
+        "systems_analysis_and_modeling/": true
       },
       // "jest.autoRun": "off",
       // "jest.disabledWorkspaceFolders": ["✨ Cologne", "Frontend"],
