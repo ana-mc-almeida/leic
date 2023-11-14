@@ -19,6 +19,10 @@
       {
         "name": "AMS",
         "path": "systems_analysis_and_modeling"
+      },
+      {
+        "name": "RC",
+        "path": "computer_networks"
       }
     ],
     "settings": {
@@ -26,7 +30,8 @@
         "computer_organization/": true,
         "machine_learning/": true,
         "alternative_worlds/": true,
-        "systems_analysis_and_modeling/": true
+        "systems_analysis_and_modeling/": true,
+        "computer_networks/": true
       },
       // "jest.autoRun": "off",
       // "jest.disabledWorkspaceFolders": ["✨ Cologne", "Frontend"],
