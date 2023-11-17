@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archimate:model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:archimate="http://www.archimatetool.com/archimate" name="(new model)" id="id-a21fab7913dc48a58f9ade0eef2077fe" version="5.0.0">
+  <folder name="Strategy" id="id-f6e93be71c1545799ed47574874c0920" type="strategy"/>
+  <folder name="Business" id="id-820ea996128049139520ff4548fd9bd7" type="business">
+    <element xsi:type="archimate:Product" name="SellingMachine" id="id-796767f8a73b4020b37149ce9db3dca3"/>
+    <element xsi:type="archimate:BusinessService" name="aluguer e gestão inteligente de máquinas de venda automática" id="id-a4c6fe6af4f1493cbf17cc2fad251cf8"/>
+    <element xsi:type="archimate:BusinessService" name="compras de produtos" id="id-18d2ae534c5b47939d33082c857198a4"/>
+    <element xsi:type="archimate:BusinessRole" name="cliente" id="id-82980bf955644295b55c4f219da4a3e1"/>
+    <element xsi:type="archimate:BusinessRole" name="terceiro" id="id-240e1023bd5f4a67b0922db863f670a9"/>
+  </folder>
+  <folder name="Application" id="id-2831d871f54f45abb8b80c52f98e055b" type="application"/>
+  <folder name="Technology &amp; Physical" id="id-fdcfe28652e042ef94b2f2f71b172069" type="technology"/>
+  <folder name="Motivation" id="id-b85c294988a144d7a33db7ebfcfc78e9" type="motivation"/>
+  <folder name="Implementation &amp; Migration" id="id-931ab1e71db5405e91061e8fbd0c0157" type="implementation_migration"/>
+  <folder name="Other" id="id-81dc7a21d0584963bd5a68a89c2642b8" type="other"/>
+  <folder name="Relations" id="id-6a4465d024d947248ea9fac580f947ee" type="relations">
+    <element xsi:type="archimate:CompositionRelationship" id="id-52a6ac9c8eea42e495be5ddf0dc533f9" source="id-796767f8a73b4020b37149ce9db3dca3" target="id-a4c6fe6af4f1493cbf17cc2fad251cf8"/>
+    <element xsi:type="archimate:CompositionRelationship" id="id-dc9d6bedfee1406ca7d9c28076551a47" source="id-796767f8a73b4020b37149ce9db3dca3" target="id-18d2ae534c5b47939d33082c857198a4"/>
+  </folder>
+  <folder name="Views" id="id-cec323f5bc654c66b8703bd00394a9b8" type="diagrams">
+    <element xsi:type="archimate:ArchimateDiagramModel" name="Default View" id="id-2a4cbeab8d614b798fa4b4351aacfe2d">
+      <child xsi:type="archimate:DiagramObject" id="id-729b06d636824ba5951829ad23cb2e59" archimateElement="id-796767f8a73b4020b37149ce9db3dca3">
+        <bounds x="456" y="168" width="217" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-e310fd9b06d6464a86c028687e5d6fa4" source="id-729b06d636824ba5951829ad23cb2e59" target="id-a5b33fa3ae8146579727c8dec03bfb53" archimateRelationship="id-52a6ac9c8eea42e495be5ddf0dc533f9"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-25c22b6e080040439569ba70292f51ba" source="id-729b06d636824ba5951829ad23cb2e59" target="id-079937a495e149e98f9fef0194f57dc6" archimateRelationship="id-dc9d6bedfee1406ca7d9c28076551a47">
+          <bendpoint startX="72" startY="81" endY="-90"/>
+        </sourceConnection>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-a5b33fa3ae8146579727c8dec03bfb53" targetConnections="id-e310fd9b06d6464a86c028687e5d6fa4" archimateElement="id-a4c6fe6af4f1493cbf17cc2fad251cf8">
+        <bounds x="336" y="324" width="205" height="85"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-079937a495e149e98f9fef0194f57dc6" targetConnections="id-25c22b6e080040439569ba70292f51ba" archimateElement="id-18d2ae534c5b47939d33082c857198a4">
+        <bounds x="552" y="324" width="168" height="85"/>
+      </child>
+      <child xsi:type="archimate:Note" id="id-2a9f9a553f7647e9844d3f183030f326" textAlignment="1">
+        <bounds x="264" y="228" width="185" height="80"/>
+        <content>Estamos a usar composição porque não nos dizem exatamente qual usar então podemos escolher</content>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-68f3b72f123f4aaeb5fd066ef35cabef" archimateElement="id-82980bf955644295b55c4f219da4a3e1">
+        <bounds x="379" y="498" width="120" height="55"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-6c31a897787246b0adfdbc454d5e834f" archimateElement="id-240e1023bd5f4a67b0922db863f670a9">
+        <bounds x="576" y="498" width="120" height="55"/>
+      </child>
+      <child xsi:type="archimate:Note" id="id-51d4a83d616d4ae38667b56f3fa83e46" textAlignment="1">
+        <bounds x="72" y="474" width="265" height="103"/>
+        <content>Estamos a usar roles porque são mais abstratos do que os actors
+
+Devem ser sempre no singular porque é uma classe
+</content>
+      </child>
+    </element>
+  </folder>
+</archimate:model>
