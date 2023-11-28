@@ -1,0 +1,16 @@
+{
+  "folders": [
+    {
+      "name": "✨ LEIC",
+      "path": ".."
+    },
+    {
+      "name": "AMS",
+      "path": "."
+    },
+    {
+      "name": "Projeto",
+      "path": "../../AMS"
+    },
+  ]
+}
