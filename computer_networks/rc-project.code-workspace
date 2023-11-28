@@ -1,0 +1,36 @@
+{
+  "folders": [
+    {
+      "name": "✨ LEIC",
+      "path": ".."
+    },
+    {
+      "name": "Labs",
+      "path": "../../RC/"
+    },
+    {
+      "name": "RC",
+      "path": "."
+    },
+    {
+      "name": "Project",
+      "path": "../../RC/project"
+    }
+  ],
+  "settings": {
+    "files.associations": {
+      "*.html": "html",
+      "*.js": "javascript",
+      "*.vue": "vue",
+      "iosfwd": "cpp",
+      "iostream": "cpp",
+      "fstream": "cpp"
+    }
+  },
+  // FIXME: this is not removing the 'project' folder from the 'RC' (aka Labs) folder
+  // "settings": {
+  //   "files.exclude": {
+  //     "../../RC/project": true,
+  //   }
+  // }
+}
