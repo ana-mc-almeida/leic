@@ -1,0 +1,22 @@
+Como é que eu deveria criar o diagrama P1 dado o seguinte context
+
+Os fornecedores são geridos através de um processo contínuo e definido, em que devem usar a interface UI-SCM para:
+• Acesso público a documentos em formato PDF, geridos pela DirT, com as especificações técnicas dos formatos de dados e interfaces funcionais dos sistemas da SUPERSHOP;
+• Submissão de documentos de candidato a fornecedor, contendo de forma estruturada o nome do fornecedor, email de contacto, identificador fiscal, e descrição.
+A aplicação SCM rejeita e informa na hora o utilizador de qualquer tentativa de submeter um documento de candidatura indevidamente estruturado ou indevidamente assinado, ou fora do prazo esperado para esse documento, se tal for o caso.
+O coordenador da UFC pode iniciar uma execução nova do processo enviando um convite de candidatura a um fornecedor, o qual deve responder indicando na candidatura o identificador do convite, sendo nesse caso a candidatura considerada automaticamente como elegível.
+Uma candidatura recebida sem identificador de convite é considerada espontânea, sendo analisada de forma expedita por um funcionário da UFC para decidir se é elegível ou se é
+rejeitada.
+Cada candidatura elegível é analisada detalhadamente por um funcionário da UFC, que decide se a mesma é aceite ou rejeitada.
+Durante uma análise detalhada, se existir informação histórica do fornecedor o funcionário da UFC deve tomá-la em consideração para a decisão.
+Durante uma análise detalhada o funcionário da UFC pode decidir pedir ao fornecedor novo documento de candidatura, esperando depois pela resposta, podendo estes pedidos repetir-se o número de vezes que o funcionário da UFC entender.
+Se a resposta a um convite não chegar em 72 horas, ou se a resposta a um pedido de novo documento de candidatura não chegar em 48 horas, o fornecedor é colocado no estado sem resposta e a execução do processo termina.
+Um convite coloca o fornecedor no estado de convidado, a receção de uma candidatura coloca-o no estado candidato, e uma candidatura aceite coloca-o no estado ativo.
+Em qualquer momento o coordenador da UFC pode tornar suspenso qualquer fornecedor ativo ou tornar ativo qualquer fornecedor suspenso.
+Em qualquer momento o coordenador da UFC pode tornar cancelado qualquer fornecedor ativo ou suspenso, o que termina a execução do processo.
+Um fornecedor nos estados cancelado ou sem resposta pode voltar a ser convidado pelo coordenador da UFC ou pode apresentar uma candidatura espontânea, o que despoleta uma nova execução do processo.
+Um fornecedor suspenso não pode alterar o seu estado.
+Cada fornecedor é automaticamente informado de cada alteração ao seu estado e da causa disso.
+Cada fornecedor é identificado pelo seu número fiscal.
+Sempre que for executada uma ação relativa a um fornecedor ainda não conhecido na aplicação SCM, é nesse momento criado um registo novo para esse fornecedo
+
