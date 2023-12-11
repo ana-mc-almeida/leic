@@ -96,7 +96,8 @@
       "typeinfo": "cpp",
       "valarray": "cpp",
       "variant": "cpp",
-      "filesystem": "cpp"
+      "filesystem": "cpp",
+      "regex": "cpp"
     },
     "editor.formatOnSave": true
   },
