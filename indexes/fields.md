@@ -3,14 +3,13 @@
 ### Main Area
 -
 
-
-### Fundamental Sciences
+### Base Education
 -
 
 
-### HACS
+### HACS - Humanities, Arts and Social Sciences
 -
 
 
-### Integrative Project
+### Integration Project
 -
