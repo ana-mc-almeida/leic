@@ -44,4 +44,7 @@
   - [Tecnologias e Sociedade](technology_and_society/)
   
 - 2.º Semestre
-  - 
+  - [Compiladores](/)
+  - [Comutação Gráfica](/)
+  - [Sistemas Distribuidos](/)
+  - [Engenharia de Software](/)
