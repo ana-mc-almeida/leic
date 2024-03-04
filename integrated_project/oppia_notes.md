@@ -12,5 +12,26 @@
 
 ## Some Questions
 
-- [ ] [Contributor License Agreement](https://docs.google.com/forms/d/e/1FAIpQLSfoFLKT4BlNH2937mSMJATVaWq-yBSrq8p3jjrPwcMw3gaGcg/viewform?c=0&w=1)
-- [ ]
+- [X] Precisa de ser `good first issue` ou pode ser qualquer um que achemos adquado
+  - Qualquer um.
+- [X] Podemos falar com eles:
+  - Não.
+
+
+## Possible Issues
+
+`good first issue`
+- https://github.com/oppia/oppia/issues/17237
+- https://github.com/oppia/oppia/issues/18422
+- https://github.com/oppia/oppia/issues/19649
+- https://github.com/oppia/oppia/issues/19644
+
+
+`work:low`
+- https://github.com/oppia/oppia/issues/13699
+- https://github.com/oppia/oppia/issues/15134
+
+Abort mission:
+  - https://github.com/oppia/oppia/issues/12891
+  - https://github.com/oppia/oppia/issues/15353
+  - https://github.com/oppia/oppia/issues/11718
