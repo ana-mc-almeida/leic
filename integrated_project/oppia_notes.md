@@ -28,10 +28,11 @@
 
 
 `work:low`
-- https://github.com/oppia/oppia/issues/13699
+- https://github.com/oppia/oppia/issues/13699 -> fav
 - https://github.com/oppia/oppia/issues/15134
 
 Abort mission:
   - https://github.com/oppia/oppia/issues/12891
   - https://github.com/oppia/oppia/issues/15353
   - https://github.com/oppia/oppia/issues/11718
+  - https://github.com/oppia/oppia/issues/19550
