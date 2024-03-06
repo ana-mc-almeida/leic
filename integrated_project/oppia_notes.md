@@ -21,14 +21,14 @@
 ## Possible Issues
 
 `good first issue`
-- https://github.com/oppia/oppia/issues/17237
+- https://github.com/oppia/oppia/issues/17237 -> already solved
 - https://github.com/oppia/oppia/issues/18422
 - https://github.com/oppia/oppia/issues/19649
 - https://github.com/oppia/oppia/issues/19644
 
 
 `work:low`
-- https://github.com/oppia/oppia/issues/13699 -> fav
+- https://github.com/oppia/oppia/issues/13699 -> escolhido
 - https://github.com/oppia/oppia/issues/15134
 
 Abort mission:
