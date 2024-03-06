@@ -26,8 +26,15 @@
 
 
 ### Ask to teacher
-- [ ] devemos verificar se recebe instituição e voluntário?
+- [X] devemos verificar se recebe instituição e voluntário?
+  - No enunciado diz "Os testes de domínio consideram que institution e volunteer contêm valores válidos."
 - [ ] temos de verificar se o id não é null ? test domain
-- [ ] Quão exautivos devem ser os testes? Devemos testar os casos limite todos? exemplo: ser a primeira review do voluntário
-- [ ] quando estamos a dar review do código é relevante o código estar formatado?
-- [ ] nos tests dos services e webService temos de retestar as cenas do domain?
+- [X] Quão exautivos devem ser os testes? Devemos testar os casos limite todos? exemplo: ser a primeira review do voluntário
+  - só o que pede no enunciado
+- [X] quando estamos a dar review do código é relevante o código estar formatado?
+  - Sim, para mostrar que lemos o código :)
+- [X] nos tests dos services e webService temos de retestar as cenas do domain?
+  - Só temos de testar o que está no enunciado
+
+### TODO
+- Dar fix na `reviewDate`
