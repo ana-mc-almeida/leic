@@ -1,3 +1,11 @@
+# ES P1 submission, Group 61
+
+## Feature Activity Enrollment
+
+TODO
+
+---
+
 ## Feature Participant Selection
 
 ### Subgroup
@@ -16,8 +24,37 @@ The list of pull requests associated with this feature is:
 ### Test Coverage Screenshot
 
 ![Test Coverage Domain](./test-coverage-screenshots/sp-coverage-domain.png)
+![Test Coverage Dto](./test-coverage-screenshots/sp-coverage-dto.png)
 ![Test Coverage Service](./test-coverage-screenshots/sp-coverage-service.png)
-
-We couldn't work out a way to get Jacoco to give us test coverage for the web services, but we are confident they too have 100% test coverage.
+![Test Coverage WebService](./test-coverage-screenshots/sp-coverage-webservice.png)
 
 ---
+
+## Feature Institution Assessment
+
+### Subgroup
+ - Alice Arnaud Mota, ist1102500, [GitLab link](https://gitlab.rnl.tecnico.ulisboa.pt/ist1102500)
+   + Issues assigned: [#6](https://gitlab.rnl.tecnico.ulisboa.pt/es/es24-61/-/issues/6), [#11](https://gitlab.rnl.tecnico.ulisboa.pt/es/es24-61/-/issues/11), [#13](https://gitlab.rnl.tecnico.ulisboa.pt/es/es24-61/-/issues/13), [#14](https://gitlab.rnl.tecnico.ulisboa.pt/es/es24-61/-/issues/14), [#20](https://gitlab.rnl.tecnico.ulisboa.pt/es/es24-61/-/issues/20), [#22](https://gitlab.rnl.tecnico.ulisboa.pt/es/es24-61/-/issues/22), [#25](https://gitlab.rnl.tecnico.ulisboa.pt/es/es24-61/-/issues/25), [#26](https://gitlab.rnl.tecnico.ulisboa.pt/es/es24-61/-/issues/26), [#28](https://gitlab.rnl.tecnico.ulisboa.pt/es/es24-61/-/issues/28), [#31](https://gitlab.rnl.tecnico.ulisboa.pt/es/es24-61/-/issues/31), [#32](https://gitlab.rnl.tecnico.ulisboa.pt/es/es24-61/-/issues/32)
+  
+ - Ana Margarida Almeida, ist1102618, [GitLab link](https://gitlab.rnl.tecnico.ulisboa.pt/ist1102618)
+   + Issues assigned: [#5](https://gitlab.rnl.tecnico.ulisboa.pt/es/es24-61/-/issues/5), [#8](https://gitlab.rnl.tecnico.ulisboa.pt/es/es24-61/-/issues/8), [#9](https://gitlab.rnl.tecnico.ulisboa.pt/es/es24-61/-/issues/9), [#17](https://gitlab.rnl.tecnico.ulisboa.pt/es/es24-61/-/issues/17), [#18](https://gitlab.rnl.tecnico.ulisboa.pt/es/es24-61/-/issues/18), [#19](https://gitlab.rnl.tecnico.ulisboa.pt/es/es24-61/-/issues/19), [#21](https://gitlab.rnl.tecnico.ulisboa.pt/es/es24-61/-/issues/21), [#23](https://gitlab.rnl.tecnico.ulisboa.pt/es/es24-61/-/issues/23), [#24](https://gitlab.rnl.tecnico.ulisboa.pt/es/es24-61/-/issues/24), [#27](https://gitlab.rnl.tecnico.ulisboa.pt/es/es24-61/-/issues/27), [#29](https://gitlab.rnl.tecnico.ulisboa.pt/es/es24-61/-/issues/29), [#30](https://gitlab.rnl.tecnico.ulisboa.pt/es/es24-61/-/issues/30)
+ 
+### Merge requests associated with this feature
+
+The list of pull requests associated with this feature is:
+
+ - [MR #1](https://gitlab.rnl.tecnico.ulisboa.pt/es/es24-61/-/merge_requests/1)
+ - [MR #3](https://gitlab.rnl.tecnico.ulisboa.pt/es/es24-61/-/merge_requests/3)
+ - [MR #4](https://gitlab.rnl.tecnico.ulisboa.pt/es/es24-61/-/merge_requests/4)
+ - [MR #6](https://gitlab.rnl.tecnico.ulisboa.pt/es/es24-61/-/merge_requests/6)
+
+
+### Test Coverage Screenshot
+
+![Test Coverage Domain](./test-coverage-screenshots/ri-coverage-domain.png)
+![Test Coverage Dto](./test-coverage-screenshots/ri-coverage-dto.png)
+![Test Coverage Service](./test-coverage-screenshots/ri-coverage-service.png)
+![Test Coverage WebService](./test-coverage-screenshots/ri-coverage-webservice.png)
+
+---
+
