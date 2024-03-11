@@ -84,3 +84,9 @@
 - Não usar `BlockingStub`
   - os pedidos put têm de ser enviados ao mesmo tempo e se se usar os stubs bloqueantes, vai um de cada vez
   - Usar os `NonBlockingStubs`
+
+
+- Podemos utilizar só um objeto para esperar pelas respostas:
+  - Vantagem: mais simples
+  - Desvantagem: não sabemos de onde vêm a resposta 
+  - Não há de ser relevante para o `put` e o `read` mas há de ser preciso sabermos de onde vem as respostas do `take`
