@@ -1,6 +1,4 @@
 
-
-
 ### Ask to the group
 
 - [ ] Como dividimos as branchs
@@ -24,7 +22,6 @@
   - limpar a base de dados entre cada teste do webService
   - webService -> quebrar pelo menos uma invariante e testar com roles diferentes
 
-
 ### Ask to teacher
 - [X] devemos verificar se recebe instituição e voluntário?
   - No enunciado diz "Os testes de domínio consideram que institution e volunteer contêm valores válidos."
@@ -35,6 +32,16 @@
   - Sim, para mostrar que lemos o código :)
 - [X] nos tests dos services e webService temos de retestar as cenas do domain?
   - Só temos de testar o que está no enunciado
+- [X] Podemos dar commits diretos para a main? Exemplo: dar fix de alguma coisa.
+  - [X] Se não, podemos criar uma branch que seja para dar fix nessas coisas e depois dar rebase para a main?
+    - Não, usar a mesma branch que já existe
+  - [X] Para adicionar mos o md file pode ser direto na main?
+    - Sim :)
+- [X] A `testCoverage` é relevante? O stor tinha dito que não mas pedem para o md file
+  - Não é relevante, é só para sabermos como fazer as cenas
 
 ### TODO
-- Dar fix na `reviewDate`
+- [X] Dar fix na `reviewDate`
+- [X] Não estamos a testar as `invocations` no nosso domain test
+- [X] Comentários do createAssessment
+- [X] Remove `PermiteAll`
