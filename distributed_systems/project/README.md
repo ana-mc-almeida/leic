@@ -90,3 +90,15 @@
   - Vantagem: mais simples
   - Desvantagem: não sabemos de onde vêm a resposta 
   - Não há de ser relevante para o `put` e o `read` mas há de ser preciso sabermos de onde vem as respostas do `take`
+
+### Ask 
+
+- [ ] Quando não há o tuplo que nós queremos no `read`, é suposto fazer como o antigo e ficar à espera ou só retornar alguma coisa a dizer que não existe?
+- [ ] `setDelay`, como utilizar?
+- [ ] `NamingServer stub` pode ser bloqueante?
+- [ ] temos de garantir quantos servidores há ou podemos sempre assumir que há `3 servidores`?
+- [ ] quando se liga um server, temos de verificar se aquele host já está em uso?
+  - Penso que isto nem faz sentido porque o próprio server não se consegue ligar a nada
+
+### TODO
+
