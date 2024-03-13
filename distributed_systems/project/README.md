@@ -91,14 +91,33 @@
   - Desvantagem: não sabemos de onde vêm a resposta 
   - Não há de ser relevante para o `put` e o `read` mas há de ser preciso sabermos de onde vem as respostas do `take`
 
+### Notes
+
+- Os clients não morrem
+  - Não temos de nos preocupar com locks infinitos
+
 ### Ask 
 
 - [ ] Quando não há o tuplo que nós queremos no `read`, é suposto fazer como o antigo e ficar à espera ou só retornar alguma coisa a dizer que não existe?
 - [ ] `setDelay`, como utilizar?
+- [ ] `clienId` deve ser gerado quando se inicia o client ou deve ser passado como argumento (tal como diz no enunciado)
 - [ ] `NamingServer stub` pode ser bloqueante?
-- [ ] temos de garantir quantos servidores há ou podemos sempre assumir que há `3 servidores`?
+- [ ] `getTupleSpaceState` é suposto manter-se igual à entrega 1, certo?
+  - Ou é suposto desligarmos or something
+- [ ] os `try / catch` fazem sentido?
+  - Tinhamos isso para a outra entrega mas agora pelo moodle podemos assumir que há sempre 3 servers que não falham
+- [ ] é suposto utilizarmos o `sequencer`?
+- [X] temos de garantir quantos servidores há ou podemos sempre assumir que há `3 servidores`?
+  - No moodle disse que podiamos assumir que eram sempre 3 servers
 - [ ] quando se liga um server, temos de verificar se aquele host já está em uso?
   - Penso que isto nem faz sentido porque o próprio server não se consegue ligar a nada
+- [ ] `sleep` é suposto metermos em algum lado?
 
 ### TODO
 
+- [ ] Ver melhor:
+  - [ ] As operações de cada worker devem ser executadas em cada réplica na mesma ordem em que foram emitidas pelo worker
+  - [ ] Uma operação put não deve ser executada em nenhuma réplica até que todas as operações take anteriores, emitidas pelo mesmo worker, tenham sido concluídas em todas as réplicas (na visão do mesmo)
+- [ ] Estamos a definir duas vezes o número de servers
+- [ ] Apagartodos os TODOs e FIXMEs
+- [ ] Não estou a dar `try/catch` no take
