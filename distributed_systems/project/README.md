@@ -96,15 +96,27 @@
 - Os clients não morrem
   - Não temos de nos preocupar com locks infinitos
 
+### Utils
+
+`setdelay A 3`
+
+`setdelay B 3`
+
+`put <a>`
+
+`put <b>`
+
+`take <.*>`
+
 ### Ask 
 
 - [X] Quando não há o tuplo que nós queremos no `read`, é suposto fazer como o antigo e ficar à espera ou só retornar alguma coisa a dizer que não existe?
   - Ficar à espera que passe a existir, tal como no `take`
 - [X] `setDelay`, como utilizar?
-  - Continuar a utilizar o for como temos
+  - Continuar a utilizar o `for` como temos
 - [X] `clienId` deve ser gerado quando se inicia o client ou deve ser passado como argumento (tal como diz no enunciado)
   - Passado como argumento
-- [ ] `NamingServer stub` pode ser bloqueante?
+- [ ] `NamingServer stub` pode ser bloqueante? E o stub para o `getTupleSpacesState`?
 - [X] `getTupleSpaceState` é suposto manter-se igual à entrega 1, certo?
   - Ou é suposto desligarmos or something
   - Manter igual à primeira entrega
@@ -118,28 +130,42 @@
 - [X] Podemos assumir que os servidores nunca falham, certo?
   - Exemplo fase 2 do take, não receber o acknowledgement
   - Podemos assumir que o servidor nunca falha
-  - [ ] Adicionar comentários sobre isto no código
+  - [X] Adicionar comentários sobre isto no código
 - [ ] quando se liga um server, temos de verificar se aquele host já está em uso?
   - Penso que isto nem faz sentido porque o próprio server não se consegue ligar a nada
-- [ ] `sleep` é suposto metermos em algum lado?
+- [X] `sleep` é suposto metermos em algum lado?
+  - Eu própria respondo e obviamente que tens de usar o sleep no `take` :smile: 
 - [X] Devemos de ter só 1 collector ou é ok temos mais do que um collector?
   - Exemplo: um collector para put/read e outro para take
   - Ter só uma **class** do collector **genérica** que é instanciada para cada um dos pedidos (put/read/take)
+- [X] Basta fazer o `wait` na fase 1 do take ou temos de fazer nas duas fases (server)
+  - Aparentemente isto já não é uma questão para a Alice :smile: 
+- [ ] É preciso `delay` no `takePhase1ReleaseRequest`
 
 ### TODO
 
-- [ ] Ver melhor:
-  - [ ] As operações de cada worker devem ser executadas em cada réplica na mesma ordem em que foram emitidas pelo worker
-  - [ ] Uma operação put não deve ser executada em nenhuma réplica até que todas as operações take anteriores, emitidas pelo mesmo worker, tenham sido concluídas em todas as réplicas (na visão do mesmo)
-- [ ] Estamos a definir duas vezes o número de servers
-- [ ] Apagartodos os TODOs e FIXMEs
-- [ ] Não estou a dar `try/catch` no take
+- [X] Ver melhor:
+  - [X] As operações de cada worker devem ser executadas em cada réplica na mesma ordem em que foram emitidas pelo worker
+  - [X] Uma operação put não deve ser executada em nenhuma réplica até que todas as operações take anteriores, emitidas pelo mesmo worker, tenham sido concluídas em todas as réplicas (na visão do mesmo)
+  - Assumo que estamos fixe porque temos os `synchronized`
+
+- [X] Estamos a definir duas vezes o número de servers
+- [X] Apagartodos os TODOs e FIXMEs
+- [X] Não estou a dar `try/catch` no take
   - Não é preciso, mas pôr comentários sobre isto no código
-- [ ] `take` ao invés de devolver lista vazia ([]) deve esperar que haja um put
-- [ ] Descomentar e **testar** o `getTupleSpaceState`
-- [ ] Tirar os `synchronized` **desnecessários**
+- [X] `take` ao invés de devolver lista vazia ([]) deve esperar que haja um put
+- [X] Descomentar e **testar** o `getTupleSpaceState`
+- [X] Tirar os `synchronized` **desnecessários**
+- [X] Ver como lidar com os InterruptedException
+- [X] Sleep dentro do while do take
+- [X] SetDelay não está a funcionar :)
 
 
 
+<br/>
+
+- [ ] Perguntar ao stor se já reviu a nossa nota do projeto
+
+<br/>
 
 - Perceber o `sequencer`
