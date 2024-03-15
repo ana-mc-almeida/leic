@@ -108,6 +108,34 @@
 
 `take <.*>`
 
+### Casos a testar
+
+Podemos criar os nossos próprios testes e correr dois clientsInputs numa só linha com:
+```
+mvn exec:java < clientOneInput.txt & mvn exec:java < clientTwoInput.txt
+```
+
+- [X] Put e take com delay
+  - dois clientes
+  - `setdelay A 3` no C1
+  - put no C1
+  - take no C2
+    - vai receber OK do B e C mas vai ter de esperar pelo A
+- [X] Dois takes ao mesmo tempo só com um tuplo
+  - dois clientes
+  - `put` em qualquer um
+  - `setdelay A 3` no C1
+  - `setdelay B 3` e `setdelay C 3` no C2
+  - `take` nos dois
+    - O `C1` há de conseguir tirar e o `C2` vai ter de ficar à espera de um novo take
+- [X] Dois takes ao mesmo tempo com dois tuplos
+  - dois clientes
+  - `put` nos dois (do mesmo tuplo)
+  - `setdelay A 3` no C1
+  - `setdelay B 3` e `setdelay C 3` no C2
+  - `take` nos dois
+    - O `C1` há de conseguir tirar e o `C2` vai ter de ficar à espera de um novo take
+
 ### Ask 
 
 - [X] Quando não há o tuplo que nós queremos no `read`, é suposto fazer como o antigo e ficar à espera ou só retornar alguma coisa a dizer que não existe?
@@ -116,7 +144,9 @@
   - Continuar a utilizar o `for` como temos
 - [X] `clienId` deve ser gerado quando se inicia o client ou deve ser passado como argumento (tal como diz no enunciado)
   - Passado como argumento
-- [ ] `NamingServer stub` pode ser bloqueante? E o stub para o `getTupleSpacesState`?
+- [X] `NamingServer stub` pode ser bloqueante? E o stub para o `getTupleSpacesState`?
+  - Bloqueantes
+  - Não fazer o lookup para o naming server e reutilizar o channel
 - [X] `getTupleSpaceState` é suposto manter-se igual à entrega 1, certo?
   - Ou é suposto desligarmos or something
   - Manter igual à primeira entrega
@@ -140,7 +170,8 @@
   - Ter só uma **class** do collector **genérica** que é instanciada para cada um dos pedidos (put/read/take)
 - [X] Basta fazer o `wait` na fase 1 do take ou temos de fazer nas duas fases (server)
   - Aparentemente isto já não é uma questão para a Alice :smile: 
-- [ ] É preciso `delay` no `takePhase1ReleaseRequest`
+- [X] É preciso `delay` no `takePhase1ReleaseRequest`
+  - Não é para usar o delay
 
 ### TODO
 
@@ -159,8 +190,8 @@
 - [X] Ver como lidar com os InterruptedException
 - [X] Sleep dentro do while do take
 - [X] SetDelay não está a funcionar :)
-
-
+- [X] Alterar a maneira como fazemos o `getTupleSpacesState`
+- [X] Tirar o delay no `takeReleaseRequest`
 
 <br/>
 
