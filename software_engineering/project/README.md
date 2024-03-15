@@ -59,3 +59,8 @@
 - Models tem de ter os mesmo atributos que o Dto
 - Css não é muito necessário
 - Usar o código deles
+
+- Meter labels nos issues relacionados com as stories
+- meter os `closes #numIssue` nos commits
+
+- 
