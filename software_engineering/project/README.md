@@ -1,3 +1,9 @@
+# Project Notes
+
+- [First submission](#first-submission)
+- [Second submission](#Second-submission)
+
+## First submission
 
 ### Ask to the group
 
@@ -7,10 +13,10 @@
 
 ### Notes from teacher
 
-- [ ] mocks
-- [ ] serviços guardar na base de dados
-- [ ] adicionar tag de serviço para o string boot reconhecer
-- [ ] Dto's usados nos serivços
+- mocks
+- serviços guardar na base de dados
+- adicionar tag de serviço para o string boot reconhecer
+- Dto's usados nos serivços
 
 - tag restController
 - principal -> info do user que fez o request
@@ -45,3 +51,11 @@
 - [X] Não estamos a testar as `invocations` no nosso domain test
 - [X] Comentários do createAssessment
 - [X] Remove `PermiteAll`
+
+## Second submition
+
+### Notes 
+
+- Models tem de ter os mesmo atributos que o Dto
+- Css não é muito necessário
+- Usar o código deles
