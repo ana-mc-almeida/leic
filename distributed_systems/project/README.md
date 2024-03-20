@@ -8,6 +8,7 @@
 
 - [Notas Variante 1](#variante-1)
 - [Notas Variante 2](#variante-2)
+- [Notas Variante 3](#variante-3)
 
 #### Notas Projeto:
 
@@ -200,3 +201,31 @@ mvn exec:java < clientOneInput.txt & mvn exec:java < clientTwoInput.txt
 <br/>
 
 - Perceber o `sequencer`
+
+## Variante 3
+
+### Dicas do professor
+
+- Menos linhas de código mas mais tempo para perceber o algoritmo
+- RME (mas tem de ser ligeiramente alterada)
+- Difusão Fiável Atómica = Difusão Fiável Total / Ordenada
+  - Em teoria demos isto na teórica 🫣
+  - Podemos assumir que é sempre **fiável** (servidores nunca falham)
+- Antes de enviar o pedido, o client tem de obter o número de sequencia
+- Antes de executar qualquer pedido, cada servidor checka o número de sequência do pedido (e só o realiza se corresponder ao número de pedido seguinte)
+  - Bloquear com `wait` dentro de um `if` (que vê se é o número de pedido seguinte)
+  - Desbloquear com com `notifyAll` quando acaba de executar qualquer pedido
+- Temos de ver como lidar com um `take` de um tuplo que não exista
+  - isto vai obrigar a que seja possivel executar um `put` de seguida, mas temos de ver como fazer isto
+  - Temos de conseguir fazer isso para mais do que um take à espera
+  - O stor disse que em príncipio não podemos utilizar o `notifyAll`
+  - Stor deu a entender a outro grupo que é para utilizar `conditions`
+- `Reads` não tem restrição de ordem total, podemos utilizar o `notifyAll` quando recebemos um put
+  - Utilizar `conditions`
+  - Colocar os reads numa fila de espera só para eles
+
+### Casos a testar
+
+- [ ] Todos os testes das últimas entregas
+- [ ] Um take antes de um put
+- [ ] Mais do que um take que corresponda ao mesmo tuplo (em que não existe esse tuplo no TupleSpaces) e quando se faz só um `put` tem de sair só o **primeiro** `take`
