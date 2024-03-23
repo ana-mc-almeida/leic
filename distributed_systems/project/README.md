@@ -229,3 +229,42 @@ mvn exec:java < clientOneInput.txt & mvn exec:java < clientTwoInput.txt
 - [ ] Todos os testes das últimas entregas
 - [ ] Um take antes de um put
 - [ ] Mais do que um take que corresponda ao mesmo tuplo (em que não existe esse tuplo no TupleSpaces) e quando se faz só um `put` tem de sair só o **primeiro** `take`
+- [ ] Quando há um `take` (sem o tuplo estar no tupleSpaces) seguido de um `put` seguido de um `take` (tudo isto com **o mesmo tuplo**)
+
+### Utils
+
+Run NamingServer:
+```
+python server.py -debug
+```
+
+Run Server A
+```
+mvn compile exec:java -Dexec.args="2001 A" -Ddebug
+```
+Run Server B
+```
+mvn exec:java -Dexec.args="2002 B"
+```
+Run Server C
+```
+mvn exec:java -Dexec.args="2003 C"
+```
+
+Run Sequencer
+```
+mvn compile exec:java
+```
+
+Run Client
+```
+mvn compile exec:java -Ddebug
+```
+
+### Ask Alice
+
+- [ ] Confirmar que não é preciso o clientId
+- [ ] Esperar pelos 3 servers ou só por um?
+  - [ ] Temos de checkar os erros ou não?
+    - Exemplo: `List<Throwable> errors = takeCollector.getErrors();`
+- [ ] Pus as cenas do server na pasta utils
