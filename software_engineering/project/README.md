@@ -1,7 +1,7 @@
 # Project Notes
 
 - [First submission](#first-submission)
-- [Second submission](#Second-submission)
+- [Second submission](#second-submition)
 
 ## First submission
 
