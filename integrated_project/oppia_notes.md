@@ -36,3 +36,14 @@ Abort mission:
   - https://github.com/oppia/oppia/issues/15353
   - https://github.com/oppia/oppia/issues/11718
   - https://github.com/oppia/oppia/issues/19550
+
+
+## Terceira entrega
+
+- checkout para uma nova branch do meu fork
+- o commit tem de ser com o meu email do técnico
+
+### TODO 
+
+- [X] testar as cenas que o bacano disse para testar
+- [X] tirar o `ComponentFixtureAutoDetect`
