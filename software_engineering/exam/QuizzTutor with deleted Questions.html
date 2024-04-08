@@ -1,0 +1,2202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Quiz Questions with Answers Highlighted</title>
+<style>
+
+body {
+    font-family: Arial, sans-serif;
+    padding-top: 20px; /* Adds space at the top */
+    padding-bottom: 20px; /* Adds space at the bottom */
+    padding-left: 20px; /* Adds padding to the left */
+    padding-right: 20px; /* Adds padding to the right */
+
+}
+
+.highlighted {
+    background-color: lightgreen;
+}
+
+/* Style for the first button */
+#toggleAllButton {
+    font-size: 16px; /* Larger font size */
+    padding: 10px 20px; /* Larger padding for bigger button size */
+    margin-bottom: 20px; /* Optional: Adds some space below the button */
+}
+
+/* Increase the size of the answer text and checkboxes */
+label {
+    font-size: 22px; /* Larger font size for answer text */
+    margin-bottom: 5px; /* Adds some space between the answers */
+    display: block; /* Ensures each answer is on a new line */
+}
+
+input[type="checkbox"] {
+    transform: scale(1.5); /* Makes checkboxes larger */
+    margin-right: 5px; /* Adds some space between checkbox and text */
+}
+/* Increase the size of paragraph text */
+p {
+    font-size: 22px; /* Adjust as needed */
+}
+
+pre {
+    font-size: 18px;
+    font-family: monospace;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Dark mode specific styles */
+.dark-mode {
+    background-color: #2b2b2b;
+    color: #ffffff;
+}
+
+.dark-mode pre {
+    background-color: #333333; /* Darker background for dark mode */
+    color: #ccc; /* Lighter text color for dark mode */
+}
+
+.dark-mode input[type="checkbox"] {
+    accent-color: #ffffff; /* For checkbox color in dark mode */
+}
+
+.dark-mode label {
+    color: #ffffff; /* Ensures label text is also light */
+}
+
+/* Optional: Style the toggle button for better visibility in both modes */
+.toggle-dark-mode {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+
+</style>
+<script>
+// Toggle highlighting for all correct answers
+function toggleHighlightAllCorrectAnswers() {
+    // Select all elements that are marked as correct answers
+    var correctAnswers = document.querySelectorAll('[class*="correct"]'); // Use *= to select classes that contain "correct"
+    
+    correctAnswers.forEach(function(answer) {
+        // Toggle the highlighted class
+        answer.classList.toggle('highlighted');
+    });
+}
+
+// Highlight or remove highlight from a specific correct answer
+function highlightCorrectAnswer(questionNumber) {
+    // Reference to the correct answer
+    var correctAnswer = document.querySelector('.correct' + questionNumber);
+    
+    // Toggle the highlighted class
+    correctAnswer.classList.toggle('highlighted');
+}
+
+function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+}
+
+</script>
+</head>
+<body>
+<button id="toggleAllButton" onclick="toggleHighlightAllCorrectAnswers()">Toggle Highlight for All Correct Answers</button>
+<button class="toggle-dark-mode" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+  <h2>Question 1: Considering the Object-Relational Structural Patterns, which pattern deals with how to implement the associations between classes?</h2>
+  <div>
+    <label class="answer1"><input type="checkbox" name="q1"> Foreign Key Mapping.</label><br>
+    <label class="answer1"><input type="checkbox" name="q1"> Association Table Mapping.</label><br>
+    <label class="answer1"><input type="checkbox" name="q1"> Dependent Mapping.</label><br>
+    <label class="answer1 correct1"><input type="checkbox" name="q1"> All options are true.</label><br>
+    <button onclick="highlightCorrectAnswer(1)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 2: In the model-view-controller who decides how to process an event?</h2>
+  <div>
+    <label class="answer2 correct2"><input type="checkbox" name="q2"> The controller.</label><br>
+    <label class="answer2"><input type="checkbox" name="q2"> The view.</label><br>
+    <label class="answer2"><input type="checkbox" name="q2"> The model.</label><br>
+    <label class="answer2"><input type="checkbox" name="q2"> All options are correct.</label><br>
+    <button onclick="highlightCorrectAnswer(2)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 3: Which of the following architectural patterns is used to process millions of tweets per second, which require several transformations?</h2>
+  <div>
+    <label class="answer3"><input type="checkbox" name="q3"> Client-server pattern.</label><br>
+    <label class="answer3 correct3"><input type="checkbox" name="q3"> Pipe-and-Filter pattern.</label><br>
+    <label class="answer3"><input type="checkbox" name="q3"> Repository pattern.</label><br>
+    <label class="answer3"><input type="checkbox" name="q3"> Model-View-Controller pattern.</label><br>
+    <button onclick="highlightCorrectAnswer(3)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 4: One of the maintainability guidelines states the following:</h2>
+  <p>
+    "Split Classes to Separate Concerns"
+  </p>
+  <p>Which of the following guidelines dictates this?</p>
+  <div>
+    <label class="answer4"><input type="checkbox" name="q4"> Keep architecture components balanced.</label><br>
+    <label class="answer4 correct4"><input type="checkbox" name="q4"> Separate concerns in modules.</label><br>
+    <label class="answer4"><input type="checkbox" name="q4"> Couple architecture components loosely.</label><br>
+    <label class="answer4"><input type="checkbox" name="q4"> Write simple units of code.</label><br>
+    <button onclick="highlightCorrectAnswer(4)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 7: Which domain logic organization patterns aggregate the business logic in terms of the system use cases?</h2>
+  <div>
+    <label class="answer7"><input type="checkbox" name="q7"> Domain model.</label><br>
+    <label class="answer7"><input type="checkbox" name="q7"> Table module.</label><br>
+    <label class="answer7"><input type="checkbox" name="q7"> Service Layer.</label><br>
+    <label class="answer7 correct7"><input type="checkbox" name="q7"> Transaction script.</label><br>
+    <button onclick="highlightCorrectAnswer(7)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 9: What is tested in object testing?</h2>
+  <div>
+    <label class="answer9"><input type="checkbox" name="q9"> Each method of the class in isolation</label><br>
+    <label class="answer9"><input type="checkbox" name="q9"> Any sequence of the methods of the class</label><br>
+    <label class="answer9"><input type="checkbox" name="q9"> In modal classes all sequences of methods of the class</label><br>
+    <label class="answer9 correct9"><input type="checkbox" name="q9"> All options are false</label><br>
+    <button onclick="highlightCorrectAnswer(9)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 11: What are the advantages following a testing first strategy when implementing a functionality?</h2>
+  <div>
+    <label class="answer11"><input type="checkbox" name="q11"> It allows to completely specify the functionality.</label><br>
+    <label class="answer11"><input type="checkbox" name="q11"> It guarantees that the functionality is correctly implemented.</label><br>
+    <label class="answer11 correct11"><input type="checkbox" name="q11"> All options are false.</label><br>
+    <label class="answer11"><input type="checkbox" name="q11"> It does not require to redefine the tests while the implementation take place.</label><br>
+    <button onclick="highlightCorrectAnswer(11)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 12: When it is known the implementation of the unit under test, which strategy should be followed?</h2>
+  <div>
+    <label class="answer12"><input type="checkbox" name="q12"> Black box</label><br>
+    <label class="answer12"><input type="checkbox" name="q12"> White box</label><br>
+    <label class="answer12 correct12"><input type="checkbox" name="q12"> Black box and white box</label><br>
+    <label class="answer12"><input type="checkbox" name="q12"> All options are false</label><br>
+    <button onclick="highlightCorrectAnswer(12)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 14: What is a Fake test double?</h2>
+  <div>
+    <label class="answer14"><input type="checkbox" name="q14"> Objects pre-programmed with expectations which form a specification of the calls they are expected to receiv</label><br>
+    <label class="answer14"><input type="checkbox" name="q14"> Objects that provide canned answers to calls made during the test</label><br>
+    <label class="answer14 correct14"><input type="checkbox" name="q14"> Objects that actually have working implementations, but usually take some shortcut which makes them not suitable for production</label><br>
+    <label class="answer14"><input type="checkbox" name="q14"> Objects are passed around but never actually used, usually they are just used to fill parameter lists</label><br>
+    <button onclick="highlightCorrectAnswer(14)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 15: Considering the command design pattern.</h2>
+  <div>
+    <label class="answer15"><input type="checkbox" name="q15"> The client, which creates the commands, has low coupling to the concrete command.</label><br>
+    <label class="answer15"><input type="checkbox" name="q15"> The here is high coupling between the invoker and the concrete command.</label><br>
+    <label class="answer15"><input type="checkbox" name="q15"> The concrete commands have low cohesion.</label><br>
+    <label class="answer15 correct15"><input type="checkbox" name="q15"> All options are false.</label><br>
+    <button onclick="highlightCorrectAnswer(15)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 16: Which of the following architectural patterns supports presentation of the same data in different ways?</h2>
+  <div>
+    <label class="answer16"><input type="checkbox" name="q16"> Client-server pattern.</label><br>
+    <label class="answer16"><input type="checkbox" name="q16"> Pipe-and-Filter pattern.</label><br>
+    <label class="answer16"><input type="checkbox" name="q16"> Repository pattern.</label><br>
+    <label class="answer16 correct16"><input type="checkbox" name="q16"> Model-View-Controller pattern.</label><br>
+    <button onclick="highlightCorrectAnswer(16)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 19: Consider the Template View pattern of the Enterprise Application Architecture. Which is a disadvantage of Template View pattern?</h2>
+  <div>
+    <label class="answer19 correct19"><input type="checkbox" name="q19"> It is easy to include complicated logic in the page.</label><br>
+    <label class="answer19"><input type="checkbox" name="q19"> Does not allow the use of WYSIWG editors.</label><br>
+    <label class="answer19"><input type="checkbox" name="q19"> It is difficult to customize a single page.</label><br>
+    <label class="answer19"><input type="checkbox" name="q19"> All options are true.</label><br>
+    <button onclick="highlightCorrectAnswer(19)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 23: What is the difference between software verification and validation?</h2>
+  <div>
+    <label class="answer23 correct23"><input type="checkbox" name="q23"> Verification checks that the system is behaving according its specification while validation checks that it is behaving according the end user expectations</label><br>
+    <label class="answer23"><input type="checkbox" name="q23"> Validation checks that the system is behaving according its specification while verification checks that it is behaving according the end user expectations</label><br>
+    <label class="answer23"><input type="checkbox" name="q23"> Validation and verification have the same meaning in software development</label><br>
+    <label class="answer23"><input type="checkbox" name="q23"> All options are false</label><br>
+    <button onclick="highlightCorrectAnswer(23)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 25: Consider the operation size of a stack of integer, which returns the number of elements in the stack. How many test cases should be considered if the equivalence</h2>
+  <p>partitioning technique is followed?</p>
+  <div>
+    <label class="answer25 correct25"><input type="checkbox" name="q25"> 1</label><br>
+    <label class="answer25"><input type="checkbox" name="q25"> 2</label><br>
+    <label class="answer25"><input type="checkbox" name="q25"> 3</label><br>
+    <label class="answer25"><input type="checkbox" name="q25"> 4</label><br>
+    <button onclick="highlightCorrectAnswer(25)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 26: When someone uses the Domain Model pattern to implement the domain logic layer of an enterprise application, it is common to use also the Service Layer pattern. The Service Layer pattern is used in the following cases:</h2>
+  <div>
+    <label class="answer26"><input type="checkbox" name="q26"> To allow the existence of more than one layer of presentation logic for the same application (to provide for example, an interface to web services).</label><br>
+    <label class="answer26"><input type="checkbox" name="q26"> To expose different interfaces of the domain logic layer so that it allows the implementation of different layers for the presentation logic.</label><br>
+    <label class="answer26"><input type="checkbox" name="q26"> To facilitate the use of the data access layer by the presentation logic layer.</label><br>
+    <label class="answer26 correct26"><input type="checkbox" name="q26"> To control and to reduce the interface exposed by the domain logic layer, thereby increasing the modifiability of that layer.</label><br>
+    <button onclick="highlightCorrectAnswer(26)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 28: In Quality Assurance in Production what is the goal of Logging?</h2>
+  <div>
+    <label class="answer28"><input type="checkbox" name="q28"> Make data more easily consumable.</label><br>
+    <label class="answer28 correct28"><input type="checkbox" name="q28"> Gathering data about the behavior of the system.</label><br>
+    <label class="answer28"><input type="checkbox" name="q28"> Count system events and aggregate system data.</label><br>
+    <label class="answer28"><input type="checkbox" name="q28"> All options are false.</label><br>
+    <button onclick="highlightCorrectAnswer(28)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 29: Consider the Front Controller pattern of the Enterprise Application Architecture. What is provided by the Front Controller pattern?</h2>
+  <div>
+    <label class="answer29"><input type="checkbox" name="q29"> Handling of security in a single place.</label><br>
+    <label class="answer29"><input type="checkbox" name="q29"> Handling of internationalization in a singe place.</label><br>
+    <label class="answer29"><input type="checkbox" name="q29"> Dynamically associate processing filters to the request.</label><br>
+    <label class="answer29 correct29"><input type="checkbox" name="q29"> All options are true.</label><br>
+    <button onclick="highlightCorrectAnswer(29)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 30: Consider the function String finalResult(int grade) that given an integer returns "pass" if</h2>
+  <p>grade is between 10 and 20, "fail" if grade is between 0 and 9, and throws an exception for all other values of grade. 
+    How many test cases should be considered if equivalence partitioning and boundary value analysis techniques are followed for the identification of the test cases?</p>
+  <div>
+    <label class="answer30"><input type="checkbox" name="q30"> 8</label><br>
+    <label class="answer30"><input type="checkbox" name="q30"> 9</label><br>
+    <label class="answer30 correct30"><input type="checkbox" name="q30"> 10</label><br>
+    <label class="answer30"><input type="checkbox" name="q30"> 11</label><br>
+    <button onclick="highlightCorrectAnswer(30)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 32: In a Spock test the *where:* block is</h2>
+  <div>
+    <label class="answer32"><input type="checkbox" name="q32"> where the stimulus of the test occurs</label><br>
+    <label class="answer32"><input type="checkbox" name="q32"> All options are false</label><br>
+    <label class="answer32 correct32"><input type="checkbox" name="q32">part of the definition of the context of the test</label><br>
+    <label class="answer32"><input type="checkbox" name="q32"> where the response is verified</label><br>
+    <button onclick="highlightCorrectAnswer(32)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 34: Consider the Template View pattern of the Enterprise Application Architecture. Which is a disadvantage of Template View pattern?</h2>
+  <div>
+    <label class="answer34 correct34"><input type="checkbox" name="q34"> It is not easy to test.</label><br>
+    <label class="answer34"><input type="checkbox" name="q34"> Does not allow the use of WYSIWG editors.</label><br>
+    <label class="answer34"><input type="checkbox" name="q34"> It is difficult to customize a single page.</label><br>
+    <label class="answer34"><input type="checkbox" name="q34"> All options are true.</label><br>
+    <button onclick="highlightCorrectAnswer(34)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 36: Consider the following code during the introduce null object refactoring.</h2>
+  <pre>if (customer.isNull()) plan = BillingPlan.basic();
+    else plan = customer.getPlan();</pre>
+    <p>What is the purpose of using this code at an intermediate step?</p>
+  <div>
+    <label class="answer36"><input type="checkbox" name="q36"> All options are false.</label><br>
+    <label class="answer36"><input type="checkbox" name="q36"> To check if the correct plan information is generated.</label><br>
+    <label class="answer36"><input type="checkbox" name="q36"> To check that ```isNull()``` method is correctly implemented.</label><br>
+    <label class="answer36 correct36"><input type="checkbox" name="q36"> To check if all places where a null pointer is created are identified and replaced by a NullObject.</label><br>
+    <button onclick="highlightCorrectAnswer(36)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 37: Compared to the Transaction Script pattern, the Domain Logic pattern has a higher initial cost of adoption. That is, it is harder to start with the Domain Logic pattern than with the Transaction Script pattern. The reason for this is that the Domain Logic pattern</h2>
+  <div>
+    <label class="answer37"><input type="checkbox" name="q37"> Requires a more skilled team, because the object-oriented paradigm is more complex than the procedural paradigm.</label><br>
+    <label class="answer37"><input type="checkbox" name="q37"> Is typically used with more complex data access code.</label><br>
+    <label class="answer37"><input type="checkbox" name="q37"> Requires that we write more code when we have only a couple of simple use cases.</label><br>
+    <label class="answer37 correct37"><input type="checkbox" name="q37"> All options are true.</label><br>
+    <button onclick="highlightCorrectAnswer(37)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 39: What characterizes the test-driven development approach?</h2>
+  <div>
+    <label class="answer39"><input type="checkbox" name="q39"> It is test-first.</label><br>
+    <label class="answer39"><input type="checkbox" name="q39"> Separates adding functionality from improving the structure.</label><br>
+    <label class="answer39"><input type="checkbox" name="q39"> It does bottom-up design.</label><br>
+    <label class="answer39 correct39"><input type="checkbox" name="q39"> All options are true.</label><br>
+    <button onclick="highlightCorrectAnswer(39)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 40: Consider the following code during the introduce null object refactoring.</h2>
+  <p>How is this code convert?</p>
+  <pre>if (customer == null)
+    plan = BillingPan.basic();
+  else
+    plan = customer.getPlan();</pre>
+  <div>
+    <label class="answer40"><input type="checkbox" name="q40"> plan = BillingPan.basic();</label><br>
+    <label class="answer40"><input type="checkbox" name="q40"> if (customer == null) plan = BillingPan.basic(); else plan = customer.getPlan();</label><br>
+    <label class="answer40"><input type="checkbox" name="q40"> All options are false.</label><br>
+    <label class="answer40 correct40"><input type="checkbox" name="q40"> plan = customer.getPlan();</label><br>
+    <button onclick="highlightCorrectAnswer(40)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 45: Which quality of a non-functional requirement allows it to be testable?</h2>
+  <div>
+    <label class="answer45"><input type="checkbox" name="q45"> Completeness.</label><br>
+    <label class="answer45"><input type="checkbox" name="q45"> Consistency.</label><br>
+    <label class="answer45 correct45"><input type="checkbox" name="q45"> Measurable.</label><br>
+    <label class="answer45"><input type="checkbox" name="q45"> Valid.</label><br>
+    <button onclick="highlightCorrectAnswer(45)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 47: Who is the responsible for doing the unit tests?</h2>
+  <div>
+    <label class="answer47 correct47"><input type="checkbox" name="q47"> Developers</label><br>
+    <label class="answer47"><input type="checkbox" name="q47"> Quality assurance team</label><br>
+    <label class="answer47"><input type="checkbox" name="q47"> Users</label><br>
+    <label class="answer47"><input type="checkbox" name="q47"> All the stakeholders</label><br>
+    <button onclick="highlightCorrectAnswer(47)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 48: When the domain logic is organized using a Transaction Script pattern the domain objects:</h2>
+  <div>
+    <label class="answer48"><input type="checkbox" name="q48"> Are responsible for loading the objects they refer to.</label><br>
+    <label class="answer48"><input type="checkbox" name="q48"> Are responsible for the management of transactions, begin and end of transactions.</label><br>
+    <label class="answer48"><input type="checkbox" name="q48"> Contain the business logic.</label><br>
+    <label class="answer48 correct48"><input type="checkbox" name="q48"> May not even exist, only record sets are used.</label><br>
+    <button onclick="highlightCorrectAnswer(48)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 50: Consider the composite design pattern.</h2>
+  <div>
+    <label class="answer50"><input type="checkbox" name="q50"> The client has low coupling with the composite.</label><br>
+    <label class="answer50"><input type="checkbox" name="q50"> Adding new members do the composite has a low impact on the client of the composite.</label><br>
+    <label class="answer50"><input type="checkbox" name="q50"> The members of the composite have high cohesion.</label><br>
+    <label class="answer50 correct50"><input type="checkbox" name="q50"> All options are true.</label><br>
+    <button onclick="highlightCorrectAnswer(50)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 53: Consider the Lazy Load pattern of the Object-relacional Behavioral Patterns. Which implementation technique requires that all access to fields is done using getter methods?</h2>
+  <div>
+    <label class="answer53 correct53"><input type="checkbox" name="q53"> Lazy initialization.</label><br>
+    <label class="answer53"><input type="checkbox" name="q53"> Virtual proxy.</label><br>
+    <label class="answer53"><input type="checkbox" name="q53"> Value holder.</label><br>
+    <label class="answer53"><input type="checkbox" name="q53"> Ghost.</label><br>
+    <button onclick="highlightCorrectAnswer(53)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 55: Consider the Unit of Work pattern of the Object-Relational Behavioral Patterns of the Enterprise Applications architecture. Which registration strategy allows flexibility to allow that some in-memory changes are not written to the database?</h2>
+  <div>
+    <label class="answer55 correct55"><input type="checkbox" name="q55"> Caller registration.</label><br>
+    <label class="answer55"><input type="checkbox" name="q55"> Object registration.</label><br>
+    <label class="answer55"><input type="checkbox" name="q55"> Unit of work controller.</label><br>
+    <label class="answer55"><input type="checkbox" name="q55"> Class registration.</label><br>
+    <button onclick="highlightCorrectAnswer(55)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 56: Which is the meaning of the following Spock command `(1.._) * subscriber.receive("hello")`?</h2>
+  <div>
+    <label class="answer56"><input type="checkbox" name="q56"> The `subscriber` entity should be invoked once and only once with the method `receive` and argument `"hello"`</label><br>
+    <label class="answer56 correct56"><input type="checkbox" name="q56"> The `subscriber` entity should be invoked at least once with the method `receive` and argument `"hello"`</label><br>
+    <label class="answer56"><input type="checkbox" name="q56"> The `subscriber` entity should be invoked two or more times with the method `receive` and argument `"hello"`</label><br>
+    <label class="answer56"><input type="checkbox" name="q56"> The `subscriber` entity cannot be invoked with the method `receive` and argument `"hello"`</label><br>
+    <button onclick="highlightCorrectAnswer(56)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 57: When the domain logic is organized using a Table Module pattern:</h2>
+  <div>
+    <label class="answer57"><input type="checkbox" name="q57"> An object oriented style is followed.</label><br>
+    <label class="answer57"><input type="checkbox" name="q57"> Row Data Gateway is the most suitable data source pattern.</label><br>
+    <label class="answer57"><input type="checkbox" name="q57"> A Service Layer should be used to provide an interface for the presentation layer.</label><br>
+    <label class="answer57 correct57"><input type="checkbox" name="q57"> The business logic is organized around record sets.</label><br>
+    <button onclick="highlightCorrectAnswer(57)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 58: Which quality of requirements can be improved with the use of formal verifications of the specifications?</h2>
+  <div>
+    <label class="answer58"><input type="checkbox" name="q58"> Completeness.</label><br>
+    <label class="answer58 correct58"><input type="checkbox" name="q58"> Consistency.</label><br>
+    <label class="answer58"><input type="checkbox" name="q58"> Measurable.</label><br>
+    <label class="answer58"><input type="checkbox" name="q58"> Valid.</label><br>
+    <button onclick="highlightCorrectAnswer(58)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 59: During requirements validation when the real need of the system users are verified?</h2>
+  <div>
+    <label class="answer59 correct59"><input type="checkbox" name="q59"> Validity checks.</label><br>
+    <label class="answer59"><input type="checkbox" name="q59"> Consistency checks.</label><br>
+    <label class="answer59"><input type="checkbox" name="q59"> Realism checks.</label><br>
+    <label class="answer59"><input type="checkbox" name="q59"> Verifiability checks.</label><br>
+    <button onclick="highlightCorrectAnswer(59)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 60: What is not a quality of software engineering from the end user perspective?</h2>
+  <div>
+    <label class="answer60"><input type="checkbox" name="q60"> Performance</label><br>
+    <label class="answer60 correct60"><input type="checkbox" name="q60"> Maintainability</label><br>
+    <label class="answer60"><input type="checkbox" name="q60"> Availability</label><br>
+    <label class="answer60"><input type="checkbox" name="q60"> Usability</label><br>
+    <button onclick="highlightCorrectAnswer(60)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 62: The Active Record pattern is best used when we are also using which domain logic pattern?</h2>
+  <div>
+    <label class="answer62"><input type="checkbox" name="q62"> The Transaction Script pattern.</label><br>
+    <label class="answer62"><input type="checkbox" name="q62"> The Table Module pattern.</label><br>
+    <label class="answer62"><input type="checkbox" name="q62"> The Service Layer pattern.</label><br>
+    <label class="answer62 correct62"><input type="checkbox" name="q62"> The Domain Model pattern.</label><br>
+    <button onclick="highlightCorrectAnswer(62)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 64: What is the relation between design and implementation?</h2>
+  <div>
+    <label class="answer64 correct64"><input type="checkbox" name="q64"> The implementation should conform to the design.</label><br>
+    <label class="answer64"><input type="checkbox" name="q64"> All implementation decisions are defined in the design.</label><br>
+    <label class="answer64"><input type="checkbox" name="q64"> Refactoring is how the design impacts on the implementation.</label><br>
+    <label class="answer64"><input type="checkbox" name="q64"> All other options are true.</label><br>
+    <button onclick="highlightCorrectAnswer(64)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 66: What is tested in object testing?</h2>
+  <div>
+    <label class="answer66 correct66"><input type="checkbox" name="q66"> All options are false</label><br>
+    <label class="answer66"><input type="checkbox" name="q66"> All methods of the class in isolation</label><br>
+    <label class="answer66"><input type="checkbox" name="q66"> The sequences of methods invocations that start with public methods and invoke private methods afterwards</label><br>
+    <label class="answer66"><input type="checkbox" name="q66"> In non-modal classes the sequences of methods of the class that are defined by its state machine</label><br>
+    <button onclick="highlightCorrectAnswer(66)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 67: One of the maintainability guidelines states the following:</h2>
+  <p>“Limit the number of parameters per unit to at most 4, by extracting parameters into objects, 
+    as this improves maintainability because keeping the number of parameters low makes units easier to understand and reuse.”</p>
+    <p>Which of the following guidelines dictates this?</p>
+  <div>
+    <label class="answer67"><input type="checkbox" name="q67"> Keep your codebase small.</label><br>
+    <label class="answer67 correct67"><input type="checkbox" name="q67"> Keep unit interfaces small.</label><br>
+    <label class="answer67"><input type="checkbox" name="q67"> Write clean code.</label><br>
+    <label class="answer67"><input type="checkbox" name="q67"> Write simple units of code.</label><br>
+    <button onclick="highlightCorrectAnswer(67)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 68: During requirements validation when is checked that the implemented system meets the requirements?</h2>
+  <div>
+    <label class="answer68"><input type="checkbox" name="q68"> Validity checks.</label><br>
+    <label class="answer68"><input type="checkbox" name="q68"> Consistency checks.</label><br>
+    <label class="answer68"><input type="checkbox" name="q68"> Realism checks.</label><br>
+    <label class="answer68 correct68"><input type="checkbox" name="q68"> Verifiability checks.</label><br>
+    <button onclick="highlightCorrectAnswer(68)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 73: One of the maintainability guidelines states the following:</h2>
+  <p>“Leave no badly handled exceptions behind.”</p>
+  <p>Which of the following guidelines dictates this?</p>
+  <div>
+    <label class="answer73"><input type="checkbox" name="q73"> Automate tests.</label><br>
+    <label class="answer73 correct73"><input type="checkbox" name="q73"> Write clean code.</label><br>
+    <label class="answer73"><input type="checkbox" name="q73"> Couple architecture components loosely.</label><br>
+    <label class="answer73"><input type="checkbox" name="q73"> Write simple units of code.</label><br>
+    <button onclick="highlightCorrectAnswer(73)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 75: Which is a responsibility of Scrum's Product owner?</h2>
+  <div>
+    <label class="answer75"><input type="checkbox" name="q75"> Define the value of stories</label><br>
+    <label class="answer75"><input type="checkbox" name="q75"> Identify stories</label><br>
+    <label class="answer75"><input type="checkbox" name="q75"> Accept stories implementation</label><br>
+    <label class="answer75 correct75"><input type="checkbox" name="q75"> All options are true</label><br>
+    <button onclick="highlightCorrectAnswer(75)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 76: Consider the Identity Map pattern of the Object-relational Behavorial patterns. How many Identity Maps can exist in an application?</h2>
+  <div>
+    <label class="answer76"><input type="checkbox" name="q76"> One per session.</label><br>
+    <label class="answer76"><input type="checkbox" name="q76"> One per class.</label><br>
+    <label class="answer76"><input type="checkbox" name="q76"> One per table.</label><br>
+    <label class="answer76 correct76"><input type="checkbox" name="q76"> All options are true.</label><br>
+    <button onclick="highlightCorrectAnswer(76)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 77: Considering the Object-Relational Structural Patterns, which pattern deals with the implementation of many to many relations between classes?</h2>
+  <div>
+    <label class="answer77"><input type="checkbox" name="q77"> Identity Field.</label><br>
+    <label class="answer77 correct77"><input type="checkbox" name="q77"> Association Table Mapping.</label><br>
+    <label class="answer77"><input type="checkbox" name="q77"> Foreign Key Mapping.</label><br>
+    <label class="answer77"><input type="checkbox" name="q77"> Dependent Mapping.</label><br>
+    <button onclick="highlightCorrectAnswer(77)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 78: In a Spock test the *then:* block is</h2>
+  <div>
+    <label class="answer78"><input type="checkbox" name="q78"> part of the definition of the context of the test</label><br>
+    <label class="answer78"><input type="checkbox" name="q78"> All options are false</label><br>
+    <label class="answer78"><input type="checkbox" name="q78"> where the stimulus of the test occurs</label><br>
+    <label class="answer78 correct78"><input type="checkbox" name="q78"> where the response is verified</label><br>
+    <button onclick="highlightCorrectAnswer(78)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 79: What characterises an exception?</h2>
+  <div>
+    <label class="answer79"><input type="checkbox" name="q79"> Its use should be defined in the context of the architectural design.</label><br>
+    <label class="answer79"><input type="checkbox" name="q79"> Should be transformed between different architectural layers.</label><br>
+    <label class="answer79"><input type="checkbox" name="q79"> Is an error handling mechanism.</label><br>
+    <label class="answer79 correct79"><input type="checkbox" name="q79"> All options are true.</label><br>
+    <button onclick="highlightCorrectAnswer(79)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 83: Considering the Identity Field pattern of the Object-Relational Structural Patterns, when getting a new key, which aspects should be considered?</h2>
+  <div>
+    <label class="answer83 correct83"><input type="checkbox" name="q83"> All options are true.</label><br>
+    <label class="answer83"><input type="checkbox" name="q83"> Whether it is necessary to get several values at once.</label><br>
+    <label class="answer83"><input type="checkbox" name="q83"> What is the size of the key?</label><br>
+    <label class="answer83"><input type="checkbox" name="q83"> Whether it is necessary to know which value is generated.</label><br>
+    <button onclick="highlightCorrectAnswer(83)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 84: *Domain Model* and *Transaction Script* are two of the existing patterns to implement the domain logic layer of an enterprise application. Choosing one or the other:</h2>
+  <div>
+    <label class="answer84"><input type="checkbox" name="q84"> Affects only the domain logic layer.</label><br>
+    <label class="answer84"><input type="checkbox" name="q84"> Does not affect the presentation logic layer because it cannot use it.</label><br>
+    <label class="answer84"><input type="checkbox" name="q84"> Does not affect the data access layer because the data access layer does not use the domain logic layer.</label><br>
+    <label class="answer84 correct84"><input type="checkbox" name="q84"> May affect the data access layer because each pattern puts different requirements on the interface of that layer.</label><br>
+    <button onclick="highlightCorrectAnswer(84)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 85: Considering the command design pattern.</h2>
+  <div>
+    <label class="answer85"><input type="checkbox" name="q85"> The definition of a new concrete command does not propagate to the invoker.</label><br>
+    <label class="answer85"><input type="checkbox" name="q85"> The concrete commands have high cohesion.</label><br>
+    <label class="answer85 correct85"><input type="checkbox" name="q85"> All options are true.</label><br>
+    <label class="answer85"><input type="checkbox" name="q85"> The client, which creates commands, has high coupling to the concrete command.</label><br>
+    <button onclick="highlightCorrectAnswer(85)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 86: What characterizes the Product Backlog of the Scrum approach?</h2>
+  <div>
+    <label class="answer86"><input type="checkbox" name="q86"> It contains the stories to be implemented in the next Sprint</label><br>
+    <label class="answer86 correct86"><input type="checkbox" name="q86"> Stories may be added and remove from it during the project lifetime</label><br>
+    <label class="answer86"><input type="checkbox" name="q86"> It is the responsibility of the development team</label><br>
+    <label class="answer86"><input type="checkbox" name="q86"> All options are true</label><br>
+    <button onclick="highlightCorrectAnswer(86)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 89: In which of the following architectural patterns the format for data transfer has to be agreed between communicating transformations?</h2>
+  <div>
+    <label class="answer89"><input type="checkbox" name="q89"> Client-server pattern.</label><br>
+    <label class="answer89"><input type="checkbox" name="q89"> Repository pattern.</label><br>
+    <label class="answer89"><input type="checkbox" name="q89"> Layered pattern.</label><br>
+    <label class="answer89 correct89"><input type="checkbox" name="q89"> Pipe-and-Filter pattern.</label><br>
+    <button onclick="highlightCorrectAnswer(89)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 92: In which of the following systems we cannot apply the quality assurance in production approach?</h2>
+  <div>
+    <label class="answer92"><input type="checkbox" name="q92"> Facebook.</label><br>
+    <label class="answer92 correct92"><input type="checkbox" name="q92"> Insulin pump.</label><br>
+    <label class="answer92"><input type="checkbox" name="q92"> Netflix.</label><br>
+    <label class="answer92"><input type="checkbox" name="q92"> All options are true.</label><br>
+    <button onclick="highlightCorrectAnswer(92)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 93: What can be considered unit testing?</h2>
+  <div>
+    <label class="answer93"><input type="checkbox" name="q93"> Testing a method of a class that invokes other methods of other classes</label><br>
+    <label class="answer93"><input type="checkbox" name="q93"> Testing all methods of a class</label><br>
+    <label class="answer93"><input type="checkbox" name="q93"> All options are false</label><br>
+    <label class="answer93 correct93"><input type="checkbox" name="q93"> Testing a method that does not call any other public method</label><br>
+    <button onclick="highlightCorrectAnswer(93)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 95: Which type of interface is provided by Spring Boot controllers?</h2>
+  <div>
+    <label class="answer95"><input type="checkbox" name="q95"> Exposes attributes.</label><br>
+    <label class="answer95"><input type="checkbox" name="q95"> Contains complex entities as parameters.</label><br>
+    <label class="answer95"><input type="checkbox" name="q95"> Only contains simple data types.</label><br>
+    <label class="answer95 correct95"><input type="checkbox" name="q95"> Is programming language independent.</label><br>
+    <button onclick="highlightCorrectAnswer(95)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 97: In which component testing strategies it is necessary to use test doubles?</h2>
+  <div>
+    <label class="answer97 correct97"><input type="checkbox" name="q97"> Top-down</label><br>
+    <label class="answer97"><input type="checkbox" name="q97"> Big bang</label><br>
+    <label class="answer97"><input type="checkbox" name="q97"> Bottom-up</label><br>
+    <label class="answer97"><input type="checkbox" name="q97"> All options are false</label><br>
+    <button onclick="highlightCorrectAnswer(97)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 98: In which of the following architectural patterns all elements depend on a data model ?</h2>
+  <div>
+    <label class="answer98"><input type="checkbox" name="q98"> Client-server pattern.</label><br>
+    <label class="answer98"><input type="checkbox" name="q98"> Layered pattern.</label><br>
+    <label class="answer98"><input type="checkbox" name="q98"> Model-View-Controller pattern.</label><br>
+    <label class="answer98 correct98"><input type="checkbox" name="q98"> Repository pattern.</label><br>
+    <button onclick="highlightCorrectAnswer(98)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 99: Consider the following code belonging to a Service Layer:</h2>
+  <div>
+    <label> <pre>    @Transactional(isolation = Isolation.REPEATABLE_READ)
+      public List<StudentDto> courseStudents(int executionId) {
+          CourseExecution courseExecution = courseExecutionRepository.findById(executionId).orElse(null);
+          if (courseExecution == null) {
+              return new ArrayList<>();
+          }
+          return courseExecution.getUsers().stream()
+                  .filter(user -> user.getRole().equals(User.Role.STUDENT))
+                  .sorted(Comparator.comparing(User::getUsername))
+                  .map(StudentDto::new)
+                  .collect(Collectors.toList());
+      }</pre></label>
+    <label class="answer99"><input type="checkbox" name="q99"> It contains presentation logic.</label><br>
+    <label class="answer99"><input type="checkbox" name="q99"> It contains business logic.</label><br>
+    <label class="answer99 correct99"><input type="checkbox" name="q99"> It contains business logic and presentation logic.</label><br>
+    <label class="answer99"><input type="checkbox" name="q99"> All options are false.</label><br>
+    <button onclick="highlightCorrectAnswer(99)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 102: In the model-view-controller what is the relation between the model and the controller?</h2>
+  <div>
+    <label class="answer102"><input type="checkbox" name="q102"> All option are false.</label><br>
+    <label class="answer102"><input type="checkbox" name="q102"> Receives user inputs.</label><br>
+    <label class="answer102 correct102"><input type="checkbox" name="q102"> The controller updates the model.</label><br>
+    <label class="answer102"><input type="checkbox" name="q102"> The controller only queries the model.</label><br>
+    <button onclick="highlightCorrectAnswer(102)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 103: Consider the Template View pattern of the Enterprise Application Architecture. What characterizes the Template View pattern?</h2>
+  <div>
+    <label class="answer103"><input type="checkbox" name="q103"> It does not allow condition display.</label><br>
+    <label class="answer103"><input type="checkbox" name="q103"> It is easy to test.</label><br>
+    <label class="answer103"><input type="checkbox" name="q103"> It does not allow iterations in the display.</label><br>
+    <label class="answer103 correct103"><input type="checkbox" name="q103"> All other options are false.</label><br>
+    <button onclick="highlightCorrectAnswer(103)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 105: Consider the following sentence from Fred Brocks "Adding manpower to a late software project makes it later". Which of the following is a reason for this to happen?</h2>
+  <div>
+    <label class="answer105 correct105"><input type="checkbox" name="q105"> Adding people to a team increases the number of communication channels between the team members.</label><br>
+    <label class="answer105"><input type="checkbox" name="q105"> Late project have problems that cannot be solved.</label><br>
+    <label class="answer105"><input type="checkbox" name="q105"> The people that join the team do not have the necessary competences.</label><br>
+    <label class="answer105"><input type="checkbox" name="q105"> It is difficult to reschedule a late project.</label><br>
+    <button onclick="highlightCorrectAnswer(105)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 106: Which is not a goal of the Data Transfer Object pattern.</h2>
+  <div>
+    <label class="answer106"><input type="checkbox" name="q106"> Aggregate data of different domain objects.</label><br>
+    <label class="answer106"><input type="checkbox" name="q106"> Reduce the cost of distributed communication.</label><br>
+    <label class="answer106 correct106"><input type="checkbox" name="q106"> Contain domain logic.</label><br>
+    <label class="answer106"><input type="checkbox" name="q106"> Decouples the structure of the domain entities from the structure of presentation.</label><br>
+    <button onclick="highlightCorrectAnswer(106)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 109: What characterizes the physical view of a software architecture?</h2>
+  <div>
+    <label class="answer109"><input type="checkbox" name="q109"> Relates the system requirements with its entities.</label><br>
+    <label class="answer109"><input type="checkbox" name="q109"> It shows how the software is decomposed for development.</label><br>
+    <label class="answer109"><input type="checkbox" name="q109"> It shows how the system is composed of interacting processes.</label><br>
+    <label class="answer109 correct109"><input type="checkbox" name="q109"> It shows the system hardware and how software components are distributed across the processors in the system.</label><br>
+    <button onclick="highlightCorrectAnswer(109)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 110: Which quality of requirements can be improved with the use of cross-checking different sources of information?</h2>
+  <div>
+    <label class="answer110 correct110"><input type="checkbox" name="q110"> Completeness.</label><br>
+    <label class="answer110"><input type="checkbox" name="q110"> Consistency.</label><br>
+    <label class="answer110"><input type="checkbox" name="q110"> Measurable.</label><br>
+    <label class="answer110"><input type="checkbox" name="q110"> Valid.</label><br>
+    <button onclick="highlightCorrectAnswer(110)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 113: What characterizes user requirements?</h2>
+  <div>
+    <label class="answer113"><input type="checkbox" name="q113"> Are written in natural language.</label><br>
+    <label class="answer113"><input type="checkbox" name="q113"> Describe the services to be provided to the system users.</label><br>
+    <label class="answer113"><input type="checkbox" name="q113"> Describe the constraints under which the system must operate.</label><br>
+    <label class="answer113 correct113"><input type="checkbox" name="q113"> All options are true.</label><br>
+    <button onclick="highlightCorrectAnswer(113)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 114: In which phase of the requirements elicitation and analysis process is documentation with the sources of requirements analysed?</h2>
+  <div>
+    <label class="answer114 correct114"><input type="checkbox" name="q114"> Requirements discovery and understanding.</label><br>
+    <label class="answer114"><input type="checkbox" name="q114"> Requirements classification and organization.</label><br>
+    <label class="answer114"><input type="checkbox" name="q114"> Requirements prioritization and negotiation.</label><br>
+    <label class="answer114"><input type="checkbox" name="q114"> Requirements documentation.</label><br>
+    <button onclick="highlightCorrectAnswer(114)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 115: Consider the Unit of Work pattern of the Object-Relational Behavioral Patterns of the Enterprise Applications architecture. Which registration strategy provides flexibility to allow that some in-memory changes are not written to the database?</h2>
+  <div>
+    <label class="answer115 correct115"><input type="checkbox" name="q115"> Caller registration.</label><br>
+    <label class="answer115"><input type="checkbox" name="q115"> Object registration.</label><br>
+    <label class="answer115"><input type="checkbox" name="q115"> Unit of work controller.</label><br>
+    <label class="answer115"><input type="checkbox" name="q115"> Class registration.</label><br>
+    <button onclick="highlightCorrectAnswer(115)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 117: Which workflow of refactoring should be followed when the team realizes that the everyday applying of the refactoring workflows has not been able to fix larger areas on problematic code that need dedicated attention?</h2>
+  <div>
+    <label class="answer117"><input type="checkbox" name="q117"> Litter-pickup.</label><br>
+    <label class="answer117"><input type="checkbox" name="q117"> Long-Term Refactoring.</label><br>
+    <label class="answer117"><input type="checkbox" name="q117"> Preparatory refactoring.</label><br>
+    <label class="answer117 correct117"><input type="checkbox" name="q117"> Planned refactoring</label><br>
+    <button onclick="highlightCorrectAnswer(117)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 118: Consider the Identity Map pattern of the Object-relational Behavorial patterns. What is a disadvantage of using an explicit Identity Map over a generic one?</h2>
+  <div>
+    <label class="answer118 correct118"><input type="checkbox" name="q118"> It is not reusable.</label><br>
+    <label class="answer118"><input type="checkbox" name="q118"> It does not allow type checking.</label><br>
+    <label class="answer118"><input type="checkbox" name="q118"> It requires that all tables use the same type of key.</label><br>
+    <label class="answer118"><input type="checkbox" name="q118"> All other options are false.</label><br>
+    <button onclick="highlightCorrectAnswer(118)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 120: In which of the following techniques are used in the quality assurance in production approach?</h2>
+  <div>
+    <label class="answer120"><input type="checkbox" name="q120"> Logging.</label><br>
+    <label class="answer120"><input type="checkbox" name="q120"> Dashboards.</label><br>
+    <label class="answer120"><input type="checkbox" name="q120"> Metrics.</label><br>
+    <label class="answer120 correct120"><input type="checkbox" name="q120"> All options are true.</label><br>
+    <button onclick="highlightCorrectAnswer(120)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 121: What is the result of the *git branch issue55* when the HEAD is in the develop branch?</h2>
+  <div>
+    <label class="answer121"><input type="checkbox" name="q121"> It creates a new branch with the same code than in develop and the HEAD moves to issue55</label><br>
+    <label class="answer121 correct121"><input type="checkbox" name="q121"> It creates a new branch with the same code than in develop and the HEAD continues in develop</label><br>
+    <label class="answer121"><input type="checkbox" name="q121"> It moves the HEAD to branch issue55</label><br>
+    <label class="answer121"><input type="checkbox" name="q121"> All options are false</label><br>
+    <button onclick="highlightCorrectAnswer(121)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 122: Which artefacts can be tested?</h2>
+  <div>
+    <label class="answer122"><input type="checkbox" name="q122"> The application source</label><br>
+    <label class="answer122"><input type="checkbox" name="q122"> Models of the system</label><br>
+    <label class="answer122"><input type="checkbox" name="q122"> Documents with the requirements</label><br>
+    <label class="answer122 correct122"><input type="checkbox" name="q122"> All options are true</label><br>
+    <button onclick="highlightCorrectAnswer(122)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 125: Which of following strategies are used in the Litter-pickup refactoring?</h2>
+  <div>
+    <label class="answer125 correct125"><input type="checkbox" name="q125"> Always leave the code better than when you found it.</label><br>
+    <label class="answer125"><input type="checkbox" name="q125"> When find something that can be improved, immediately stop implementing the feature and do the  refactoring.</label><br>
+    <label class="answer125"><input type="checkbox" name="q125"> When find something that can be improved, finished the implementing the feature and only then do the  refactoring.</label><br>
+    <label class="answer125"><input type="checkbox" name="q125"> All options are true.</label><br>
+    <button onclick="highlightCorrectAnswer(125)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 127: What are the advantages of test doubles?</h2>
+  <div>
+    <label class="answer127"><input type="checkbox" name="q127"> Isolate units</label><br>
+    <label class="answer127"><input type="checkbox" name="q127"> Reduce dependencies between teams</label><br>
+    <label class="answer127"><input type="checkbox" name="q127"> Reduce the overhead of testing set up</label><br>
+    <label class="answer127 correct127"><input type="checkbox" name="q127"> All options are true</label><br>
+    <button onclick="highlightCorrectAnswer(127)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 128: Which type of interface allows higher coupling?</h2>
+  <div>
+    <label class="answer128 correct128"><input type="checkbox" name="q128"> Exposes attributes.</label><br>
+    <label class="answer128"><input type="checkbox" name="q128"> Contains complex entities as parameters.</label><br>
+    <label class="answer128"><input type="checkbox" name="q128"> Only contains simple data types.</label><br>
+    <label class="answer128"><input type="checkbox" name="q128"> Contains the meta-model.</label><br>
+    <button onclick="highlightCorrectAnswer(128)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 130: Consider the following code of the refactoring of the rental application. What should be done in this phase, related with ```switch```?</h2>
+  <div>
+    <label class="answer130"><pre>  class Price...
+      double getCharge(int daysRented) {
+          double result = 0;
+          switch (getPriceCode()) {
+              case Movie.REGULAR:
+                  result += 2;
+                  if (daysRented > 2)
+                      result += (daysRented - 2) * 1.5;
+                  break;
+              case Movie.NEW_RELEASE:
+                  result += daysRented * 3;
+                  break;
+              case Movie.CHILDREN:
+                  result += 1.5;
+                  if (daysRented > 3)
+                      result += (daysRented - 3) * 1.5;
+                  break;
+          }
+          return result;
+      }</pre></label>
+    <label class="answer130"><input type="checkbox" name="q130"> Extract method to the Movie class.</label><br>
+    <label class="answer130"><input type="checkbox" name="q130"> All options are false.</label><br>
+    <label class="answer130"><input type="checkbox" name="q130"> Replace temp with query.</label><br>
+    <label class="answer130 correct130"><input type="checkbox" name="q130"> Replace Conditional with Polymorphism.</label><br>
+    <button onclick="highlightCorrectAnswer(130)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 133: Consider the Lazy Load pattern of the Object-relacional Behavioral Patterns. Which implementation technique works like a real objet in a partial state?</h2>
+  <div>
+    <label class="answer133"><input type="checkbox" name="q133"> Lazy initialization.</label><br>
+    <label class="answer133"><input type="checkbox" name="q133"> Value holder.</label><br>
+    <label class="answer133"><input type="checkbox" name="q133"> Virtual proxy.</label><br>
+    <label class="answer133 correct133"><input type="checkbox" name="q133"> Ghost.</label><br>
+    <button onclick="highlightCorrectAnswer(133)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 135: One of the maintainability guidelines states the following:</h2>
+  <p>“Leave no long identifier names behind.”</p>
+  <p>Which of the following guidelines dictates this?</p>
+  <div>
+    <label class="answer135"><input type="checkbox" name="q135"> Keep your codebase small.</label><br>
+    <label class="answer135"><input type="checkbox" name="q135"> Keep unit interfaces small.</label><br>
+    <label class="answer135 correct135"><input type="checkbox" name="q135"> Write clean code.</label><br>
+    <label class="answer135"><input type="checkbox" name="q135"> Write simple units of code.</label><br>
+    <button onclick="highlightCorrectAnswer(135)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 137: Which strategy can be followed to test a method that you know its implementation?</h2>
+  <div>
+    <label class="answer137"><input type="checkbox" name="q137"> White box</label><br>
+    <label class="answer137"><input type="checkbox" name="q137"> Black box</label><br>
+    <label class="answer137 correct137"><input type="checkbox" name="q137"> Black box and white box</label><br>
+    <label class="answer137"><input type="checkbox" name="q137"> All options are false</label><br>
+    <button onclick="highlightCorrectAnswer(137)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 139: Software development is a formalization process because:</h2>
+  <div>
+    <label class="answer139"><input type="checkbox" name="q139"> Software is language</label><br>
+    <label class="answer139"><input type="checkbox" name="q139"> Requirements are expressed using a language</label><br>
+    <label class="answer139"><input type="checkbox" name="q139"> Software executes have a precise semantics</label><br>
+    <label class="answer139 correct139"><input type="checkbox" name="q139"> All options are true</label><br>
+    <button onclick="highlightCorrectAnswer(139)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 142: Software is a social system because:</h2>
+  <div>
+    <label class="answer142"><input type="checkbox" name="q142"> The system is not only the software but also how people use it</label><br>
+    <label class="answer142"><input type="checkbox" name="q142"> The same software used by different people result in different systems</label><br>
+    <label class="answer142"><input type="checkbox" name="q142"> A system functionality may be implemented but if it is not used it is not part of the system</label><br>
+    <label class="answer142 correct142"><input type="checkbox" name="q142"> All options are true</label><br>
+    <button onclick="highlightCorrectAnswer(142)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 146: Which of the following isolation levels provides a higher throughput of the enterprise application?</h2>
+  <div>
+    <label class="answer146"><input type="checkbox" name="q146"> Serializable.</label><br>
+    <label class="answer146"><input type="checkbox" name="q146"> Repeatable Read.</label><br>
+    <label class="answer146"><input type="checkbox" name="q146"> Read Committed.</label><br>
+    <label class="answer146 correct146"><input type="checkbox" name="q146"> Read Uncommitted.</label><br>
+    <button onclick="highlightCorrectAnswer(146)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 149: Which reuse technique follows the Hollywood principle "Don't call us, we will call you"?</h2>
+  <div>
+    <label class="answer149"><input type="checkbox" name="q149"> Libraries.</label><br>
+    <label class="answer149"><input type="checkbox" name="q149"> Model-driven engineering.</label><br>
+    <label class="answer149 correct149"><input type="checkbox" name="q149"> Frameworks.</label><br>
+    <label class="answer149"><input type="checkbox" name="q149"> Product-lines.</label><br>
+    <button onclick="highlightCorrectAnswer(149)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 150: Which of the following aspects should not be considered during a review process?</h2>
+  <div>
+    <label class="answer150"><input type="checkbox" name="q150"> Comments</label><br>
+    <label class="answer150"><input type="checkbox" name="q150"> Design</label><br>
+    <label class="answer150"><input type="checkbox" name="q150"> Complexity</label><br>
+    <label class="answer150 correct150"><input type="checkbox" name="q150"> All options are false</label><br>
+    <button onclick="highlightCorrectAnswer(150)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 151: What are the advantages of following a test first strategy when implementing a functionality?</h2>
+  <div>
+    <label class="answer151"><input type="checkbox" name="q151"> It allows to completely specify the functionality.</label><br>
+    <label class="answer151"><input type="checkbox" name="q151"> All options are false.</label><br>
+    <label class="answer151"><input type="checkbox" name="q151"> It does not require to redefine the tests when the implementation takes place.</label><br>
+    <label class="answer151 correct151"><input type="checkbox" name="q151"> It increases the probability that the implementation of the functionality has less errors.</label><br>
+    <button onclick="highlightCorrectAnswer(151)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 155: Which is the meaning of the following Spock command `1 * subscriber.receive("hello")`?</h2>
+  <div>
+    <label class="answer155"><input type="checkbox" name="q155"> The `subscriber` entity should be invoked at least once with the method `receive` and argument `"hello"`</label><br>
+    <label class="answer155 correct155"><input type="checkbox" name="q155"> The `subscriber` entity should be invoked once and only once with the method `receive` and argument `"hello"`</label><br>
+    <label class="answer155"><input type="checkbox" name="q155"> The `subscriber` entity should be invoked two or more times with the method `receive` and argument `"hello"`</label><br>
+    <label class="answer155"><input type="checkbox" name="q155"> The `subscriber` entity cannot be invoked with the method `receive` and argument `"hello"`</label><br>
+    <button onclick="highlightCorrectAnswer(155)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 157: The Unit of Work pattern is often used in enterprise applications:</h2>
+  <div>
+    <label class="answer157"><input type="checkbox" name="q157"> To implement each of the services that are executed whenever the client makes a request to the server.</label><br>
+    <label class="answer157"><input type="checkbox" name="q157"> To improve the server performance by maintaining a cache of the objects most accessed during the processing of a client request.</label><br>
+    <label class="answer157"><input type="checkbox" name="q157"> o split the computation required to process each request made by the client in smaller units of work that are parallelizable.</label><br>
+    <label class="answer157 correct157"><input type="checkbox" name="q157"> To keep a record of changes made to the data during a business transaction and to coordinate the writing of these changes to the database.</label><br>
+    <button onclick="highlightCorrectAnswer(157)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 158: Which strategy can be followed to test a library?</h2>
+  <div>
+    <label class="answer158 correct158"><input type="checkbox" name="q158"> Black box</label><br>
+    <label class="answer158"><input type="checkbox" name="q158"> White box</label><br>
+    <label class="answer158"><input type="checkbox" name="q158"> Black box and white box</label><br>
+    <label class="answer158"><input type="checkbox" name="q158"> All options are false</label><br>
+    <button onclick="highlightCorrectAnswer(158)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 162: Which of the following architectural patterns reduces the number of dependencies between the system modules?</h2>
+  <div>
+    <label class="answer162"><input type="checkbox" name="q162"> Client-server pattern.</label><br>
+    <label class="answer162"><input type="checkbox" name="q162"> Repository pattern.</label><br>
+    <label class="answer162 correct162"><input type="checkbox" name="q162"> Layered pattern.</label><br>
+    <label class="answer162"><input type="checkbox" name="q162"> Pipe-and-Filter pattern.</label><br>
+    <button onclick="highlightCorrectAnswer(162)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 163: What characterizes the process view of a software architecture?</h2>
+  <div>
+    <label class="answer163"><input type="checkbox" name="q163"> It shows how the software is decomposed for development.</label><br>
+    <label class="answer163"><input type="checkbox" name="q163"> It shows the system hardware and how software components are distributed across the processors in the system.</label><br>
+    <label class="answer163"><input type="checkbox" name="q163"> Relates the system requirements with its entities.</label><br>
+    <label class="answer163 correct163"><input type="checkbox" name="q163"> It is useful for making judgments about non-functional system characteristics.</label><br>
+    <button onclick="highlightCorrectAnswer(163)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 164: Which data source pattern hides the database structure from the domain logic?</h2>
+  <div>
+    <label class="answer164"><input type="checkbox" name="q164"> Table Data Gateway.</label><br>
+    <label class="answer164"><input type="checkbox" name="q164"> Row Data Gateway.</label><br>
+    <label class="answer164"><input type="checkbox" name="q164"> Active Record.</label><br>
+    <label class="answer164 correct164"><input type="checkbox" name="q164"> Data Mapper.</label><br>
+    <button onclick="highlightCorrectAnswer(164)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 165: What is the relation between design and implementation?</h2>
+  <div>
+    <label class="answer165"><input type="checkbox" name="q165"> The design should preserve the structure of the code.</label><br>
+    <label class="answer165 correct165"><input type="checkbox" name="q165"> The implementation can take advantage of the specificities of the programming language.</label><br>
+    <label class="answer165"><input type="checkbox" name="q165"> Refactorings occur during design but not during implementation.</label><br>
+    <label class="answer165"><input type="checkbox" name="q165"> All options are true.</label><br>
+    <button onclick="highlightCorrectAnswer(165)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 172: What is the difference between user and system requirements?</h2>
+  <div>
+    <label class="answer172 correct172"><input type="checkbox" name="q172"> Just the system requirements part of the contract between the system buyer and the software developers.</label><br>
+    <label class="answer172"><input type="checkbox" name="q172"> Just the system requirements describe the services to be provided to the system users.</label><br>
+    <label class="answer172"><input type="checkbox" name="q172"> Just the system requirements describe the constraints under which the system must operate.</label><br>
+    <label class="answer172"><input type="checkbox" name="q172"> Just user requirements describe how the business problem is going to the solved.</label><br>
+    <button onclick="highlightCorrectAnswer(172)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 173: Considering the qualities of software design, which of the following sentences is true?</h2>
+  <div>
+    <label class="answer173"><input type="checkbox" name="q173"> Coupling is a symmetric property.</label><br>
+    <label class="answer173"><input type="checkbox" name="q173"> High cohesion increases the probability of propagation of change.</label><br>
+    <label class="answer173"><input type="checkbox" name="q173"> High cohesion implies low coupling.</label><br>
+    <label class="answer173 correct173"><input type="checkbox" name="q173"> A good design should have high cohesion and low coupling.</label><br>
+    <button onclick="highlightCorrectAnswer(173)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 175: Ruby on Rails is a popular full-stack framework for building web applications. One of the elements of this framework is the **model**, which is described in the Rails documentation in the following way:</h2>
+  <p>*"A model represents the information (data) of the application and the rules to manipulate that data. In the case of Rails, models are primarily used for managing the rules of interaction 
+    with a corresponding database table. In most cases, one table in your database will correspond to one model in your application. The bulk of your application's business logic will be concentrated in the models."*</p>
+    <p>Given this description, the Rails' model is best described as an instance of</p>
+    <div>
+    <label class="answer175"><input type="checkbox" name="q175"> The Service Layer pattern.</label><br>
+    <label class="answer175"><input type="checkbox" name="q175"> The Transaction Script pattern.</label><br>
+    <label class="answer175"><input type="checkbox" name="q175"> The Data Mapper pattern.</label><br>
+    <label class="answer175 correct175"><input type="checkbox" name="q175"> The Active Record pattern.</label><br>
+    <button onclick="highlightCorrectAnswer(175)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 176: Considering the Identity Field pattern of the Object-Relational Structural Patterns, when choosing which key to use which aspects should be considered?</h2>
+  <div>
+    <label class="answer176"><input type="checkbox" name="q176"> Whether the key is or not meaningful.</label><br>
+    <label class="answer176"><input type="checkbox" name="q176"> Whether it is a simple or compound key.</label><br>
+    <label class="answer176"><input type="checkbox" name="q176"> Whether the key is table-unique or database-unique.</label><br>
+    <label class="answer176 correct176"><input type="checkbox" name="q176"> All options are true.</label><br>
+    <button onclick="highlightCorrectAnswer(176)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 181: Which adaptation technique is used by Frameworks?</h2>
+  <div>
+    <label class="answer181"><input type="checkbox" name="q181"> Parameterization.</label><br>
+    <label class="answer181 correct181"><input type="checkbox" name="q181"> Extension.</label><br>
+    <label class="answer181"><input type="checkbox" name="q181"> Selection.</label><br>
+    <label class="answer181"><input type="checkbox" name="q181"> Writing sentences.</label><br>
+    <button onclick="highlightCorrectAnswer(181)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 183: What can be done in Comprehensive refactoring?</h2>
+  <div>
+    <label class="answer183"><input type="checkbox" name="q183"> Improve the understandability of the code.</label><br>
+    <label class="answer183"><input type="checkbox" name="q183"> Extract a method.</label><br>
+    <label class="answer183"><input type="checkbox" name="q183"> Rename a variable.</label><br>
+    <label class="answer183 correct183"><input type="checkbox" name="q183"> All options are true.</label><br>
+    <button onclick="highlightCorrectAnswer(183)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 186: What is the desirable trade-off in a code review?</h2>
+  <div>
+    <label class="answer186 correct186"><input type="checkbox" name="q186"> It is better to provide quick feedback than a perfect review that addresses all aspects</label><br>
+    <label class="answer186"><input type="checkbox" name="q186"> It is better to suggest higher levels of abstraction than simplicity in the code</label><br>
+    <label class="answer186"><input type="checkbox" name="q186"> All options are false</label><br>
+    <label class="answer186"><input type="checkbox" name="q186"> It is better to demand that all comments are followed than write comments that can be optionally followed</label><br>
+    <button onclick="highlightCorrectAnswer(186)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 188: Which of the following is not one of the principles behind the maintainability guidelines?</h2>
+  <div>
+    <label class="answer188"><input type="checkbox" name="q188"> Maintainability is not an afterthought, and every contribution counts.</label><br>
+    <label class="answer188"><input type="checkbox" name="q188"> Some violations are worse than others.</label><br>
+    <label class="answer188 correct188"><input type="checkbox" name="q188"> Maintainability benefits most from complex guidelines.</label><br>
+    <label class="answer188"><input type="checkbox" name="q188"> All other options are principles behind the maintainability guidelines.</label><br>
+    <button onclick="highlightCorrectAnswer(188)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 189: When the domain logic is organized using a Transaction Script pattern which are the most suitable data source patterns?</h2>
+  <div>
+    <label class="answer189"><input type="checkbox" name="q189"> Row Data Gateway and Active Record.</label><br>
+    <label class="answer189"><input type="checkbox" name="q189"> Row Data Gateway and Data Mapper.</label><br>
+    <label class="answer189"><input type="checkbox" name="q189"> Active Record and Data Mapper.</label><br>
+    <label class="answer189 correct189"><input type="checkbox" name="q189"> Table Data Gateway and Row Data Gateway.</label><br>
+    <button onclick="highlightCorrectAnswer(189)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 191: Consider the template method design pattern.</h2>
+  <div>
+    <label class="answer191"><input type="checkbox" name="q191"> The is a strong coupling between the subclass and the superclass.</label><br>
+    <label class="answer191"><input type="checkbox" name="q191"> The super class is cohesive in the definition of the structure of the algorithm.</label><br>
+    <label class="answer191"><input type="checkbox" name="q191"> The sub classes are cohesive in the parts of the algorithm.</label><br>
+    <label class="answer191 correct191"><input type="checkbox" name="q191"> All options are true.</label><br>
+    <button onclick="highlightCorrectAnswer(191)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 192: In which phase of the requirements elicitation and analysis process compromisses are sought between the stakeholders?</h2>
+  <div>
+    <label class="answer192"><input type="checkbox" name="q192"> Requirements discovery and understanding.</label><br>
+    <label class="answer192"><input type="checkbox" name="q192"> Requirements classification and organization.</label><br>
+    <label class="answer192 correct192"><input type="checkbox" name="q192"> Requirements prioritization and negotiation.</label><br>
+    <label class="answer192"><input type="checkbox" name="q192"> Requirements documentation.</label><br>
+    <button onclick="highlightCorrectAnswer(192)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 193: In Quality Assurance in Production what is the goal of Dashboards?</h2>
+  <div>
+    <label class="answer193 correct193"><input type="checkbox" name="q193"> Make data more easily consumable.</label><br>
+    <label class="answer193"><input type="checkbox" name="q193"> Logging information in log files.</label><br>
+    <label class="answer193"><input type="checkbox" name="q193"> Test interfaces.</label><br>
+    <label class="answer193"><input type="checkbox" name="q193"> All options are false.</label><br>
+    <button onclick="highlightCorrectAnswer(193)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 194: Considering the qualities of software design, which of the following sentences is false?</h2>
+  <div>
+    <label class="answer194"><input type="checkbox" name="q194"> Coupling is an asymmetric property.</label><br>
+    <label class="answer194 correct194"><input type="checkbox" name="q194"> Cohesion is an asymmetric property.</label><br>
+    <label class="answer194"><input type="checkbox" name="q194"> The level of coupling depends on the quality of abstractions.</label><br>
+    <label class="answer194"><input type="checkbox" name="q194"> High cohesion decreases the probability of propagation of change.</label><br>
+    <button onclick="highlightCorrectAnswer(194)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 195: What is an exemple of an organizational non-functional requirement?</h2>
+  <div>
+    <label class="answer195"><input type="checkbox" name="q195"> A usability requirement.</label><br>
+    <label class="answer195"><input type="checkbox" name="q195"> An ethical requirement.</label><br>
+    <label class="answer195"><input type="checkbox" name="q195"> Security  requirement.</label><br>
+    <label class="answer195 correct195"><input type="checkbox" name="q195"> The programming language to use.</label><br>
+    <button onclick="highlightCorrectAnswer(195)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 196: Concerning test doubles, which of the following sentences is false?</h2>
+  <div>
+    <label class="answer196 correct196"><input type="checkbox" name="q196"> They do not support unit testing</label><br>
+    <label class="answer196"><input type="checkbox" name="q196"> They reduce dependencies between teams</label><br>
+    <label class="answer196"><input type="checkbox" name="q196"> They reduce the overhead of testing set up</label><br>
+    <label class="answer196"><input type="checkbox" name="q196"> They allow the simulation of infrequent, or difficult to generate, test cases</label><br>
+    <button onclick="highlightCorrectAnswer(196)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 199: Consider the operation push of a stack of integer, which adds an element to the stack, but throws an exception if the stack is full. How many test cases should be considered if the equivalence partitioning technique is followed?</h2>
+  <div>
+    <label class="answer199"><input type="checkbox" name="q199"> 3</label><br>
+    <label class="answer199"><input type="checkbox" name="q199"> 4</label><br>
+    <label class="answer199"><input type="checkbox" name="q199"> 1</label><br>
+    <label class="answer199 correct199"><input type="checkbox" name="q199"> 2</label><br>
+    <button onclick="highlightCorrectAnswer(199)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 201: In which of the following systems we can apply the quality assurance in production approach?</h2>
+  <div>
+    <label class="answer201 correct201"><input type="checkbox" name="q201"> Facebook.</label><br>
+    <label class="answer201"><input type="checkbox" name="q201"> Insulin pump.</label><br>
+    <label class="answer201"><input type="checkbox" name="q201"> Air control.</label><br>
+    <label class="answer201"><input type="checkbox" name="q201"> All options are false.</label><br>
+    <button onclick="highlightCorrectAnswer(201)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 203: What characterizes functional and non-functional requirements?</h2>
+  <div>
+    <label class="answer203"><input type="checkbox" name="q203"> Functional requirements describe constraints to the system behavior.</label><br>
+    <label class="answer203"><input type="checkbox" name="q203"> Non-functional requirements describe what the system should do.</label><br>
+    <label class="answer203"><input type="checkbox" name="q203"> Functional requirements include the definition of the expected level of performance.</label><br>
+    <label class="answer203 correct203"><input type="checkbox" name="q203"> All other options are false.</label><br>
+    <button onclick="highlightCorrectAnswer(203)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 204: Which of the following architectural patterns is easy to understand and supports transformation reuse?</h2>
+  <div>
+    <label class="answer204"><input type="checkbox" name="q204"> Layered pattern.</label><br>
+    <label class="answer204"><input type="checkbox" name="q204"> Client-server pattern.</label><br>
+    <label class="answer204 correct204"><input type="checkbox" name="q204"> Pipe-and-Filter pattern.</label><br>
+    <label class="answer204"><input type="checkbox" name="q204"> Repository pattern.</label><br>
+    <button onclick="highlightCorrectAnswer(204)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 205: When you have to change you database persistence framework, for instance, from JPA to direct accesses to the database, which workflow of refactoring should be followed?</h2>
+  <div>
+    <label class="answer205"><input type="checkbox" name="q205"> Litter-pickup.</label><br>
+    <label class="answer205"><input type="checkbox" name="q205"> Preparatory refactoring.</label><br>
+    <label class="answer205"><input type="checkbox" name="q205"> Planned refactoring</label><br>
+    <label class="answer205 correct205"><input type="checkbox" name="q205"> Long-Term Refactoring.</label><br>
+    <button onclick="highlightCorrectAnswer(205)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 209: Consider the Unit of Work pattern of the Object-Relational Behavioral Patterns of the Enterprise Applications architecture. Which registration strategy places the registration of which are the changed objects in the setter methods?</h2>
+  <div>
+    <label class="answer209"><input type="checkbox" name="q209"> Unit of work controller.</label><br>
+    <label class="answer209"><input type="checkbox" name="q209"> Class registration.</label><br>
+    <label class="answer209"><input type="checkbox" name="q209"> Caller registration.</label><br>
+    <label class="answer209 correct209"><input type="checkbox" name="q209"> Object registration.</label><br>
+    <button onclick="highlightCorrectAnswer(209)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 211: Which git command triggers an interaction between the staging area and the local repository?</h2>
+  <div>
+    <label class="answer211 correct211"><input type="checkbox" name="q211"> git commit</label><br>
+    <label class="answer211"><input type="checkbox" name="q211"> git add</label><br>
+    <label class="answer211"><input type="checkbox" name="q211"> git push</label><br>
+    <label class="answer211"><input type="checkbox" name="q211"> git fetch</label><br>
+    <button onclick="highlightCorrectAnswer(211)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 216: Consider the Web Presentation patterns of the Enterprise Application Architecture. Which pattern allows a detailed customization of the style of a presentation page, done page by page?</h2>
+  <div>
+    <label class="answer216 correct216"><input type="checkbox" name="q216"> Template View pattern.</label><br>
+    <label class="answer216"><input type="checkbox" name="q216"> Transform View pattern.</label><br>
+    <label class="answer216"><input type="checkbox" name="q216"> Front Controller pattern.</label><br>
+    <label class="answer216"><input type="checkbox" name="q216"> Page Controller pattern.</label><br>
+    <button onclick="highlightCorrectAnswer(216)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 218: Which design principle states that *High-level modules should depend on low-level modules*.</h2>
+  <div>
+    <label class="answer218"><input type="checkbox" name="q218"> Dependency Inversion Principle.</label><br>
+    <label class="answer218"><input type="checkbox" name="q218"> Open Close Principle.</label><br>
+    <label class="answer218"><input type="checkbox" name="q218"> Liskov's Substitution Principle.</label><br>
+    <label class="answer218 correct218"><input type="checkbox" name="q218"> All options are false.</label><br>
+    <button onclick="highlightCorrectAnswer(218)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 219: Having a small product, project, and team is a success factor as far as maintainability is concerned. Which guideline helps in achieving this?</h2>
+  <div>
+    <label class="answer219"><input type="checkbox" name="q219"> Write Short Units of Code.</label><br>
+    <label class="answer219"><input type="checkbox" name="q219"> Separate Concerns in Modules.</label><br>
+    <label class="answer219 correct219"><input type="checkbox" name="q219"> Keep Your Codebase Small.</label><br>
+    <label class="answer219"><input type="checkbox" name="q219"> Write Simple Units of Code.</label><br>
+    <button onclick="highlightCorrectAnswer(219)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 222: Which are the roles in Scrum?</h2>
+  <div>
+    <label class="answer222"><input type="checkbox" name="q222"> Product owner</label><br>
+    <label class="answer222"><input type="checkbox" name="q222"> Developer</label><br>
+    <label class="answer222"><input type="checkbox" name="q222"> Scrum master</label><br>
+    <label class="answer222 correct222"><input type="checkbox" name="q222"> All options are true</label><br>
+    <button onclick="highlightCorrectAnswer(222)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 223: Consider the following code of the refactoring of the rental application. What should be done in this phase, related with ```thisAmount```?</h2>
+  <div>
+    <label class="answer223"> <pre>     double totalAmount = 0;
+      int frequentRenterPoints = 0;
+      String result = "Rental Record for " + getName() + "\n";
+      for (Rental rental : rentals) {
+          double thisAmount = 0;
+
+          thisAmount = rental.getCharge();
+
+          // add frequent renter points
+          frequentRenterPoints ++;
+          // add bonus for a two day new release rental
+          if ((rental.getMovie().getPriceCode() == Movie.NEW_RELEASE)
+              && rental.getDaysRented() > 1)
+            frequentRenterPoints ++;
+
+          //show figures for this rental
+          result += "\t" + rental.getMovie().getTitle()+ "\t"
+                        + String.valueOf(thisAmount) + "\n";
+          totalAmount += thisAmount;
+      }</pre></label>
+    <label class="answer223"><input type="checkbox" name="q223"> Extract method to the Movie class.</label><br>
+    <label class="answer223"><input type="checkbox" name="q223"> All options are false.</label><br>
+    <label class="answer223 correct223"><input type="checkbox" name="q223"> Replace temp with query.</label><br>
+    <label class="answer223"><input type="checkbox" name="q223"> Extract method to the Rental class.</label><br>
+    <button onclick="highlightCorrectAnswer(223)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 224: Consider the following code of the refactoring of the rental application. What should be done in this phase, related with ```rental.getMovie().getPriceCode()```?</h2>
+  <pre>class Customer...
+    private double amountFor(Rental rental) {
+        double result = 0;
+        switch (rental.getMovie().getPriceCode()) {
+            case Movie.REGULAR:
+                result += 2;
+                if (rental.getDaysRented() > 2)
+                    result += (rental.getDaysRented() - 2) * 1.5;
+                break;
+            case Movie.NEW_RELEASE:
+                result += rental.getDaysRented() * 3;
+                break;
+            case Movie.CHILDREN:
+                result += 1.5;
+                if (rental.getDaysRented() > 3)
+                    result += (rental.getDaysRented() - 3) * 1.5;
+                break;
+  
+        }
+        return result;
+    }</pre>
+  <div>
+    <label class="answer224"><input type="checkbox" name="q224"> Replace temp with query.</label><br>
+    <label class="answer224"><input type="checkbox" name="q224"> Extract method to the Movie class.</label><br>
+    <label class="answer224 correct224"><input type="checkbox" name="q224"> Extract method to the Rental class.</label><br>
+    <label class="answer224"><input type="checkbox" name="q224"> All options are false.</label><br>
+    <button onclick="highlightCorrectAnswer(224)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 225: Consider the following code of the introduce null object refactoring.</h2>
+  <pre>Customer getCustomer() {
+    return (customer == null) ? Customer.newNull() : customer;
+  }</pre>
+  <p>What is the purpose of this code?</p>
+  <div>
+    <label class="answer225 correct225"><input type="checkbox" name="q225"> To replace null reference by null objects.</label><br>
+    <label class="answer225"><input type="checkbox" name="q225"> To check that ```newNull()``` method is correctly implemented.</label><br>
+    <label class="answer225"><input type="checkbox" name="q225"> All options are false.</label><br>
+    <label class="answer225"><input type="checkbox" name="q225"> To check if the correct plan information is generated.</label><br>
+    <button onclick="highlightCorrectAnswer(225)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 226: Which of the following is/are a misunderstanding(s) about maintainability?</h2>
+  <div>
+    <label class="answer226"><input type="checkbox" name="q226"> Maintainability is industry-dependent.</label><br>
+    <label class="answer226"><input type="checkbox" name="q226"> Maintainability is the same as the absence of bugs.</label><br>
+    <label class="answer226"><input type="checkbox" name="q226"> Maintainability is a binary quantity.</label><br>
+    <label class="answer226 correct226"><input type="checkbox" name="q226"> All options are correct.</label><br>
+    <button onclick="highlightCorrectAnswer(226)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 230: What is the result of the *git merge issue55* command when the HEAD is in master and master is a predecessor of issue55?</h2>
+  <div>
+    <label class="answer230 correct230"><input type="checkbox" name="q230"> It does a fast forward of master with master and issue55 pointing to the same point</label><br>
+    <label class="answer230"><input type="checkbox" name="q230"> It does a fast forward of issue55 with master and issue55 pointing to the same point</label><br>
+    <label class="answer230"><input type="checkbox" name="q230"> It moves the HEAD to branch issue55</label><br>
+    <label class="answer230"><input type="checkbox" name="q230"> All options are false</label><br>
+    <button onclick="highlightCorrectAnswer(230)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 231: Consider the Unit of Work pattern of the Object-Relational Behavioral Patterns of the Enterprise Applications architecture. Which registration strategy only registers the reads of objects from the database?</h2>
+  <div>
+    <label class="answer231"><input type="checkbox" name="q231"> Caller registration.</label><br>
+    <label class="answer231"><input type="checkbox" name="q231"> Class registration.</label><br>
+    <label class="answer231"><input type="checkbox" name="q231"> Object registration.</label><br>
+    <label class="answer231 correct231"><input type="checkbox" name="q231"> Unit of work controller.</label><br>
+    <button onclick="highlightCorrectAnswer(231)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 232: What is the objetive of a code review?</h2>
+  <div>
+    <label class="answer232"><input type="checkbox" name="q232"> Improve the code to the point where it cannot be improved anymore</label><br>
+    <label class="answer232"><input type="checkbox" name="q232"> Find the reponsible for bugs</label><br>
+    <label class="answer232 correct232"><input type="checkbox" name="q232"> Share knowledge among the team</label><br>
+    <label class="answer232"><input type="checkbox" name="q232"> Introduce higher level abstractions in the code</label><br>
+    <button onclick="highlightCorrectAnswer(232)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 233: What characterizes the Sprint of the Scrum approach?</h2>
+  <div>
+    <label class="answer233"><input type="checkbox" name="q233"> It has a fixed duration</label><br>
+    <label class="answer233"><input type="checkbox" name="q233"> It is managed according to the team velocity</label><br>
+    <label class="answer233 correct233"><input type="checkbox" name="q233"> All options are true</label><br>
+    <label class="answer233"><input type="checkbox" name="q233"> It has as goal to provide value to the end users</label><br>
+    <button onclick="highlightCorrectAnswer(233)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 236: Which git command triggers an interaction between the workspace and the staging area?</h2>
+  <div>
+    <label class="answer236"><input type="checkbox" name="q236"> git commit</label><br>
+    <label class="answer236 correct236"><input type="checkbox" name="q236"> git add</label><br>
+    <label class="answer236"><input type="checkbox" name="q236"> git push</label><br>
+    <label class="answer236"><input type="checkbox" name="q236"> git fetch</label><br>
+    <button onclick="highlightCorrectAnswer(236)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 238: How Extreme Programming method deals with software project cancelation because management find the system not relevant?</h2>
+  <div>
+    <label class="answer238"><input type="checkbox" name="q238"> The system is frequently tested.</label><br>
+    <label class="answer238"><input type="checkbox" name="q238"> Programmers estimate their work duration.</label><br>
+    <label class="answer238 correct238"><input type="checkbox" name="q238"> Functionalities that have the biggest business impact are implemented first.</label><br>
+    <label class="answer238"><input type="checkbox" name="q238"> The project is divided into several small duration releases.</label><br>
+    <button onclick="highlightCorrectAnswer(238)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 239: What characterizes system requirements?</h2>
+  <div>
+    <label class="answer239"><input type="checkbox" name="q239"> Are part of the contract between the system buyer and the software developers.</label><br>
+    <label class="answer239"><input type="checkbox" name="q239"> Describe the services to be provided to the system users.</label><br>
+    <label class="answer239"><input type="checkbox" name="q239"> Describe the constraints under which the system must operate.</label><br>
+    <label class="answer239 correct239"><input type="checkbox" name="q239"> All options are true.</label><br>
+    <button onclick="highlightCorrectAnswer(239)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 240: In which phase of the requirements elicitation and analysis process interviews occur?</h2>
+  <div>
+    <label class="answer240 correct240"><input type="checkbox" name="q240"> Requirements discovery and understanding.</label><br>
+    <label class="answer240"><input type="checkbox" name="q240"> Requirements classification and organization.</label><br>
+    <label class="answer240"><input type="checkbox" name="q240"> Requirements prioritization and negotiation.</label><br>
+    <label class="answer240"><input type="checkbox" name="q240"> Requirements documentation.</label><br>
+    <button onclick="highlightCorrectAnswer(240)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 242: Which is a responsibility of the Scrum master?</h2>
+  <div>
+    <label class="answer242"><input type="checkbox" name="q242"> Define the value of stories</label><br>
+    <label class="answer242"><input type="checkbox" name="q242"> Define the complexity of stories</label><br>
+    <label class="answer242"><input type="checkbox" name="q242"> Accept stories implementation</label><br>
+    <label class="answer242 correct242"><input type="checkbox" name="q242"> Help developers to focus on development activities</label><br>
+    <button onclick="highlightCorrectAnswer(242)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 244: Which type of interface allows higher cohesion?</h2>
+  <div>
+    <label class="answer244"><input type="checkbox" name="q244"> Contains complex entities as parameters.</label><br>
+    <label class="answer244"><input type="checkbox" name="q244"> Only contains simple data types.</label><br>
+    <label class="answer244"><input type="checkbox" name="q244"> Exposes attributes.</label><br>
+    <label class="answer244 correct244"><input type="checkbox" name="q244"> It is not possible to infer the cohesion level from these types of interface.</label><br>
+    <button onclick="highlightCorrectAnswer(244)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 249: Consider the Identity Map pattern of the Object-relational Behavorial patterns. What is the advantage of locating them in the Unit of Work?</h2>
+  <div>
+    <label class="answer249 correct249"><input type="checkbox" name="q249"> It does not require transactional protection.</label><br>
+    <label class="answer249"><input type="checkbox" name="q249"> It can support read-only objects across sessions.</label><br>
+    <label class="answer249"><input type="checkbox" name="q249"> It can support read-write objects across sessions.</label><br>
+    <label class="answer249"><input type="checkbox" name="q249"> All options are true.</label><br>
+    <button onclick="highlightCorrectAnswer(249)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 250: Which data source pattern provides an interface to the domain layer where the interactions are done based on recordsets?</h2>
+  <div>
+    <label class="answer250"><input type="checkbox" name="q250"> Row Data Gateway.</label><br>
+    <label class="answer250"><input type="checkbox" name="q250"> Active Record.</label><br>
+    <label class="answer250 correct250"><input type="checkbox" name="q250"> Table Data Gateway.</label><br>
+    <label class="answer250"><input type="checkbox" name="q250"> Data Mapper.</label><br>
+    <button onclick="highlightCorrectAnswer(250)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 252: What is the goal of the Remote Façade pattern?</h2>
+  <div>
+    <label class="answer252"><input type="checkbox" name="q252"> Support a object-oriented interaction paradigm.</label><br>
+    <label class="answer252 correct252"><input type="checkbox" name="q252"> Improve efficiency over a network.</label><br>
+    <label class="answer252"><input type="checkbox" name="q252"> Reduce the number of objects transferred between two remote nodes.</label><br>
+    <label class="answer252"><input type="checkbox" name="q252"> Implement a Transaction Script pattern.</label><br>
+    <button onclick="highlightCorrectAnswer(252)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 254: What does not characterize the test-driven development approach?</h2>
+  <div>
+    <label class="answer254"><input type="checkbox" name="q254"> It is test-first.</label><br>
+    <label class="answer254"><input type="checkbox" name="q254"> It does bottom-up design.</label><br>
+    <label class="answer254"><input type="checkbox" name="q254"> All options characterize test-driven development.</label><br>
+    <label class="answer254 correct254"><input type="checkbox" name="q254"> While adding functionality, the structure of the code is also improved.</label><br>
+    <button onclick="highlightCorrectAnswer(254)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 255: In the model-view-controller what is the relation between the model and the view?</h2>
+  <div>
+    <label class="answer255 correct255"><input type="checkbox" name="q255"> Is like the relation between the subject and the observer in the Observer pattern.</label><br>
+    <label class="answer255"><input type="checkbox" name="q255"> Is like the relation between the observer and the subject in the Observer pattern.</label><br>
+    <label class="answer255"><input type="checkbox" name="q255"> All option are false.</label><br>
+    <label class="answer255"><input type="checkbox" name="q255"> The model is strongly coupled to the view.</label><br>
+    <button onclick="highlightCorrectAnswer(255)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 256: In a Spock test the *given:* block is</h2>
+  <div>
+    <label class="answer256 correct256"><input type="checkbox" name="q256"> part of the definition of the context of the test</label><br>
+    <label class="answer256"><input type="checkbox" name="q256"> where the stimulus of the test occurs</label><br>
+    <label class="answer256"><input type="checkbox" name="q256"> where the response is verified</label><br>
+    <label class="answer256"><input type="checkbox" name="q256"> All options are false</label><br>
+    <button onclick="highlightCorrectAnswer(256)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 257: Who is the responsible for doing the component tests?</h2>
+  <div>
+    <label class="answer257"><input type="checkbox" name="q257"> Quality assurance team</label><br>
+    <label class="answer257 correct257"><input type="checkbox" name="q257"> Developers</label><br>
+    <label class="answer257"><input type="checkbox" name="q257"> Users</label><br>
+    <label class="answer257"><input type="checkbox" name="q257"> All the stakeholders</label><br>
+    <button onclick="highlightCorrectAnswer(257)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 258: What characterizes functional and non-functional requirements?</h2>
+  <div>
+    <label class="answer258"><input type="checkbox" name="q258"> Functional requirements describe constraints to the system behavior.</label><br>
+    <label class="answer258"><input type="checkbox" name="q258"> Non-functional requirements describe what the system should do.</label><br>
+    <label class="answer258"><input type="checkbox" name="q258"> Functional requirements include the definition of the expected level of performance.</label><br>
+    <label class="answer258 correct258"><input type="checkbox" name="q258"> Non-functional requirements may generate new functional requirements.</label><br>
+    <button onclick="highlightCorrectAnswer(258)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 260: Considering the command design pattern.</h2>
+  <div>
+    <label class="answer260"><input type="checkbox" name="q260"> The client, which creates the commands, has low coupling to the concrete command.</label><br>
+    <label class="answer260"><input type="checkbox" name="q260"> The concrete commands have low cohesion.</label><br>
+    <label class="answer260 correct260"><input type="checkbox" name="q260"> The here is low coupling between the invoker and the concrete command.</label><br>
+    <label class="answer260"><input type="checkbox" name="q260"> All options are false.</label><br>
+    <button onclick="highlightCorrectAnswer(260)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 262: What does not characterize the test-driven development approach?</h2>
+  <div>
+    <label class="answer262"><input type="checkbox" name="q262"> It is test-first.</label><br>
+    <label class="answer262"><input type="checkbox" name="q262"> It does bottom-up design.</label><br>
+    <label class="answer262"><input type="checkbox" name="q262"> All options characterize test-driven development.</label><br>
+    <label class="answer262 correct262"><input type="checkbox" name="q262"> The tests always pass.</label><br>
+    <button onclick="highlightCorrectAnswer(262)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 263: Who is the responsible for doing the release tests?</h2>
+  <div>
+    <label class="answer263 correct263"><input type="checkbox" name="q263"> Quality assurance team</label><br>
+    <label class="answer263"><input type="checkbox" name="q263"> Developers</label><br>
+    <label class="answer263"><input type="checkbox" name="q263"> Users</label><br>
+    <label class="answer263"><input type="checkbox" name="q263"> All the stakeholders</label><br>
+    <button onclick="highlightCorrectAnswer(263)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 265: Which git command triggers an interaction between the local repository and the remote repository?</h2>
+  <div>
+    <label class="answer265"><input type="checkbox" name="q265"> git commit</label><br>
+    <label class="answer265"><input type="checkbox" name="q265"> git add</label><br>
+    <label class="answer265 correct265"><input type="checkbox" name="q265"> git push</label><br>
+    <label class="answer265"><input type="checkbox" name="q265"> git reset</label><br>
+    <button onclick="highlightCorrectAnswer(265)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 266: What is tested in object testing?</h2>
+  <div>
+    <label class="answer266"><input type="checkbox" name="q266"> All methods of the class in isolation</label><br>
+    <label class="answer266"><input type="checkbox" name="q266"> The sequences of methods invocations that start with public methods and invoke private methods afterwards</label><br>
+    <label class="answer266 correct266"><input type="checkbox" name="q266"> In modal classes the sequences of methods inferred from the analysis of the class state machine</label><br>
+    <label class="answer266"><input type="checkbox" name="q266"> All options are true</label><br>
+    <button onclick="highlightCorrectAnswer(266)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 267: What is not an advantage of test doubles?</h2>
+  <div>
+    <label class="answer267"><input type="checkbox" name="q267"> Isolate units</label><br>
+    <label class="answer267"><input type="checkbox" name="q267"> Reduce dependencies between teams</label><br>
+    <label class="answer267"><input type="checkbox" name="q267"> Reduce the overhead of testing set up</label><br>
+    <label class="answer267 correct267"><input type="checkbox" name="q267"> All options are false</label><br>
+    <button onclick="highlightCorrectAnswer(267)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 268: Considering the Identity Field pattern of the Object-Relational Structural Patterns, what is the disadvantage of generating the key in a different transaction than the one where the object is being created?</h2>
+  <div>
+    <label class="answer268 correct268"><input type="checkbox" name="q268"> May result that some of the generated keys are lost.</label><br>
+    <label class="answer268"><input type="checkbox" name="q268"> It cannot be used with table-unique keys.</label><br>
+    <label class="answer268"><input type="checkbox" name="q268"> It cannot be used with database-unique keys.</label><br>
+    <label class="answer268"><input type="checkbox" name="q268"> Reduces the contention between the different business transactions.</label><br>
+    <button onclick="highlightCorrectAnswer(268)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 270: The Service Layer pattern is typically used in conjunction with:</h2>
+  <div>
+    <label class="answer270"><input type="checkbox" name="q270"> The Transaction Script pattern to help demarcate the business transactions.</label><br>
+    <label class="answer270"><input type="checkbox" name="q270"> The Data Access layer to be able to access the data that it needs in each service.</label><br>
+    <label class="answer270"><input type="checkbox" name="q270"> The Table Module pattern to hide the details of the table structure for the Presentation layer.</label><br>
+    <label class="answer270 correct270"><input type="checkbox" name="q270"> The Domain Model pattern to reduce the interface of the Domain Logic layer to a controlled set.</label><br>
+    <button onclick="highlightCorrectAnswer(270)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 273: Consider the Front Controller pattern of the Enterprise Application Architecture. Which GoF design pattern is used in the design of the Front Controller pattern?</h2>
+  <div>
+    <label class="answer273 correct273"><input type="checkbox" name="q273"> Command design pattern.</label><br>
+    <label class="answer273"><input type="checkbox" name="q273"> Strategy design pattern.</label><br>
+    <label class="answer273"><input type="checkbox" name="q273"> Interpreter design pattern.</label><br>
+    <label class="answer273"><input type="checkbox" name="q273"> Observer design pattern.</label><br>
+    <button onclick="highlightCorrectAnswer(273)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 274: In which situations the code should be commented?</h2>
+  <div>
+    <label class="answer274"><input type="checkbox" name="q274"> The code is readable and cannot be refactored.</label><br>
+    <label class="answer274 correct274"><input type="checkbox" name="q274"> Implements an algorithm which is complex or have a known name.</label><br>
+    <label class="answer274"><input type="checkbox" name="q274"> All other options are false.</label><br>
+    <label class="answer274"><input type="checkbox" name="q274"> After codification to record what was done during implementation.</label><br>
+    <button onclick="highlightCorrectAnswer(274)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 276: Considering the qualities of software design, which of the following sentences is true?</h2>
+  <div>
+    <label class="answer276"><input type="checkbox" name="q276"> Cohesion is an asymmetric property.</label><br>
+    <label class="answer276"><input type="checkbox" name="q276"> Coupling is a symmetric property.</label><br>
+    <label class="answer276"><input type="checkbox" name="q276"> High cohesion implies low coupling.</label><br>
+    <label class="answer276 correct276"><input type="checkbox" name="q276"> High cohesion increases the probability of locality of change.</label><br>
+    <button onclick="highlightCorrectAnswer(276)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 277: What is the difference between system testing and release testing?</h2>
+  <div>
+    <label class="answer277"><input type="checkbox" name="q277"> System testing occurs in the development environment and release testing in the production environment</label><br>
+    <label class="answer277"><input type="checkbox" name="q277"> System testing is done by the quality assurance team and release testing by the users</label><br>
+    <label class="answer277 correct277"><input type="checkbox" name="q277"> System testing is done by the developers and release testing by the quality assurance team</label><br>
+    <label class="answer277"><input type="checkbox" name="q277"> The goal of system testing is validation and the goal of release testing is verification</label><br>
+    <button onclick="highlightCorrectAnswer(277)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 278: Which workflows of refactoring are opportunistic?</h2>
+  <div>
+    <label class="answer278 correct278"><input type="checkbox" name="q278"> Litter-pickup and Comprehension.</label><br>
+    <label class="answer278"><input type="checkbox" name="q278"> Litter-pickup and Preparatory refactoring.</label><br>
+    <label class="answer278"><input type="checkbox" name="q278"> Comprehension and Planned refactoring</label><br>
+    <label class="answer278"><input type="checkbox" name="q278"> Preparatory refactoring and Planned refactoring.</label><br>
+    <button onclick="highlightCorrectAnswer(278)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 280: Consider the Lazy Load pattern of the Object-relacional Behavioral Patterns. Which implementation technique may result in identity problems?</h2>
+  <div>
+    <label class="answer280"><input type="checkbox" name="q280"> Lazy initialization.</label><br>
+    <label class="answer280 correct280"><input type="checkbox" name="q280"> Virtual proxy.</label><br>
+    <label class="answer280"><input type="checkbox" name="q280"> Value holder.</label><br>
+    <label class="answer280"><input type="checkbox" name="q280"> Ghost.</label><br>
+    <button onclick="highlightCorrectAnswer(280)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 281: What characterizes the Sprint of the Scrum approach?</h2>
+  <div>
+    <label class="answer281 correct281"><input type="checkbox" name="q281"> It contains the stories to be implemented in the Sprint</label><br>
+    <label class="answer281"><input type="checkbox" name="q281"> It is the responsibility of the product owner</label><br>
+    <label class="answer281"><input type="checkbox" name="q281"> All options are true</label><br>
+    <label class="answer281"><input type="checkbox" name="q281"> The stories in it have a detailed description of the functionality to be implemented</label><br>
+    <button onclick="highlightCorrectAnswer(281)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 282: Which design principle states that *Modules should be closed for extension but open for modifications*.</h2>
+  <div>
+    <label class="answer282"><input type="checkbox" name="q282"> Dependency Inversion Principle.</label><br>
+    <label class="answer282"><input type="checkbox" name="q282"> Open Close Principle.</label><br>
+    <label class="answer282"><input type="checkbox" name="q282"> Interface Segregation Principle.</label><br>
+    <label class="answer282 correct282"><input type="checkbox" name="q282"> All options are false.</label><br>
+    <button onclick="highlightCorrectAnswer(282)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 283: Which is the meaning of the following Spock command `(_..3) * subscriber.receive("hello")`?</h2>
+  <div>
+    <label class="answer283"><input type="checkbox" name="q283"> The `subscriber` entity should be invoked at least once with the method `receive` and argument `"hello"`</label><br>
+    <label class="answer283 correct283"><input type="checkbox" name="q283"> The `subscriber` entity should be invoked at most 3 times with the method `receive` and argument `"hello"`</label><br>
+    <label class="answer283"><input type="checkbox" name="q283"> The `subscriber` entity should be invoked once and only once with the method `receive` and argument `"hello"`</label><br>
+    <label class="answer283"><input type="checkbox" name="q283"> The `subscriber` entity cannot be invoked with the method `receive` and argument `"hello"`</label><br>
+    <button onclick="highlightCorrectAnswer(283)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 284: Considering the inheritance mapping patterns of the Object-Relational Structural Patterns, which pattern generates tuples with null values?</h2>
+  <div>
+    <label class="answer284 correct284"><input type="checkbox" name="q284"> Single Table Inheritance.</label><br>
+    <label class="answer284"><input type="checkbox" name="q284"> Class Table Inheritance.</label><br>
+    <label class="answer284"><input type="checkbox" name="q284"> Concrete Table Inheritance.</label><br>
+    <label class="answer284"><input type="checkbox" name="q284"> Association Table Mapping.</label><br>
+    <button onclick="highlightCorrectAnswer(284)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 286: What is the relation between design and implementation?</h2>
+  <div>
+    <label class="answer286 correct286"><input type="checkbox" name="q286"> The implementation allows to rethink the design.</label><br>
+    <label class="answer286"><input type="checkbox" name="q286"> All implementation decisions are defined in the design.</label><br>
+    <label class="answer286"><input type="checkbox" name="q286"> The design should preserve the structure of the code.</label><br>
+    <label class="answer286"><input type="checkbox" name="q286"> The programming language that is used does not have impact on the implementation.</label><br>
+    <button onclick="highlightCorrectAnswer(286)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 287: One of the maintainability guidelines states the following:</h2>
+  <p>“Limit the number of branch points per unit to 4.”</p>
+    <p>Which of the following guidelines dictates this?</p>
+  <div>
+    <label class="answer287"><input type="checkbox" name="q287"> Keep your codebase small.</label><br>
+    <label class="answer287"><input type="checkbox" name="q287"> Keep unit interfaces small.</label><br>
+    <label class="answer287"><input type="checkbox" name="q287"> Write clean code.</label><br>
+    <label class="answer287 correct287"><input type="checkbox" name="q287"> Write simple units of code.</label><br>
+    <button onclick="highlightCorrectAnswer(287)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 288: What is a quality of software engineering from the developer's perspective?</h2>
+  <div>
+    <label class="answer288"><input type="checkbox" name="q288"> Performance</label><br>
+    <label class="answer288 correct288"><input type="checkbox" name="q288"> Maintainability</label><br>
+    <label class="answer288"><input type="checkbox" name="q288"> Availability</label><br>
+    <label class="answer288"><input type="checkbox" name="q288"> Usability</label><br>
+    <button onclick="highlightCorrectAnswer(288)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 289: Consider the function String finalResult(int grade) that given an integer returns "pass" if</h2>
+  <p>grade is between 10 and 20, "fail" if grade is between 0 and 9, and throws an exception for all other values of grade.
+     Which are values relevant for test cases designed according to the boundary value analysis technique?</p>
+  <div>
+    <label class="answer289"><input type="checkbox" name="q289"> 12</label><br>
+    <label class="answer289"><input type="checkbox" name="q289"> 8</label><br>
+    <label class="answer289 correct289"><input type="checkbox" name="q289"> 9</label><br>
+    <label class="answer289"><input type="checkbox" name="q289"> 30</label><br>
+    <button onclick="highlightCorrectAnswer(289)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 293: Which reuse technique distinguishes between common and variation modules?</h2>
+  <div>
+    <label class="answer293"><input type="checkbox" name="q293"> Libraries.</label><br>
+    <label class="answer293"><input type="checkbox" name="q293"> Model-driven engineering.</label><br>
+    <label class="answer293"><input type="checkbox" name="q293"> Frameworks.</label><br>
+    <label class="answer293 correct293"><input type="checkbox" name="q293"> Product-lines.</label><br>
+    <button onclick="highlightCorrectAnswer(293)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 294: Why should unit testing be done first when testing a system?</h2>
+  <div>
+    <label class="answer294"><input type="checkbox" name="q294"> All options are false</label><br>
+    <label class="answer294 correct294"><input type="checkbox" name="q294"> Because if the smaller units of code have faults, their compositions will also have, and it will be difficult to identify in which part the bug is.</label><br>
+    <label class="answer294"><input type="checkbox" name="q294"> Because it is the rule</label><br>
+    <label class="answer294"><input type="checkbox" name="q294"> Because it allows to identify the bugs resulting from the interactions between components</label><br>
+    <button onclick="highlightCorrectAnswer(294)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 295: Consider the Front Controller pattern of the Enterprise Application Architecture. What characterizes the  Front Controller pattern?</h2>
+  <div>
+    <label class="answer295"><input type="checkbox" name="q295"> Has a single handler.</label><br>
+    <label class="answer295"><input type="checkbox" name="q295"> Allows several Concrete Commands.</label><br>
+    <label class="answer295"><input type="checkbox" name="q295"> Handles internationalization in a single place.</label><br>
+    <label class="answer295 correct295"><input type="checkbox" name="q295"> All options are true.</label><br>
+    <button onclick="highlightCorrectAnswer(295)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 296: To implement the Identity Map pattern:</h2>
+  <div>
+    <label class="answer296"><input type="checkbox" name="q296"> It is not possible to support SQL searches in the application server.</label><br>
+    <label class="answer296"><input type="checkbox" name="q296"> It is always necessary to search in the database before accessing an object.</label><br>
+    <label class="answer296"><input type="checkbox" name="q296"> All accesses to objects should occur through their inter-references.</label><br>
+    <label class="answer296 correct296"><input type="checkbox" name="q296"> It is necessary that each object has a unique identifier.</label><br>
+    <button onclick="highlightCorrectAnswer(296)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 298: When the domain logic is organized using a Domain Model pattern which arte the most suitable data source patterns?</h2>
+  <div>
+    <label class="answer298"><input type="checkbox" name="q298"> Table Data Gateway and Row Data Gateway.</label><br>
+    <label class="answer298"><input type="checkbox" name="q298"> Row Data Gateway and Active Record.</label><br>
+    <label class="answer298"><input type="checkbox" name="q298"> Row Data Gateway and Data Mapper.</label><br>
+    <label class="answer298 correct298"><input type="checkbox" name="q298"> Active Record and Data Mapper.</label><br>
+    <button onclick="highlightCorrectAnswer(298)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 302: Why is validation of software different from the verification of software?</h2>
+  <div>
+    <label class="answer302 correct302"><input type="checkbox" name="q302"> Because there is a mismatch between the user needs and the system specification</label><br>
+    <label class="answer302"><input type="checkbox" name="q302"> Because for validation are used case tests while for verifications demonstrations of correctness</label><br>
+    <label class="answer302"><input type="checkbox" name="q302"> All options are true</label><br>
+    <label class="answer302"><input type="checkbox" name="q302"> Because verification requires the envolvement of the client while validation does not</label><br>
+    <button onclick="highlightCorrectAnswer(302)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 303: Consider the state design pattern.</h2>
+  <div>
+    <label class="answer303"><input type="checkbox" name="q303"> The context is highly coupled to the state.</label><br>
+    <label class="answer303 correct303"><input type="checkbox" name="q303"> The pattern provides high cohesion of the states responsibilities.</label><br>
+    <label class="answer303"><input type="checkbox" name="q303"> The pattern provides high cohesion of the operations responsibilities, the changes to an operation can occur inside a single state.</label><br>
+    <label class="answer303"><input type="checkbox" name="q303"> All options are true.</label><br>
+    <button onclick="highlightCorrectAnswer(303)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 304: What is a quality of software engineering from the customer's perspective?</h2>
+  <div>
+    <label class="answer304"><input type="checkbox" name="q304"> Maintainability</label><br>
+    <label class="answer304"><input type="checkbox" name="q304"> Performance</label><br>
+    <label class="answer304 correct304"><input type="checkbox" name="q304"> Time to market</label><br>
+    <label class="answer304"><input type="checkbox" name="q304"> Usability</label><br>
+    <button onclick="highlightCorrectAnswer(304)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 306: Which reuse technique define domain-specific languages?</h2>
+  <div>
+    <label class="answer306"><input type="checkbox" name="q306"> Libraries.</label><br>
+    <label class="answer306"><input type="checkbox" name="q306"> Frameworks.</label><br>
+    <label class="answer306 correct306"><input type="checkbox" name="q306"> Model-driven engineering.</label><br>
+    <label class="answer306"><input type="checkbox" name="q306"> Product-lines.</label><br>
+    <button onclick="highlightCorrectAnswer(306)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 307: What cannot be considered unit testing?</h2>
+  <div>
+    <label class="answer307"><input type="checkbox" name="q307"> Testing a method of a class that invokes other methods of other classes</label><br>
+    <label class="answer307"><input type="checkbox" name="q307"> Testing all methods of a class</label><br>
+    <label class="answer307 correct307"><input type="checkbox" name="q307"> All options are true</label><br>
+    <label class="answer307"><input type="checkbox" name="q307"> Testing a method in the user interface that invokes a backend server</label><br>
+    <button onclick="highlightCorrectAnswer(307)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 308: In which situations the code should be commented?</h2>
+  <div>
+    <label class="answer308 correct308"><input type="checkbox" name="q308"> During codification to record the steps of implementation.</label><br>
+    <label class="answer308"><input type="checkbox" name="q308"> The code is refactored.</label><br>
+    <label class="answer308"><input type="checkbox" name="q308"> The code does not have performance problems.</label><br>
+    <label class="answer308"><input type="checkbox" name="q308"> All other options are false.</label><br>
+    <button onclick="highlightCorrectAnswer(308)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 309: Software development is a learning process because:</h2>
+  <div>
+    <label class="answer309"><input type="checkbox" name="q309"> Knowledge about the problem and the solution is created as the software artifact is built</label><br>
+    <label class="answer309"><input type="checkbox" name="q309"> The client knows more about its own business after the development</label><br>
+    <label class="answer309"><input type="checkbox" name="q309"> The team knows more about the business after the development</label><br>
+    <label class="answer309 correct309"><input type="checkbox" name="q309"> All options are true</label><br>
+    <button onclick="highlightCorrectAnswer(309)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 310: How can artifacts be tested?</h2>
+  <div>
+    <label class="answer310"><input type="checkbox" name="q310"> Checking if they comply with some norms</label><br>
+    <label class="answer310"><input type="checkbox" name="q310"> Running the code and observing the behavior</label><br>
+    <label class="answer310"><input type="checkbox" name="q310"> Demonstrating that they have some properties</label><br>
+    <label class="answer310 correct310"><input type="checkbox" name="q310"> All options are true</label><br>
+    <button onclick="highlightCorrectAnswer(310)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 313: Consider the operation pop of a stack of integer, which removes the last pushed element from the stack, but throws an exception if it is the empty stack. How many test cases should be considered if the equivalence partitioning technique is followed?</h2>
+  <div>
+    <label class="answer313"><input type="checkbox" name="q313"> 3</label><br>
+    <label class="answer313"><input type="checkbox" name="q313"> 4</label><br>
+    <label class="answer313"><input type="checkbox" name="q313"> 1</label><br>
+    <label class="answer313 correct313"><input type="checkbox" name="q313"> 2</label><br>
+    <button onclick="highlightCorrectAnswer(313)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 315: Suppose that git branches master and develop point to the same point in the codeline and the HEAD is pointing to develop. What occurs after a commit?</h2>
+  <div>
+    <label class="answer315"><input type="checkbox" name="q315"> Both, master and develop, point to the same point in the codeline</label><br>
+    <label class="answer315 correct315"><input type="checkbox" name="q315"> Branch develop points to a new point in the codeline and master is a predecessor of develop</label><br>
+    <label class="answer315"><input type="checkbox" name="q315"> All options are false</label><br>
+    <label class="answer315"><input type="checkbox" name="q315"> Branch develop points to a new point in the codeline but HEAD points to master</label><br>
+    <button onclick="highlightCorrectAnswer(315)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 321: What is not an Extreme Programming rule?</h2>
+  <div>
+    <label class="answer321"><input type="checkbox" name="q321"> Code the unit test first.</label><br>
+    <label class="answer321"><input type="checkbox" name="q321"> Make frequent small releases.</label><br>
+    <label class="answer321 correct321"><input type="checkbox" name="q321"> User stories are detailed descriptions of the interaction between the actor and the system.</label><br>
+    <label class="answer321"><input type="checkbox" name="q321"> When a bug is found tests are created.</label><br>
+    <button onclick="highlightCorrectAnswer(321)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 325: In Quality Assurance in Production what is the goal of Metrics?</h2>
+  <div>
+    <label class="answer325"><input type="checkbox" name="q325"> Logging information in log files.</label><br>
+    <label class="answer325"><input type="checkbox" name="q325"> All options are false.</label><br>
+    <label class="answer325"><input type="checkbox" name="q325"> Make data more easily consumable.</label><br>
+    <label class="answer325 correct325"><input type="checkbox" name="q325"> Count system events and aggregate system data.</label><br>
+    <button onclick="highlightCorrectAnswer(325)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 327: One of the maintainability guidelines states the following:</h2>
+  <p>“Define component interfaces on a high level of abstraction.”</p>
+  <p>Which of the following guidelines dictates this?</p>
+  <div>
+    <label class="answer327"><input type="checkbox" name="q327"> Keep your codebase small.</label><br>
+    <label class="answer327"><input type="checkbox" name="q327"> Keep Architecture Components Balanced.</label><br>
+    <label class="answer327 correct327"><input type="checkbox" name="q327"> Couple Architecture Components Loosely</label><br>
+    <label class="answer327"><input type="checkbox" name="q327"> Write simple units of code.</label><br>
+    <button onclick="highlightCorrectAnswer(327)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 329: Considering the inheritance mapping patterns of the Object-Relational Structural Patterns, which pattern requires a type column?</h2>
+  <div>
+    <label class="answer329 correct329"><input type="checkbox" name="q329"> Single Table Inheritance.</label><br>
+    <label class="answer329"><input type="checkbox" name="q329"> Class Table Inheritance.</label><br>
+    <label class="answer329"><input type="checkbox" name="q329"> Concrete Table Inheritance.</label><br>
+    <label class="answer329"><input type="checkbox" name="q329"> All patterns require a type column.</label><br>
+    <button onclick="highlightCorrectAnswer(329)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 330: What is the difference between system testing and acceptance testing?</h2>
+  <div>
+    <label class="answer330"><input type="checkbox" name="q330"> System testing is done by the developers and acceptance testing by the quality assurance team</label><br>
+    <label class="answer330"><input type="checkbox" name="q330"> The goal of system testing is validation and the goal of acceptance testing is verification</label><br>
+    <label class="answer330"><input type="checkbox" name="q330"> System testing occurs in the production environment and acceptance testing in the development environment</label><br>
+    <label class="answer330 correct330"><input type="checkbox" name="q330"> System testing is done by the developers and acceptance testing by the users</label><br>
+    <button onclick="highlightCorrectAnswer(330)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 331: What is a Mock test double?</h2>
+  <div>
+    <label class="answer331 correct331"><input type="checkbox" name="q331"> Objects pre-programmed with expectations which form a specification of the calls they are expected to receiv</label><br>
+    <label class="answer331"><input type="checkbox" name="q331"> Objects that actually have working implementations, but usually take some shortcut which makes them not suitable for production</label><br>
+    <label class="answer331"><input type="checkbox" name="q331"> Objects are passed around but never actually used, usually they are just used to fill parameter lists</label><br>
+    <label class="answer331"><input type="checkbox" name="q331"> Objects that provide canned answers to calls made during the test</label><br>
+    <button onclick="highlightCorrectAnswer(331)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 333: Consider the function String finalResult(int grade) that given an integer returns "pass" if</h2>
+  <p>grade is between 10 and 20, "fail" if grade is between 0 and 9, and throws an exception for all other values of grade. 
+    How many partitions should be considered if an equivalence partitioning technique is followed for the identification of the test cases?</p>
+  <div>
+    <label class="answer333"><input type="checkbox" name="q333"> 1</label><br>
+    <label class="answer333"><input type="checkbox" name="q333"> 2</label><br>
+    <label class="answer333"><input type="checkbox" name="q333"> 3</label><br>
+    <label class="answer333 correct333"><input type="checkbox" name="q333"> 4</label><br>
+    <button onclick="highlightCorrectAnswer(333)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 335: What is a Stub test double?</h2>
+  <div>
+    <label class="answer335"><input type="checkbox" name="q335"> Objects pre-programmed with expectations which form a specification of the calls they are expected to receiv</label><br>
+    <label class="answer335 correct335"><input type="checkbox" name="q335"> Objects that provide canned answers to calls made during the test</label><br>
+    <label class="answer335"><input type="checkbox" name="q335"> Objects that actually have working implementations, but usually take some shortcut which makes them not suitable for production</label><br>
+    <label class="answer335"><input type="checkbox" name="q335"> Objects are passed around but never actually used, usually they are just used to fill parameter lists</label><br>
+    <button onclick="highlightCorrectAnswer(335)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 336: In which situations the code should be commented?</h2>
+  <div>
+    <label class="answer336"><input type="checkbox" name="q336"> The code does not have performance problems.</label><br>
+    <label class="answer336"><input type="checkbox" name="q336"> All other options are false.</label><br>
+    <label class="answer336 correct336"><input type="checkbox" name="q336"> The code is not readable and cannot be refactored.</label><br>
+    <label class="answer336"><input type="checkbox" name="q336"> After codification to record what was done during implementation.</label><br>
+    <button onclick="highlightCorrectAnswer(336)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 338: The Unit of Work pattern can be implemented in an application server, while it is still necessary to use transactions in the repository to access to the data. In this situation:</h2>
+  <div>
+    <label class="answer338"><input type="checkbox" name="q338"> It is necessary to use a optimistic concurrency control policy because the transactions cannot be open for a long period.</label><br>
+    <label class="answer338"><input type="checkbox" name="q338"> Transactional management is the complete responsibility of the repository.</label><br>
+    <label class="answer338"><input type="checkbox" name="q338"> It is necessary to use a pessimistic concurrency control policy to avoid frequent conflicts in the transactions.</label><br>
+    <label class="answer338 correct338"><input type="checkbox" name="q338"> Both, pessimistic and optimistic, concurrency control policies can be used.</label><br>
+    <button onclick="highlightCorrectAnswer(338)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 339: What characterizes the logical view of a software architecture?</h2>
+  <div>
+    <label class="answer339 correct339"><input type="checkbox" name="q339"> Relates the system requirements with its entities.</label><br>
+    <label class="answer339"><input type="checkbox" name="q339"> It is useful for making judgments about non-functional system characteristics.</label><br>
+    <label class="answer339"><input type="checkbox" name="q339"> It shows how the software is decomposed for development.</label><br>
+    <label class="answer339"><input type="checkbox" name="q339"> It shows the system hardware and how software components are distributed across the processors in the system.</label><br>
+    <button onclick="highlightCorrectAnswer(339)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 340: When you you start working on adding new functionality and you realize the existing structures don't play well with what you're about to do, which workflow of refactoring should be followed?</h2>
+  <div>
+    <label class="answer340"><input type="checkbox" name="q340"> Litter-pickup.</label><br>
+    <label class="answer340"><input type="checkbox" name="q340"> Planned refactoring</label><br>
+    <label class="answer340 correct340"><input type="checkbox" name="q340"> Preparatory refactoring.</label><br>
+    <label class="answer340"><input type="checkbox" name="q340"> Long-Term Refactoring.</label><br>
+    <button onclick="highlightCorrectAnswer(340)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 341: The Identity Map pattern is typically used in enterprise applications:</h2>
+  <div>
+    <label class="answer341"><input type="checkbox" name="q341"> To improve the performance of the application server because it maintains a cache of entities that reduces the number of operations made on the database.</label><br>
+    <label class="answer341"><input type="checkbox" name="q341"> To avoid loading a lot of data from the database when an entity that has many relationships with other entities is loaded.</label><br>
+    <label class="answer341"><input type="checkbox" name="q341"> To map each entity loaded by the server to the identity of that entity in the database, so that the server is able to update the database later, if needed.</label><br>
+    <label class="answer341 correct341"><input type="checkbox" name="q341"> To prevent data inconsistencies when there are multiple accesses within the same business operation to the same entity.</label><br>
+    <button onclick="highlightCorrectAnswer(341)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 342: Qual das seguintes opções não está relacionada com white-box texting:</h2>
+  <div>
+    <label class="answer342"><input type="checkbox" name="q342"> Branch testing.</label><br>
+    <label class="answer342"><input type="checkbox" name="q342"> Path testing.</label><br>
+    <label class="answer342"><input type="checkbox" name="q342"> Statement testing.</label><br>
+    <label class="answer342 correct342"><input type="checkbox" name="q342"> Boundary value analysis.</label><br>
+    <button onclick="highlightCorrectAnswer(342)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 343: Qual das seguintes opções é uma vantagem quando se opta por implementar primeiro os testes (test-first)?</h2>
+  <div>
+    <label class="answer343 correct343"><input type="checkbox" name="q343"> Os testes podem ser utilizados como especificação e documentação.</label><br>
+    <label class="answer343"><input type="checkbox" name="q343"> Irá permitir encontrar todos os problemas durante o desenvolvimento.</label><br>
+    <label class="answer343"><input type="checkbox" name="q343"> Torna mais fácil a implementação dos testes.</label><br>
+    <label class="answer343"><input type="checkbox" name="q343"> Faz com que não seja necessária a utilização de técnicas de inspeção e revisão.</label><br>
+    <button onclick="highlightCorrectAnswer(343)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 344: Para o desenho de casos de testes pressupõe-se que</h2>
+  <div>
+    <label class="answer344"><input type="checkbox" name="q344"> Os testes, antes de executados, são revistos por programadores experientes.</label><br>
+    <label class="answer344"><input type="checkbox" name="q344"> Existe um simulador do sistema que permite verificar os resultados dos testes.</label><br>
+    <label class="answer344"><input type="checkbox" name="q344"> A equipa responsável pelo desenvolvimento dos testes tem conhecimento total sobre o comportamento do sistema a ser testado.</label><br>
+    <label class="answer344 correct344"><input type="checkbox" name="q344"> O programador responsável pela implementação do teste é capaz de identificar o (output) esperado.</label><br>
+    <button onclick="highlightCorrectAnswer(344)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 345: Sobre revisão (reviews), qual das seguintes afirmações é verdadeira?</h2>
+  <div>
+    <label class="answer345"><input type="checkbox" name="q345"> Reviews são a forma menos eficaz de testar software.</label><br>
+    <label class="answer345"><input type="checkbox" name="q345"> É pouco provável que reviews ajudem a encontrar problemas em planos de testes.</label><br>
+    <label class="answer345"><input type="checkbox" name="q345"> Reviews não podem ser usadas para analisar documentos de requisitos.</label><br>
+    <label class="answer345 correct345"><input type="checkbox" name="q345"> Reviews é uma técnica que pode e deve ser utilizada nas diversas fases do ciclo de desenvolvimento de software (levantamento de requisitos, desenho, implementação e teste).</label><br>
+    <button onclick="highlightCorrectAnswer(345)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 346: No contexto do sistema Quizzes Tutor, no momento da criação de instâncias de entidades de domínio, o atributo id:</h2>
+  <div>
+    <label class="answer346"><input type="checkbox" name="q346"> É definido pelo respetivo serviço, após a inserção na base de dados.</label><br>
+    <label class="answer346 correct346"><input type="checkbox" name="q346"> É definido automaticamente pelo Hibernate no momento da criação.</label><br>
+    <label class="answer346"><input type="checkbox" name="q346"> É único para qualquer objeto da aplicação, sendo definido por um contador global do sistema.</label><br>
+    <label class="answer346"><input type="checkbox" name="q346"> É definido no frontend e chega ao backend dentro do DTO.</label><br>
+    <button onclick="highlightCorrectAnswer(346)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 350: Ao criar uma relação em que uma entidade A pode corresponder a várias entidades B, a anotação @JoinColumn:</h2>
+  <div>
+    <label class="answer350"><input type="checkbox" name="q350"> Deve ser colocada em ambas as entidades, referenciando as respetivas primary keys.</label><br>
+    <label class="answer350"><input type="checkbox" name="q350"> Deve ser colocada na entidade A, referenciando a primary key da entidade B.</label><br>
+    <label class="answer350 correct350"><input type="checkbox" name="q350"> Deve ser colocada na entidade B, referenciando a primary key da entidade A.</label><br>
+    <label class="answer350"><input type="checkbox" name="q350"> Apenas é necessária em combinação com alguns fetch types.</label><br>
+    <button onclick="highlightCorrectAnswer(350)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 351: Considere o código do serviço que cria um curso execução externo. Em que linha há uma falta?</h2>
+  <p>1___public CourseDto createExternalCourseExecution(CourseDto courseDto)<br>
+     { 2______courseDto.setCourseExecutionType(Course.Type.EXTERNAL);<br>
+      3______Course course = getCourse(courseDto.getName(), courseDto.getCourseType());<br>
+      4______CourseExecution courseExecution = createCourseExecution(course, courseDto); <br>
+      5______courseExecution.setStatus(CourseExecution.Status.ACTIVE); <br>
+      6______return new CourseDto();<br>
+       7___} // End of method</p><br>
+  <div>
+    <label class="answer351"><input type="checkbox" name="q351"> Linha 5.</label><br>
+    <label class="answer351"><input type="checkbox" name="q351"> Linha 3.</label><br>
+    <label class="answer351 correct351"><input type="checkbox" name="q351"> Linha 6.</label><br>
+    <label class="answer351"><input type="checkbox" name="q351"> Linha 4.</label><br>
+    <button onclick="highlightCorrectAnswer(351)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 353: Usando a framework de testes Spock, o bloco where serve para:</h2>
+  <div>
+    <label class="answer353"><input type="checkbox" name="q353"> Verificar a ocorrência de uma excepção no método que pretendemos testar.</label><br>
+    <label class="answer353"><input type="checkbox" name="q353"> Avaliar um caso de teste com diferentes combinações de parâmetros, devendo ser definido no fim do método de teste e combinado obrigatoriamente com a anotação @Unroll.</label><br>
+    <label class="answer353"><input type="checkbox" name="q353"> Avaliar um caso de teste com diferentes combinações de parâmetros, fazendo parte da fase de setup e por isso devendo ser definido no início do método.</label><br>
+    <label class="answer353 correct353"><input type="checkbox" name="q353"> Avaliar um caso de teste com diferentes combinações de parâmetros, devendo ser definido no fim do método de teste.</label><br>
+    <button onclick="highlightCorrectAnswer(353)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 354: Considere o seguinte teste escrito em Spock. Em que linha há um falta?</h2>
+  <p>1___def "the course and course execution exist"()<br>
+    { 2______def courseDto = new CourseDto(courseExecution) <br>
+      3______given: <br>
+      4______def result = courseService.createTecnicoCourseExecution(courseDto) <br>
+      5______then: "the returned data are correct" <br>
+      6______result.name == COURSE_1_NAME<br>
+       7______result.acronym == COURSE_1_ACRONYM <br>
+       8______result.academicTerm == COURSE_1_ACADEMIC_TERM <br>
+       9______and: 'are in the database' <br>
+       10_____courseRepository.findAll().size() == existingCourses <br>
+       11_____courseExecutionRepository.findAll().size() == existingCourseExecutions <br>
+       12__} // End of method</p><br>
+  <div>
+    <label class="answer354"><input type="checkbox" name="q354"> Linha 5.</label><br>
+    <label class="answer354 correct354"><input type="checkbox" name="q354"> Linha 3.</label><br>
+    <label class="answer354"><input type="checkbox" name="q354"> Linha 4.</label><br>
+    <label class="answer354"><input type="checkbox" name="q354"> Linha 1.</label><br>
+    <button onclick="highlightCorrectAnswer(354)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 355: Considere o código do serviço que cria um curso execução externo e que é invocado a partir de um controlador. Em que linhas há faltas?</h2>
+  <p>1___public Course createExternalCourseExecution(CourseDto courseDto) <br>
+    { 2______courseDto.setCourseExecutionType(Course.Type.EXTERNAL); <br>
+      3______Course course = getCourse(courseDto.getName(), courseDto.getCourseType()); <br>
+      4______CourseExecution courseExecution = createCourseExecution(course, courseDto); <br>
+      5______courseExecution.setStatus(CourseExecution.Status.ACTIVE); <br>
+      6______return course; <br>
+      7___} // End of method</p><br>
+  <div>
+    <label class="answer355"><input type="checkbox" name="q355"> Linhas 1 e 4.</label><br>
+    <label class="answer355"><input type="checkbox" name="q355"> Linhas 3 e 5.</label><br>
+    <label class="answer355 correct355"><input type="checkbox" name="q355"> Linhas 1 e 6.</label><br>
+    <label class="answer355"><input type="checkbox" name="q355"> Linhas 1 e 3.</label><br>
+    <button onclick="highlightCorrectAnswer(355)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 357: Considere o seguinte fragmento da declaração da classe Course. Em que linha há uma falta?</h2>
+  <p>1___@Id<br>
+    2___@GeneratedValue(strategy = GenerationType.IDENTITY) <br>
+    3___private Integer id; <br>
+    4___@Enumerated(EnumType.STRING) <br>
+    5___private Type type; <br>
+    6___@Column(nullable = false) <br>
+    7___private String name; <br>
+    8___@ManyToOne(cascade = CascadeType.ALL, mappedBy = "course", fetch=FetchType.LAZY, orphanRemoval=true) <br>
+    9___private final Set<CourseExecution> courseExecutions = new HashSet<>(); // End of fragment</p><br>
+  <div>
+    <label class="answer357"><input type="checkbox" name="q357"> Linha 4.</label><br>
+    <label class="answer357"><input type="checkbox" name="q357"> Linha 6.</label><br>
+    <label class="answer357 correct357"><input type="checkbox" name="q357"> Linha 8.</label><br>
+    <label class="answer357"><input type="checkbox" name="q357"> Linha 2.</label><br>
+    <button onclick="highlightCorrectAnswer(357)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 358: Qual o papel dos DTOs na arquitetura do sistema:</h2>
+  <div>
+    <label class="answer358"><input type="checkbox" name="q358"> Representação das entidades e da lógica do domínio.</label><br>
+    <label class="answer358"><input type="checkbox" name="q358"> Transferência de dados entre o backend e a base de dados.</label><br>
+    <label class="answer358 correct358"><input type="checkbox" name="q358"> Transferência de dados entre frontend e backend.</label><br>
+    <label class="answer358"><input type="checkbox" name="q358"> Representação das relações entre as entidades de domínio.</label><br>
+    <button onclick="highlightCorrectAnswer(358)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 359: Considere o seguinte código da classe TopBar.vue.</h2>
+  <pre>
+    <code>
+      &lt;v-menu offset-y v-if="isAdmin" open-on-hover&gt; 
+        ___&lt;template v-slot:activator="{ on }"&gt; 
+          ______&lt;v-btn v-on="on" text dark data-cy="administrationMenuButton"&gt; 
+            _________Administration 
+            _________&lt;v-icon&gt;fas fa-file-alt&lt;/v-icon&gt; 
+            ______&lt;/v-btn&gt; ___&lt;/template&gt; ___&lt;v-list dense&gt; 
+              ______&lt;v-list-item to="/admin/courses" data-cy="manageCoursesMenuButton"&gt;
+                _________&lt;v-list-item-action&gt; 
+                  ____________&lt;v-icon&gt;fas fa-school&lt;/v-icon&gt; 
+                  _________&lt;/v-list-item-action&gt;
+                  _________&lt;v-list-item-content&gt; 
+                    ____________&lt;v-list-item-title&gt;Manage Courses&lt;/v-list-item-title&gt; 
+                    _________&lt;/v-list-item-content&gt; 
+                    ______&lt;/v-list-item&gt; 
+                    ___&lt;/v-list&gt; &lt;/v-menu&gt; % end of code
+    </code>
+    </pre>    
+  <div>
+    <label class="answer359"><input type="checkbox" name="q359"> isAdmin indica que este elemento apenas está visível para administradores.</label><br>
+    <label class="answer359 correct359"><input type="checkbox" name="q359"> Todas as opções são verdadeiras.</label><br>
+    <label class="answer359"><input type="checkbox" name="q359"> Para o correto funcionamento é necessário indicar num router qual o componente associado ao link /admin/courses.</label><br>
+    <label class="answer359"><input type="checkbox" name="q359"> data-cy="manageCoursesMenuButton" é um atributo usado pelo Cypress.</label><br>
+    <button onclick="highlightCorrectAnswer(359)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 360: Considere o seguinte comando Cypress. Onde é que existe uma falta?</h2>
+  <p>1___Cypress.Commands.add( <br>
+    2______'createFromCourseExecution', <br>
+    3______(name, acronym, academicTerm) => { <br>
+      4_________cy.contains(name) <br>
+      5____________.parent() <br>
+      6____________.should('have.length', 1) <br>
+      7____________.children() <br>
+      8____________.should('have.length', 11) <br>
+      9____________.get('[data-cy="createFromCourse"]') <br>
+      10___________.click(); <br>
+      11________cy.get('[data-cy="courseExecutionAcronymInput"]').type(acronym); <br>
+      12________cy.get('[data-cy="courseExecutionAcademicTermInput"]').type(academicTerm); <br>
+      13________cy.get('[data-cy="saveButton"]').click(); <br>
+      14_____} <br>
+      15__); // End of method</p><br>
+  <div>
+    <label class="answer360"><input type="checkbox" name="q360"> Linha 4.</label><br>
+    <label class="answer360"><input type="checkbox" name="q360"> Linha 7.</label><br>
+    <label class="answer360 correct360"><input type="checkbox" name="q360"> Linha 9.</label><br>
+    <label class="answer360"><input type="checkbox" name="q360"> Linha 11.</label><br>
+    <button onclick="highlightCorrectAnswer(360)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 361: Assumindo que existe um formulário na view atual com um input de texto com a tag [data-cy="textInput"], a sequência correta de comandos cypress para inserir ‘test’ nesse formulário é:</h2>
+  <div>
+    <label class="answer361"><input type="checkbox" name="q361"> cy.select(‘[data-cy="textInput"]’).insert(‘test’)</label><br>
+    <label class="answer361 correct361"><input type="checkbox" name="q361"> cy.get(‘[data-cy="textInput"]’).type(‘test’)</label><br>
+    <label class="answer361"><input type="checkbox" name="q361"> cy.select(‘[data-cy="textInput"]’).type(‘test’)</label><br>
+    <label class="answer361"><input type="checkbox" name="q361"> cy.get(‘[data-cy="textInput"]’).insert(‘test’)</label><br>
+    <button onclick="highlightCorrectAnswer(361)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 362: Considere o seguinte código de invocação remota. Em que linha há uma falta?</h2>
+  <p>1___static async createExternalCourse(course: Course): Course { <br>
+    2______return httpClient <br>
+    3_________.post('/courses/external', course) <br>
+    4_________.then(response => { <br>
+      5____________return new Course(response.data); <br>
+      6_________}) <br>
+      7_________.catch(async error => { <br>
+        8____________throw Error(await this.errorMessage(error)); <br>
+        9_________}); <br>
+        10__} // End of method</p><br>
+  <div>
+    <label class="answer362"><input type="checkbox" name="q362"> Linha 8.</label><br>
+    <label class="answer362"><input type="checkbox" name="q362"> Linha 3.</label><br>
+    <label class="answer362"><input type="checkbox" name="q362"> Linha 5.</label><br>
+    <label class="answer362 correct362"><input type="checkbox" name="q362"> Linha 1.</label><br>
+    <button onclick="highlightCorrectAnswer(362)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 363: Considere o seguinte web service que cria cursos execução externos. Onde há uma falta?</h2>
+  <p>1___@PostMapping("/courses/external") <br>
+    2___@PreAuthorize("hasRole('ROLE_ADMIN') or (hasRole('ROLE_DEMO_ADMIN') and hasPermission(#courseDto, 'DEMO.ACCESS'))") <br>
+    3___public CourseDto createExternalCourseExecution(@PathVariable CourseDto courseDto) { <br>
+      4______return courseService.createExternalCourseExecution(courseDto); <br>
+      5___} // End of method</p><br>
+  <div>
+    <label class="answer363"><input type="checkbox" name="q363"> Linha 4.</label><br>
+    <label class="answer363"><input type="checkbox" name="q363"> Linha 1.</label><br>
+    <label class="answer363"><input type="checkbox" name="q363"> Linha 2.</label><br>
+    <label class="answer363 correct363"><input type="checkbox" name="q363"> Linha 3.</label><br>
+    <button onclick="highlightCorrectAnswer(363)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 365: Tendo alterações locais nos ficheiros A e B, a sequência de comandos correta para a atualizar as versões é:</h2>
+  <div>
+    <label class="answer365"><input type="checkbox" name="q365"> git commit A B; git push</label><br>
+    <label class="answer365 correct365"><input type="checkbox" name="q365"> git add A B; git commit; git push</label><br>
+    <label class="answer365"><input type="checkbox" name="q365"> git stash; git commit; git push</label><br>
+    <label class="answer365"><input type="checkbox" name="q365"> git add A B; git checkout; git push</label><br>
+    <button onclick="highlightCorrectAnswer(365)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 366: Tendo dois branches A e B com histórico de versões divergente, a sequência correta de comandos para combinar as alterações no branch A (ignorando o resolução de conflitos):</h2>
+  <div>
+    <label class="answer366"><input type="checkbox" name="q366"> git checkout A; git merge B</label><br>
+    <label class="answer366"><input type="checkbox" name="q366"> git checkout B; git merge A; git commit -a</label><br>
+    <label class="answer366 correct366"><input type="checkbox" name="q366"> git checkout A; git merge B; git commit -a</label><br>
+    <label class="answer366"><input type="checkbox" name="q366"> git checkout B; git merge A</label><br>
+    <button onclick="highlightCorrectAnswer(366)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 367: Cobertura...</h2>
+  <div>
+    <label class="answer367"><input type="checkbox" name="q367"> Só pode ser obtida durante a execução de testes de unidade (unit testing), e não para testes de integração ou sistema.</label><br>
+    <label class="answer367"><input type="checkbox" name="q367"> É uma métrica apenas utilizada em testes de caixa preta (black-box testing).</label><br>
+    <label class="answer367 correct367"><input type="checkbox" name="q367"> É uma métrica que permite medir, ainda que parcialmente, a exaustividade dos testes.</label><br>
+    <label class="answer367"><input type="checkbox" name="q367"> Não tem nenhuma relação com teste de software.</label><br>
+    <button onclick="highlightCorrectAnswer(367)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 368: Existem situações para as quais a Integração Contínua (Continuous Integration, CI) necessita de ser realizada de forma faseada, porque</h2>
+  <div>
+    <label class="answer368"><input type="checkbox" name="q368"> A manutenção de infraestrutura de integração contínua própria requer custos elevados.</label><br>
+    <label class="answer368"><input type="checkbox" name="q368"> É necessário reduzir a colaboração através do aumento dos ciclos de desenvolvimento isolados.</label><br>
+    <label class="answer368 correct368"><input type="checkbox" name="q368"> Alguns sistemas demoram bastante tempo a compilar e a testar.</label><br>
+    <label class="answer368"><input type="checkbox" name="q368"> A integração contínua obriga a que o software seja testado frequentemente.</label><br>
+    <button onclick="highlightCorrectAnswer(368)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 369: Sobre o Template View em Web Presentation Patterns, qual das seguintes afirmações é verdadeira?</h2>
+  <div>
+    <label class="answer369"><input type="checkbox" name="q369"> Processa uma página web em duas fases, apresentação lógica e formatação.</label><br>
+    <label class="answer369 correct369"><input type="checkbox" name="q369"> Processa e mostra informação através da incorporação de marcadores na página HTML.</label><br>
+    <label class="answer369"><input type="checkbox" name="q369"> É um controlador que processa todos os pedidos num sítio web.</label><br>
+    <label class="answer369"><input type="checkbox" name="q369"> É um objeto que processa o pedido para uma página ou ação específica numa sítio web.</label><br>
+    <button onclick="highlightCorrectAnswer(369)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 370: Qual o padrão arquitetural mais adequado para implementar um compilador de código Java para Java Byte Code?</h2>
+  <div>
+    <label class="answer370"><input type="checkbox" name="q370"> Cliente-Servidor.</label><br>
+    <label class="answer370 correct370"><input type="checkbox" name="q370"> Pipe and Filter.</label><br>
+    <label class="answer370"><input type="checkbox" name="q370"> Model-View-Controller.</label><br>
+    <label class="answer370"><input type="checkbox" name="q370"> Camadas.</label><br>
+    <button onclick="highlightCorrectAnswer(370)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 371: Qual das seguintes não é uma tarefa associada à análise de requisitos?</h2>
+  <div>
+    <label class="answer371"><input type="checkbox" name="q371"> Especificação, modelação e revisão.</label><br>
+    <label class="answer371 correct371"><input type="checkbox" name="q371"> Verificação da exequibilidade de negócio (business case).</label><br>
+    <label class="answer371"><input type="checkbox" name="q371"> Reconhecimento das fronteiras do sistema.</label><br>
+    <label class="answer371"><input type="checkbox" name="q371"> Definição da rastreabilidade dos requisitos.</label><br>
+    <button onclick="highlightCorrectAnswer(371)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 374: No contexto do sistema Quizzes Tutor, a definição de um DTO segue as seguintes práticas:</h2>
+  <div>
+    <label class="answer374"><input type="checkbox" name="q374"> Existe uma relação de 1 para 1 entre uma classe DTO e uma entidade do domínio.</label><br>
+    <label class="answer374"><input type="checkbox" name="q374"> Cada classe DTO apenas contém informação de uma única entidade do domínio, mas pode haver entidades do domínio que não possuem DTOs associados.</label><br>
+    <label class="answer374"><input type="checkbox" name="q374"> Os DTOs são definidos por pedido remoto, pelo que para cada pedido remoto é definido um tipo de DTO.</label><br>
+    <label class="answer374 correct374"><input type="checkbox" name="q374"> Todas as outras opções são falsa</label><br>
+    <button onclick="highlightCorrectAnswer(374)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 375: Relativamente à arquitectura do sistema Quizzes Tutor:</h2>
+  <div>
+    <label class="answer375"><input type="checkbox" name="q375"> Tem serviços que representam o domínio, controladores onde é aplicada a lógica do sistema e DTOs que aceitam comunicação do exterior.</label><br>
+    <label class="answer375"><input type="checkbox" name="q375"> Tem entidades que representam o domínio, controladores onde é aplicada a lógica do sistema, serviços que aceitam comunicação do exterior e DTOs que transferem informação entre backend e frontend.</label><br>
+    <label class="answer375 correct375"><input type="checkbox" name="q375"> Tem entidades que representam o domínio, serviços que definem o contexto transacional e DTOs que transferem informação entre backend e frontend.</label><br>
+    <label class="answer375"><input type="checkbox" name="q375"> Tem entidades que representam o domínio, serviços onde é aplicada a lógica do sistema e DTOs que aceitam comunicação do exterior.</label><br>
+    <button onclick="highlightCorrectAnswer(375)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 376: Assumindo que existe um botão na view atual com a tag [data-cy="testBtn"], a sequência correta de comandos cypress para interagir com o botão é:</h2>
+  <div>
+    <label class="answer376"><input type="checkbox" name="q376"> cy.find(‘[data-cy="testBtn"]’).click()</label><br>
+    <label class="answer376"><input type="checkbox" name="q376"> cy.get(‘[data-cy="testBtn"]’).press()</label><br>
+    <label class="answer376"><input type="checkbox" name="q376"> cy.find(‘[data-cy="testBtn"]’).press()</label><br>
+    <label class="answer376 correct376"><input type="checkbox" name="q376"> cy.get(‘[data-cy="testBtn"]’).click()</label><br>
+    <button onclick="highlightCorrectAnswer(376)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 377: A que se refere a sigla DTO:</h2>
+  <div>
+    <label class="answer377"><input type="checkbox" name="q377"> Data Transfer Operation.</label><br>
+    <label class="answer377"><input type="checkbox" name="q377"> Data Transport Operation.</label><br>
+    <label class="answer377"><input type="checkbox" name="q377"> Data Transport Object.</label><br>
+    <label class="answer377 correct377"><input type="checkbox" name="q377"> Data Transfer Object.</label><br>
+    <button onclick="highlightCorrectAnswer(377)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 378: Qual o comando cypress que me permite obter um elemento na página atual contendo o texto “test”:</h2>
+  <div>
+    <label class="answer378"><input type="checkbox" name="q378"> cy.get(‘test’)</label><br>
+    <label class="answer378"><input type="checkbox" name="q378"> cy.find(‘test’)</label><br>
+    <label class="answer378 correct378"><input type="checkbox" name="q378"> cy.contains(‘test’)</label><br>
+    <label class="answer378"><input type="checkbox" name="q378"> cy.select(‘test’)</label><br>
+    <button onclick="highlightCorrectAnswer(378)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 379: Para definir uma classe como JPA Entity é indispensável:</h2>
+  <div>
+    <label class="answer379"><input type="checkbox" name="q379"> Colocar as anotações @Entity e @Table (especificando o nome a dar à tabela e definindo um index) antes da definição da classe.</label><br>
+    <label class="answer379"><input type="checkbox" name="q379"> Colocar a anotação @JPAEntity antes da definição da classe.</label><br>
+    <label class="answer379"><input type="checkbox" name="q379"> Colocar as anotações @Entity e @Table (especificando o nome a dar à tabela) antes da definição da classe.</label><br>
+    <label class="answer379 correct379"><input type="checkbox" name="q379"> Colocar a anotação @Entity antes da definição da classe.</label><br>
+    <button onclick="highlightCorrectAnswer(379)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 380: Considere o seguinte excerto de código da classe router.ts.</h2>
+  <p>1__path: '/admin', <br>
+    2__name: 'admin', <br>
+    3____component: AdminManagementView, <br>
+    4____children: [ <br>
+    5______{ <br>
+      6________path: 'courses', <br>
+      7________name: 'courseAdmin', <br>
+      8________component: CoursesView, <br>
+      9________meta: { <br>
+        10_________title: APP_NAME + ' - Manage Courses', <br>
+        11_________requiredAuth: 'Admin' <br>
+        12_______} <br>
+        13_____} <br>
+        14___] \\ end of code</p><br>
+  <div>
+    <label class="answer380"><input type="checkbox" name="q380"> Para aceder ao path /admin/courses o utilizador não poderá estar autenticado como student ou teacher.</label><br>
+    <label class="answer380"><input type="checkbox" name="q380"> O identificador courseAdmin é uma alternativa ao path /admin/courses e é utilizado para facilitar a navegação através do Router.</label><br>
+    <label class="answer380"><input type="checkbox" name="q380"> O componente CoursesView está disponível no path /admin/courses.</label><br>
+    <label class="answer380 correct380"><input type="checkbox" name="q380"> Todas as opções são verdadeiras.</label><br>
+    <button onclick="highlightCorrectAnswer(380)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 381: A framework de testes Spock suporta a implementação testes utilizando blocos, entre os quais:</h2>
+  <div>
+    <label class="answer381 correct381"><input type="checkbox" name="q381"> given, onde é feito setup do teste.</label><br>
+    <label class="answer381"><input type="checkbox" name="q381"> having, onde é feito o setup do teste.</label><br>
+    <label class="answer381"><input type="checkbox" name="q381"> then, onde é executado o estímulo, i.e. o método de teste.</label><br>
+    <label class="answer381"><input type="checkbox" name="q381"> when, onde é verificada a resposta.</label><br>
+    <button onclick="highlightCorrectAnswer(381)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 382: Estando no branch Develop com alterações locais nos ficheiros A e B, a sequência de comandos correta para atualizar as versões num novo branch Test é:</h2>
+  <div>
+    <label class="answer382"><input type="checkbox" name="q382"> git add A B; git commit Test</label><br>
+    <label class="answer382"><input type="checkbox" name="q382"> git checkout -b Test; git commit</label><br>
+    <label class="answer382 correct382"><input type="checkbox" name="q382"> git checkout -b Test; git add A B; git commit</label><br>
+    <label class="answer382"><input type="checkbox" name="q382"> git branch Test; git add A B; git commit; git checkout Test</label><br>
+    <button onclick="highlightCorrectAnswer(382)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 383: Considere o seguinte fragmento da declaração da classe CourseExecution. Em que linha há uma falta?</h2>
+  <p>1__@Id <br>
+    2__@GeneratedValue(strategy = GenerationType.IDENTITY) <br>
+    3__private Integer id; <br>
+    4__@Enumerated(EnumType.STRING) <br>
+    5__private Course.Type type; <br>
+    6__private String acronym; <br>
+    7__private String academicTerm; <br>
+    8__@Enumerated(EnumType.STRING) <br>
+    9__private Status status; <br>
+    10_@ManyToOne(fetch=FetchType.EAGER, optional=false) <br>
+    11_@JoinColumn(name = "course_id") <br>
+    12_private Course course; <br>
+    13_@OneToMany(mappedBy = "courseExecutions", fetch=FetchType.LAZY) <br>
+    14_private final Set<User> users = new HashSet<>();</p><br>
+  <div>
+    <label class="answer383"><input type="checkbox" name="q383"> Linha 10.</label><br>
+    <label class="answer383 correct383"><input type="checkbox" name="q383"> Linha 13.</label><br>
+    <label class="answer383"><input type="checkbox" name="q383"> Linha 2.</label><br>
+    <label class="answer383"><input type="checkbox" name="q383"> Linha 4.</label><br>
+    <button onclick="highlightCorrectAnswer(383)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 384: Considere o código do serviço que cria um curso execução. Em que linha há uma falta?</h2>
+  <p>1__public CourseDto createExternalCourseExecution(CourseDto courseDto) { <br>
+    2____courseDto.setCourseExecutionType(Course.Type.EXTERNAL); <br>
+    3____if (courseDto.getCourseType() == null) throw new TutorException(INVALID_TYPE_FOR_COURSE); <br>
+    4____Course course = courseRepository.findByNameType(courseDto.getName(), courseDto.getCourseType()).orElseGet(() -> courseRepository.save(new Course())); <br>
+    5____CourseExecution courseExecution = createCourseExecution(course, courseDto); <br>
+    6____courseExecution.setStatus(CourseExecution.Status.ACTIVE); <br>
+    7____return new CourseDto(course); <br>
+    8__} \\ End of Method</p><br>
+  <div>
+    <label class="answer384 correct384"><input type="checkbox" name="q384"> Linha 4.</label><br>
+    <label class="answer384"><input type="checkbox" name="q384"> Linha 5.</label><br>
+    <label class="answer384"><input type="checkbox" name="q384"> Linha 3.</label><br>
+    <label class="answer384 correct384"><input type="checkbox" name="q384"> Linha 7.</label><br>
+    <button onclick="highlightCorrectAnswer(384)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 385: Considere o seguinte código de invocação remota. Em que linha há uma falta?</h2>
+  <p>1__static async createExternalCourse(course: Course): Promise<Course> { <br>
+    2____return httpClient <br>
+    3______.get('/courses/external', course) <br>
+    4______.then(response => { <br>
+      5________return new Course(response.data); <br>
+      6______}) <br>
+      7______.catch(async error => { <br>
+        8________throw Error(await this.errorMessage(error)); <br>
+        9______}); <br>
+        10_} \\ end of method</p><br>
+  <div>
+    <label class="answer385"><input type="checkbox" name="q385"> Linha 5.</label><br>
+    <label class="answer385 correct385"><input type="checkbox" name="q385"> Linha 3.</label><br>
+    <label class="answer385"><input type="checkbox" name="q385"> Linha 1.</label><br>
+    <label class="answer385"><input type="checkbox" name="q385"> Linha 8.</label><br>
+    <button onclick="highlightCorrectAnswer(385)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 386: A sequência de comandos correta para criar um novo branch test partindo do branch develop:</h2>
+  <div>
+    <label class="answer386 correct386"><input type="checkbox" name="q386"> git checkout develop; git checkout -b test</label><br>
+    <label class="answer386"><input type="checkbox" name="q386"> git branch -m develop test</label><br>
+    <label class="answer386"><input type="checkbox" name="q386"> git checkout develop; git branch create test</label><br>
+    <label class="answer386"><input type="checkbox" name="q386"> git checkout develop; git branch</label><br>
+    <button onclick="highlightCorrectAnswer(386)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 388: Considere o código do serviço que cria um curso execução externo associado a um curso já existente. Em que linha há uma falta?</h2>
+  <p>1__public CourseDto createExternalCourseExecution(CourseDto courseDto) { <br>
+    2____courseDto.setCourseExecutionType(Course.Type.EXTERNAL); <br>
+    3____Course course = getCourse(courseDto.getName(), courseDto.getCourseType()); <br>
+    4____courseRepository.save(course) <br>
+    5____CourseExecution courseExecution = createCourseExecution(course, courseDto); <br>
+    6____courseExecution.setStatus(CourseExecution.Status.ACTIVE); <br>
+    7____return new CourseDto(course); <br>
+    8__} \\ end of method</p><br>
+  <div>
+    <label class="answer388"><input type="checkbox" name="q388"> Linha 5.</label><br>
+    <label class="answer388"><input type="checkbox" name="q388"> Linha 3.</label><br>
+    <label class="answer388 correct388"><input type="checkbox" name="q388"> Linha 7.</label><br>
+    <label class="answer388 correct388"><input type="checkbox" name="q388"> Linha 4.</label><br>
+    <button onclick="highlightCorrectAnswer(388)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 389: Considere o seguinte teste escrito em Spock. Em que linha há um falta?</h2>
+  <p>1__def "the course and course execution exist"() { <br>
+    2____def courseDto = new CourseDto(courseExecution) <br>
+    3____when: <br>
+    4____def result = courseService.createTecnicoCourseExecution(courseDto) <br>
+    5____then: "the returned data are correct" <br>
+    6____result.name = COURSE_NAME <br>
+    7__} \\ end of test</p><br>
+  <div>
+    <label class="answer389"><input type="checkbox" name="q389"> Linha 3.</label><br>
+    <label class="answer389"><input type="checkbox" name="q389"> Linha 5.</label><br>
+    <label class="answer389 correct389"><input type="checkbox" name="q389"> Linha 6.</label><br>
+    <label class="answer389"><input type="checkbox" name="q389"> Linha 4.</label><br>
+    <button onclick="highlightCorrectAnswer(389)">Show/Hide Correct Answer</button>
+  </div>
+  <h2>Question 392: Considere o seguinte web service que cria cursos execução externos.</h2>
+  <p>1__@PostMapping("/courses/external") <br>
+    2__@PreAuthorize("hasRole('ROLE_ADMIN') or (hasRole('ROLE_DEMO_ADMIN') and hasPermission(#courseDto, 'DEMO.ACCESS'))") <br>
+    3__public CourseDto createExternalCourseExecution(@RequestBody CourseDto courseDto) { <br>
+      4____return courseService.createExternalCourseExecution(courseDto); <br>
+      5__} \\ end of method</p><br>
+  <div>
+    <label class="answer392 correct392"><input type="checkbox" name="q392"> Os cursos execução externos que utilizadores com ROLE_DEMO_ADMIN podem criar dependem da implementação da regra hasPermission.</label><br>
+    <label class="answer392"><input type="checkbox" name="q392"> O utilizador com ROLE_ADMIN apenas pode criar alguns tipos de cursos execução externos.</label><br>
+    <label class="answer392"><input type="checkbox" name="q392"> Todos os utilizadores podem criar cursos execução externos.</label><br>
+    <label class="answer392"><input type="checkbox" name="q392"> O utilizador com ROLE_TEACHER pode criar cursos execução externos pois ROLE_TEACHER é um super papel de ROLE_ADMIN.</label><br>
+    <button onclick="highlightCorrectAnswer(392)">Show/Hide Correct Answer</button>
+  </div>
+  </body>
+</html>
