@@ -1,5 +1,7 @@
 # Lectures
 
+Lectures can be found [here](https://drive.google.com/drive/folders/1mcl_aCKWCj-xb9LP8rQJxtJ5w5XjF2Ai?usp=sharing)
+
 All lectures are merged in [this file](all_merged.pdf) by the following order:
 - [Lecture 1](./Lecture%2001%20-%20blue.pdf) - From page 1 to page 32
 - [Lecture 2](./Lecture%2002%20-%20blue.pdf) - From page 33 to page 95
