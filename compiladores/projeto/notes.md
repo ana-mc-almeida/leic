@@ -40,3 +40,6 @@ Find it nodes to implement [here](./nodes.md)
 ### TODO
 
 - [ ] Porque é que dou `#include <cdk/ast/expression_node.h>` e não do basic_node, por exemplo
+  - Não estou a fazer include nenhum para além deste
+  - Não alterei nada nos `ifs` nem no `evaluation_node`
+- [ ] Porque é que é preciso a `_append_newline`? (no `print_node`)
