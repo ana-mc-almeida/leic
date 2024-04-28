@@ -10,36 +10,36 @@
   - [identity\_node (TODO)](#identity_node-todo)
   - [if\_else\_node (TODO)](#if_else_node-todo)
   - [if\_node (TODO)](#if_node-todo)
-  - [input\_node (TODO)](#input_node-todo)
-  - [next\_node](#next_node)
+  - [read\_node (TODO)](#read_node-todo)
+  - [next\_node (IMPLEMENTED)](#next_node-implemented)
   - [nullptr\_node (TODO)](#nullptr_node-todo)
   - [pointer\_index\_node (TODO)](#pointer_index_node-todo)
   - [print\_node](#print_node)
-  - [return\_node](#return_node)
-  - [sizeof\_node (TODO)](#sizeof_node-todo)
+  - [return\_node (IMPLEMENTED)](#return_node-implemented)
+  - [sizeof\_node (IMPLEMENTED)](#sizeof_node-implemented)
   - [stop\_node (IMPLEMENTED)](#stop_node-implemented)
   - [loop\_node (IMPLEMENTED)](#loop_node-implemented)
 
 ## Nodes to implement
 
-1. - [ ] [address_of_node](#address_of_node-todo)
-2. - [ ] [alloc_node](#alloc_node-todo)
-3. - [ ] [block_node](#block_node-todo) -> agora é "(block ... )" ao invés de "{ ... }"
+1. - [ ] [address_of_node](#address_of_node-todo) -> set na realidade
+2. - [ ] [alloc_node](#alloc_node-todo) -> objects na realidade
+3. - [ ] [block_node](#block_node-todo)
 4. - [ ] [declaration_node](#declaration_node-todo)
 5. - [ ] [evaluation_node](#evaluation_node-todo)
 6. - [ ] [function_call_node](#function_call_node-todo)
 7. - [ ] [function_node](#function_node-todo)
 8. - [ ] [identity_node](#identity_node-todo)
-9. - [ ] [if_else_node](#if_else_node-todo)
-10. - [ ] [if_node](#if_node-todo)
-11. - [ ] [input_node](#input_node-todo)
-12. - [ ] [next_node](#next_node)
+9. - [ ] [if_else_node](#if_else_node-todo) -> semi implementado mas tenho dúvidas
+10. - [ ] [if_node](#if_node-todo) -> semi implementado mas tenho dúvidas
+11. - [ ] [read_node](#read_node-todo)
+12. - [X] [next_node](#next_node-implemented)
 13. - [ ] [nullptr_node](#nullptr_node-todo)
-14. - [ ] [pointer_index_node](#pointer_index_node-todo)
-15. - [ ] [print_node](#print_node) -> agora é `print` e `println` ao invés de `!` e `!!`
-16. - [ ] [return_node](#return_node)
-17. - [ ] [sizeof_node](#sizeof_node-todo)
-18. - [X] [stop_node](#stop_node)
+14. - [ ] [pointer_index_node](#pointer_index_node-todo) -> index na realidade
+15. - [ ] [print_node](#print_node) -> semi implementado mas tenho dúvidas
+16. - [X] [return_node](#return_node-implemented)
+17. - [X] [sizeof_node](#sizeof_node-implemented)
+18. - [X] [stop_node](#stop_node-implemented)
 19. - [X] [loop_node](#loop_node-implemented)
 
 ---
@@ -57,6 +57,8 @@
 
 
 ### block_node (TODO)
+
+agora é "(block ... )" ao invés de "{ ... }"
 
 - O que é: 
 - O que recebe: 
@@ -104,13 +106,15 @@
 - O que recebe: 
 
 
-### input_node (TODO)
+### read_node (TODO)
+
+Antigo `input_node`, mas não percebi bem o que é que faz
 
 - O que é: 
 - O que recebe: 
 
 
-### next_node
+### next_node (IMPLEMENTED)
 
 - O que é: `instrução`
 - O que recebe: `literal-inteiro` aka inteiro (?)
@@ -130,20 +134,24 @@
 
 ### print_node
 
+Agora é `print` e `println` ao invés de `!` e `!!`
+
+> Porque é que é preciso a `_append_newline`?
+
 - O que é: `instrução`
 - O que recebe: `expressões` !plural aka `sequence_node`
 
 
-### return_node
+### return_node (IMPLEMENTED)
 
 - O que é: `instrução`
 - O que recebe: `expressão`
 
 
-### sizeof_node (TODO)
+### sizeof_node (IMPLEMENTED)
 
 - O que é: `expressão`
-- O que recebe: 
+- O que recebe: `expressão`
 
 
 ### stop_node (IMPLEMENTED)
@@ -166,14 +174,14 @@ Antigo `while_node`
 4.  stop
 5.  next
 6.  return
-7.  print
-8.  aaa
-9.  aaa
-10. aaa
-11. aaa
-12. aaa
-13. aaa
-14. aaa
+7.  print + println
+8.  read
+9.  null
+10. index
+11. objects
+12. sizeof
+13. function
+14. program -> antigo begin + end
 15. aaa
 16. aaa
 17. aaa
