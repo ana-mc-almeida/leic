@@ -1,12 +1,12 @@
 # Nodes <!-- omit in toc -->
 - [Nodes to implement](#nodes-to-implement)
   - [address\_of\_node (IMPLEMENTED)](#address_of_node-implemented)
-  - [alloc\_node (TODO)](#alloc_node-todo)
+  - [alloc\_node (IMPLEMENTED)](#alloc_node-implemented)
   - [block\_node (IMPLEMENTED)](#block_node-implemented)
-  - [declaration\_node (TODO)](#declaration_node-todo)
+  - [declaration\_node (IMPLEMENTED)](#declaration_node-implemented)
   - [evaluation\_node (ALREADY-DONE)](#evaluation_node-already-done)
-  - [function\_call\_node (TODO)](#function_call_node-todo)
-  - [function\_node (TODO)](#function_node-todo)
+  - [function\_call\_node (IMPLEMENTED)](#function_call_node-implemented)
+  - [function\_definition\_node (IMPLEMENTED)](#function_definition_node-implemented)
   - [if\_else\_node (ALREADY-DONE)](#if_else_node-already-done)
   - [if\_node (ALREADY-DONE)](#if_node-already-done)
   - [read\_node (IMPLEMENTED)](#read_node-implemented)
@@ -22,12 +22,12 @@
 ## Nodes to implement
 
 1. - [X] [address_of_node](#address_of_node-implemented)
-2. - [ ] [alloc_node](#alloc_node-todo)
+2. - [X] [alloc_node](#alloc_node-implemented)
 3. - [X] [block_node](#block_node-implemented)
-4. - [ ] [declaration_node](#declaration_node-todo)
+4. - [X] [declaration_node](#declaration_node-implemented)
 5. - [X] [evaluation_node](#evaluation_node-already-done)
-6. - [ ] [function_call_node](#function_call_node-todo)
-7. - [ ] [function_node](#function_node-todo)
+6. - [X] [function_call_node](#function_call_node-implemented)
+7. - [X] [function_definition_node](#function_definition_node-implemented)
 8. - [X] [if_else_node](#if_else_node-already-done) -> semi implementado mas tenho dúvidas
 9.  - [X] [if_node](#if_node-already-done) -> semi implementado mas tenho dúvidas
 10. - [X] [read_node](#read_node-implemented) -> semi implementado mas tenho dúvidas
@@ -44,17 +44,9 @@
 
 ### address_of_node (IMPLEMENTED)
 
-- O que é: 
-- O que recebe: 
+### alloc_node (IMPLEMENTED)
 
-
-### alloc_node (TODO)
-
-**acho** que são os objects
-
-- O que é: 
-- O que recebe: 
-
+**acho** que são os `objects`
 
 ### block_node (IMPLEMENTED)
 
@@ -64,26 +56,15 @@ agora é "(block ... )" ao invés de "{ ... }"
 - O que recebe: `declarações` e `instruções` -> sequence_node
 
 
-### declaration_node (TODO)
-
-- O que é: 
-- O que recebe: 
-
+### declaration_node (IMPLEMENTED)
 
 ### evaluation_node (ALREADY-DONE)
 
 **acho** que não é preciso alterar nada do DM
 
-### function_call_node (TODO)
+### function_call_node (IMPLEMENTED)
 
-- O que é: 
-- O que recebe: 
-
-
-### function_node (TODO)
-
-- O que é: 
-- O que recebe: 
+### function_definition_node (IMPLEMENTED)
 
 ### if_else_node (ALREADY-DONE)
 

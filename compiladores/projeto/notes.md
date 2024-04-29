@@ -4,7 +4,7 @@
   - [Nodes](#nodes)
   - [Notes do Stor](#notes-do-stor)
   - [Personal Notes](#personal-notes)
-  - [TODO](#todo)
+  - [ASK](#ask)
 
 ## First Delivery
 
@@ -37,7 +37,7 @@ Find it nodes to implement [here](./nodes.md)
     - `til_parser.y`
     - `til_scanner.l`
 
-### TODO
+### ASK
 
 - [ ] Porque é que dou `#include <cdk/ast/expression_node.h>` e não do basic_node, por exemplo
   - Não estou a fazer include nenhum para além deste
