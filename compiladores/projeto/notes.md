@@ -5,6 +5,7 @@
   - [Notes do Stor](#notes-do-stor)
   - [Personal Notes](#personal-notes)
   - [ASK](#ask)
+  - [TODO](#todo)
 
 ## First Delivery
 
@@ -39,7 +40,13 @@ Find it nodes to implement [here](./nodes.md)
 
 ### ASK
 
-- [ ] Porque é que dou `#include <cdk/ast/expression_node.h>` e não do basic_node, por exemplo
+- [X] Porque é que dou `#include <cdk/ast/expression_node.h>` e não do basic_node, por exemplo
   - Não estou a fazer include nenhum para além deste
   - Não alterei nada nos `ifs` nem no `evaluation_node`
+  - R: só é preciso ter os includes que não deixem aquilo compilar
 - [ ] Porque é que é preciso a `_append_newline`? (no `print_node`)
+
+### TODO
+
+- [X] Verificar os `includes`
+- [X] Apagar o `programm_node`
