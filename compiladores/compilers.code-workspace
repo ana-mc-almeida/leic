@@ -1,0 +1,17 @@
+{
+  "folders": [
+    {
+      "name": "✨ LEIC",
+      "path": ".."
+    },
+    {
+      "name": "Compiladores",
+      "path": "."
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "compiladores/": true,
+    }
+  }
+}
