@@ -12,6 +12,7 @@
   "settings": {
     "files.exclude": {
       "compiladores/": true,
-    }
+    },
+    "editor.formatOnSave": true,
   }
 }

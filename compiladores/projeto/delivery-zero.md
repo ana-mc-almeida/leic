@@ -6,7 +6,6 @@
 - [ASK](#ask)
 - [TODO](#todo)
 
-
 ## Nodes
 
 Find it nodes to implement [here](./nodes.md)
@@ -38,7 +37,7 @@ Find it nodes to implement [here](./nodes.md)
 
 ## ASK
 
-- [X] Porque é que dou `#include <cdk/ast/expression_node.h>` e não do basic_node, por exemplo
+- [x] Porque é que dou `#include <cdk/ast/expression_node.h>` e não do basic_node, por exemplo
   - Não estou a fazer include nenhum para além deste
   - Não alterei nada nos `ifs` nem no `evaluation_node`
   - R: só é preciso ter os includes que não deixem aquilo compilar
@@ -46,5 +45,5 @@ Find it nodes to implement [here](./nodes.md)
 
 ## TODO
 
-- [X] Verificar os `includes`
-- [X] Apagar o `programm_node`
+- [x] Verificar os `includes`
+- [x] Apagar o `programm_node`

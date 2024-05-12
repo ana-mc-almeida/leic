@@ -12,6 +12,6 @@ Notes from `delivery zero` are [here](delivery-zero.md)
 
 Notes from `Intermediate Delivery` are [here](intermediate-delivery.md)
 
-## Third delivery 
+## Third delivery
 
 > TODO
