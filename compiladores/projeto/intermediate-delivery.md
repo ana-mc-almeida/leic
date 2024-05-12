@@ -83,16 +83,37 @@
 
 - [ ] ficheiro
   - [ ] `⟨  declaração ⟩ [ programa-principal ]`
+    - [ ] `declarações programa-principal`
+    - [ ] `declarações`
+    - [ ] `programa-principal`
 - [ ] declaração
   - [ ] `( [ qualificador ] tipo identificador [ expressão ] )`
+    - [ ] `( qualificador tipo identificador expressão  )`
+    - [ ] `( tipo identificador expressão  )`
+    - [ ] `( qualificador tipo identificador )`
   - [ ] `( [ qualificador ] [ var ] identificador expressão )`
+    - [ ] `( qualificador var identificador expressão )`
+    - [ ] `( qualificador identificador expressão )`
+    - [ ] `( var identificador expressão )`
 - [ ] declarações
   - [ ] `declaração ⟨ declaração ⟩`
+    - [ ] `declarações declaração`
+    - [ ] `declaração`
 - [ ] programa-principal
   - [ ] `( program ⟨ declaração ⟩ ⟨ instrução ⟩ )`
+    - [ ] `( program declarações instruções )`
+    - [ ] `( program declarações )`
+    - [ ] `( program instruções )`
+    - [ ] `( program )`
 - [ ] função
   - [ ] `( function ( tipo ) ⟨ declaração ⟩ ⟨ instrução ⟩ )`
+    - [ ] `( function ( tipo ) declarações instruções )`
+    - [ ] `( function ( tipo ) declarações )`
+    - [ ] `( function ( tipo ) instruções )`
   - [ ] `( function ( tipo declarações ) ⟨ declaração ⟩ ⟨ instrução ⟩ )`
+    - [ ] `( function ( tipo declarações ) declarações instruções )`
+    - [ ] `( function ( tipo declarações ) declarações )`
+    - [ ] `( function ( tipo declarações ) instruções )`
 - [ ] tipo
   - [ ] `int`
   - [ ] `double`
@@ -105,21 +126,39 @@
   - [ ] `( tipo ( tipos ) )`
 - [ ] tipos
   - [ ] `tipo ⟨ tipo ⟩`
+    - [ ] `tipos tipo`
+    - [ ] `tipo`
 - [ ] bloco
   - [ ] `( block ⟨ declaração ⟩ ⟨ instrução ⟩ )`
+    - [ ] `( block declarações instruções )`
+    - [ ] `( block declarações )`
+    - [ ] `( block instruções )`
 - [ ] instrução
   - [ ] `expressão`
   - [ ] `( print expressões )`
   - [ ] `( println expressões )`
   - [ ] `( stop [ literal-inteiro ] )`
+    - [ ] `( stop literal-inteiro )`
+    - [ ] `( stop )`
   - [ ] `( next [ literal-inteiro ] )`
+    - [ ] `( next literal-inteiro )`
+    - [ ] `( next )`
   - [ ] `( return [ expressão ] )`
+    - [ ] `( return expressão )`
+    - [ ] `( return )`
   - [ ] `instrução-condicional`
   - [ ] `instrução-de-iteração`
   - [ ] `bloco`
 - [ ] instrução-condicional
   - [ ] `( if expressão instrução [ instrução ] )`
+    - [ ] `( if expressão instrução instrução )`
+    - [ ] `( if expressão instrução )`
 - [ ] instrução-de-iteração
   - [ ] `( loop expressão instrução )`
+- [ ] instruções
+  - [ ] `instruções instrução`
+  - [ ] `instrução`
 - [ ] expressões
   - [ ] `expressão ⟨ expressão ⟩`
+    - [ ] `expressões expressão`
+    - [ ] `expressão`
