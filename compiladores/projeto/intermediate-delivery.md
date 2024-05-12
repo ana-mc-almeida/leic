@@ -6,6 +6,7 @@
 - [Notes to Implement](#notes-to-implement)
 - [Palavras-Chave](#palavras-chave)
   - [Tipos de Dados](#tipos-de-dados)
+- [Gramática](#gramática)
 
 ## Usefull links
 
@@ -45,14 +46,14 @@
   - [ ] string
   - [ ] void
 - Declarações
-  - [ ] external
+  - [ ] external = antigo foreign
   - [ ] forward
   - [ ] public
-  - [ ] var
+  - [ ] var = antigo auto
 - Instruções
   - [ ] block
   - [ ] if
-  - [ ] loop
+  - [ ] loop = antigo while
   - [ ] stop
   - [ ] next
   - [ ] return
@@ -74,3 +75,51 @@
 - [ ] Reais `double`
 - [ ] Strings
 - [ ] Pointers `!`
+
+## Gramática
+
+`[` e `]` = opcional
+`<` e `>` = zero ou mais vezes
+
+- [ ] ficheiro
+  - [ ] `⟨  declaração ⟩ [ programa-principal ]`
+- [ ] declaração
+  - [ ] `( [ qualificador ] tipo identificador [ expressão ] )`
+  - [ ] `( [ qualificador ] [ var ] identificador expressão )`
+- [ ] declarações
+  - [ ] `declaração ⟨ declaração ⟩`
+- [ ] programa-principal
+  - [ ] `( program ⟨ declaração ⟩ ⟨ instrução ⟩ )`
+- [ ] função
+  - [ ] `( function ( tipo ) ⟨ declaração ⟩ ⟨ instrução ⟩ )`
+  - [ ] `( function ( tipo declarações ) ⟨ declaração ⟩ ⟨ instrução ⟩ )`
+- [ ] tipo
+  - [ ] `int`
+  - [ ] `double`
+  - [ ] `string`
+  - [ ] `void`
+  - [ ] `tipo !`
+  - [ ] `tipo-de-função`
+- [ ] tipo-de-função
+  - [ ] `( tipo )`
+  - [ ] `( tipo ( tipos ) )`
+- [ ] tipos
+  - [ ] `tipo ⟨ tipo ⟩`
+- [ ] bloco
+  - [ ] `( block ⟨ declaração ⟩ ⟨ instrução ⟩ )`
+- [ ] instrução
+  - [ ] `expressão`
+  - [ ] `( print expressões )`
+  - [ ] `( println expressões )`
+  - [ ] `( stop [ literal-inteiro ] )`
+  - [ ] `( next [ literal-inteiro ] )`
+  - [ ] `( return [ expressão ] )`
+  - [ ] `instrução-condicional`
+  - [ ] `instrução-de-iteração`
+  - [ ] `bloco`
+- [ ] instrução-condicional
+  - [ ] `( if expressão instrução [ instrução ] )`
+- [ ] instrução-de-iteração
+  - [ ] `( loop expressão instrução )`
+- [ ] expressões
+  - [ ] `expressão ⟨ expressão ⟩`
