@@ -1,11 +1,21 @@
 - https://github.com/oppia/oppia/issues/8512
   - Pareceu giro nem vou mentir
+  - `NÃO TRABALHAR`
 - https://github.com/oppia/oppia/issues/12844 
   - parece me bué bacano e até se podia implementar outras formas de ordenação
+  - `backlog`
 
 ---
 
 - https://github.com/oppia/oppia/issues/19173
+
+- https://github.com/oppia/oppia/issues/20266
+  - Looks cool but doesn't have a mock to the button + classroom admin page not looking good
+
+- https://github.com/oppia/oppia/issues/16486
+  - Maybe something like [this](https://github.com/oppia/oppia/issues/10532) or [this](https://github.com/oppia/oppia/issues/10608)
+
+
 
 ---
 
@@ -17,10 +27,30 @@
 - https://github.com/oppia/oppia/issues/18276 
   - não consegui encontrar onde é que há emails a ser enviados
   - A Alice não gostou de não lhe darem logo a solução
+  - `backlog`
 - https://github.com/oppia/oppia/issues/7558
   - ```return this.urlInterpolationService.interpolateUrl```
   - a parte chata é perceber onde estão todos os url com string concatenation
+  - `backlog`
 - https://github.com/oppia/oppia/issues/11180
   - frontend mas não percebi
+  - `backlog`
 - https://github.com/oppia/oppia/issues/14211
   - meh
+  - `backlog`
+
+## Notes from professor
+
+### Problemas com a feature
+
+- Submeter a feature proposal com 2 features que dê a complexidade necessária
+- Depois da feature sem aprovada, criar um patch individual para cada feature
+- Para cada patch aprovado, abrir o PR
+
+### Cotações
+
+- `<50` -> 0
+- `300 < x < 100` -> leva desconto
+- `>500` -> nota total
+
+
