@@ -12,13 +12,20 @@
 
 ### Possíveis features
 
-- https://github.com/oppia/oppia/issues/19173
+- [Add way to view previous answers when reviewing previous checkpoints](https://github.com/oppia/oppia/issues/18385)
 
-- https://github.com/oppia/oppia/issues/20266
-  - Looks cool but doesn't have a mock to the button + classroom admin page not looking good
+- [Progess Bar](https://github.com/oppia/oppia/issues/17668)
+  - Não acho que haja design por isso o Sean vai ter muito por onde reclamar
 
-- https://github.com/oppia/oppia/issues/16486
+- [DropDown Pagination for Translation Reviewer Tab](https://github.com/oppia/oppia/issues/19173)
+
+- [Outro Pagination](https://github.com/oppia/oppia/issues/16486)
   - Maybe something like [this](https://github.com/oppia/oppia/issues/10532) or [this](https://github.com/oppia/oppia/issues/10608)
+
+- [Send periodic emails](https://github.com/oppia/oppia/issues/18479)
+
+- [Allow learners to subscribe to a classroom](https://github.com/oppia/oppia/issues/20266)
+  - Looks cool but doesn't have a mock to the button + classroom admin page not looking good
 
 ### Já interagimos com o oppia
 
