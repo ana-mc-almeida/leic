@@ -1,11 +1,16 @@
-- https://github.com/oppia/oppia/issues/8512
-  - Pareceu giro nem vou mentir
-  - `NÃO TRABALHAR`
-- https://github.com/oppia/oppia/issues/12844 
-  - parece me bué bacano e até se podia implementar outras formas de ordenação
-  - `backlog`
+# Notes to implement feature <!-- omit in toc -->
 
----
+- [Issues](#issues)
+  - [Possíveis features](#possíveis-features)
+  - [Já interagimos com o oppia](#já-interagimos-com-o-oppia)
+  - [Descartar](#descartar)
+- [Notas do professor](#notas-do-professor)
+  - [Problemas com a feature](#problemas-com-a-feature)
+  - [Cotações](#cotações)
+
+## Issues
+
+### Possíveis features
 
 - https://github.com/oppia/oppia/issues/19173
 
@@ -15,9 +20,17 @@
 - https://github.com/oppia/oppia/issues/16486
   - Maybe something like [this](https://github.com/oppia/oppia/issues/10532) or [this](https://github.com/oppia/oppia/issues/10608)
 
+### Já interagimos com o oppia
 
+- https://github.com/oppia/oppia/issues/20164
+  - Submetemos feature proposal mas comentaram mais cedo do que nós
+- https://github.com/oppia/oppia/issues/8512
+  - Pareceu giro nem vou mentir
+  - Sean disse para `NÃO TRABALHAR`
+- https://github.com/oppia/oppia/issues/18519
+  - Solução com baixa complexidade
 
----
+### Descartar
 
 - https://github.com/oppia/oppia/issues/5097
   - parece demasiado fácil para ser verdade
@@ -38,8 +51,12 @@
 - https://github.com/oppia/oppia/issues/14211
   - meh
   - `backlog`
+- https://github.com/oppia/oppia/issues/12844 
+  - parece me bué bacano e até se podia implementar outras formas de ordenação
+  - `backlog`
 
-## Notes from professor
+
+## Notas do professor
 
 ### Problemas com a feature
 
