@@ -4,10 +4,13 @@
 
 - [Usefull links](#usefull-links)
 - [TODO](#todo)
+- [Notes from teacher](#notes-from-teacher)
 - [Notes to Implement](#notes-to-implement)
 - [Palavras-Chave](#palavras-chave)
   - [Tipos de Dados](#tipos-de-dados)
 - [Gramática](#gramática)
+- [Expressões](#expressões)
+  - [Operações](#operações)
 
 ## Usefull links
 
@@ -23,11 +26,16 @@
 - [ ] Parser Comentários
 - [ ] Verificar outra vez as fdeclaration
 - [ ] Ver todos os `FIXME`
+- [ ] Verifcar que não preciso de `%prec tUNARY`no `'(' '+' expr ')'`
+
+## Notes from teacher
+
+- left-value são endereços de memória
 
 ## Notes to Implement
 
-1. - [ ] [address_of_node](#address_of_node-implemented)
-2. - [ ] [alloc_node](#alloc_node-implemented)
+1. - [x] [address_node](#address_of_node-implemented)
+2. - [x] [alloc_node](#alloc_node-implemented)
 3. - [x] [block_node](#block_node-implemented)
 4. - [x] [declaration_node](#declaration_node-implemented)
 5. - [x] [evaluation_node](#evaluation_node-already-done)
@@ -35,13 +43,13 @@
 7. - [x] [function_definition_node](#function_definition_node-implemented)
 8. - [x] [if_else_node](#if_else_node-already-done)
 9. - [x] [if_node](#if_node-already-done)
-10. - [ ] [read_node](#read_node-implemented)
+10. - [x] [read_node](#read_node-implemented)
 11. - [x] [next_node](#next_node-implemented)
-12. - [ ] [null_node](#null_node-implemented)
-13. - [ ] [index_node](#index_node-implemented)
+12. - [x] [null_node](#null_node-implemented)
+13. - [x] [index_node](#index_node-implemented)
 14. - [x] [print_node](#print_node-implemented)
 15. - [x] [return_node](#return_node-implemented)
-16. - [ ] [sizeof_node](#sizeof_node-implemented)
+16. - [x] [sizeof_node](#sizeof_node-implemented)
 17. - [x] [stop_node](#stop_node-implemented)
 18. - [x] [loop_node](#loop_node-implemented)
 
@@ -67,12 +75,12 @@
   - [x] print
   - [x] println
 - Expressões
-  - [ ] read
-  - [ ] null
-  - [ ] set
-  - [ ] index
-  - [ ] objects
-  - [ ] sizeof
+  - [x] read
+  - [x] null
+  - [x] set
+  - [x] index
+  - [x] objects
+  - [x] sizeof
   - [x] function
 - [x] program
 
@@ -174,3 +182,38 @@
   - [x] `expressão ⟨ expressão ⟩`
     - [x] `expressões expressão`
     - [x] `expressão`
+
+## Expressões
+
+- [ ] Literais
+- [ ] Invocação de Funções
+- [ ] Operadores
+- [ ] Identificadores
+- [ ] Leitura
+- [ ] Funções
+
+### Operações
+
+- [x] Unária
+  - [x] `+`
+  - [x] `-`
+  - [x] `?`
+- [x] Multiplicativa
+  - [x] `*`
+  - [x] `/`
+  - [x] `%`
+- [x] Aditiva
+  - [x] `+`
+  - [x] `-`
+- [x] Comparativa
+  - [x] `<`
+  - [x] `>`
+  - [x] `<=`
+  - [x] `>=`
+- [x] Igualdade
+  - [x] `==`
+  - [x] `!=`
+- [x] não lógico (`~`)
+- [x] e lógico (`&&`)
+- [x] ou lógico (`||`)
+- [x] atribuição (`set`)
