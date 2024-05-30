@@ -21,29 +21,34 @@
 ## TODO
 
 - [ ] type_checker.cpp
+  - [ ] verificar as funções add e sub porque neste momento estão iguais mas não sei se podem estar
   - [x] do_sequence_node
-  - [ ] do_integer_node
-  - [ ] do_double_node
-  - [ ] do_string_node
-  - [ ] do_null_node
-  - [ ] do_not_node
-  - [ ] do_neg_node
-  - [ ] do_identity_node
+  - [x] do_integer_node
+    - Apenas alterei para usar o `create_int`
+  - [x] do_double_node
+  - [x] do_string_node
+    - Não alterei nada
+  - [x] do_null_node
+  - [x] do_not_node
+  - [x] do_neg_node
+    - `do_unary_minus_node` este ano
+  - [x] do_identity_node
+    - `do_unary_plus_node`
   - [ ] do_sizeof_node
   - [ ] do_alloc_node
-  - [ ] do_add_node
-  - [ ] do_sub_node
-  - [ ] do_mul_node
-  - [ ] do_div_node
-  - [ ] do_mod_node
-  - [ ] do_lt_node
-  - [ ] do_le_node
-  - [ ] do_ge_node
-  - [ ] do_gt_node
-  - [ ] do_ne_node
-  - [ ] do_eq_node
-  - [ ] do_and_node
-  - [ ] do_or_node
+  - [x] do_add_node
+  - [x] do_sub_node
+  - [x] do_mul_node
+  - [x] do_div_node
+  - [x] do_mod_node
+  - [x] do_lt_node
+  - [x] do_le_node
+  - [x] do_ge_node
+  - [x] do_gt_node
+  - [x] do_ne_node
+  - [x] do_eq_node
+  - [x] do_and_node
+  - [x] do_or_node
   - [ ] do_variable_node
   - [ ] do_rvalue_node
   - [ ] do_assignment_node
@@ -61,10 +66,10 @@
   - [ ] do_if_node
   - [ ] do_if_else_node
   - Should be empty
-    - do_nil_node
-    - do_data_node
-    - do_stop_node
-    - do_next_node
+    - [x] do_nil_node
+    - [x] do_data_node
+    - [x] do_stop_node
+    - [x] do_next_node
 - [ ] postfix_writer.cpp
 
 ## Funções dos anos passados
@@ -79,3 +84,4 @@
 - type_checker:
   - [ ] No `do_sequence_node` é suposto adicionarmos o +2 no `lvl`?
   - [ ] O do_block_node é suposto estar vazio?
+  - [ ] O Correia não faz a distinção entre `processBinaryCompareExpression` e `processEqExpression`
