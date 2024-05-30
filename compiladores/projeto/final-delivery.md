@@ -5,6 +5,7 @@
 - [Usefull links](#usefull-links)
 - [TODO](#todo)
 - [Funções dos anos passados](#funções-dos-anos-passados)
+- [ASK](#ask)
 
 ## Usefull links
 
@@ -20,7 +21,7 @@
 ## TODO
 
 - [ ] type_checker.cpp
-  - [ ] do_sequence_node
+  - [x] do_sequence_node
   - [ ] do_integer_node
   - [ ] do_double_node
   - [ ] do_string_node
@@ -60,6 +61,8 @@
   - [ ] do_if_node
   - [ ] do_if_else_node
   - Should be empty
+    - do_nil_node
+    - do_data_node
     - do_stop_node
     - do_next_node
 - [ ] postfix_writer.cpp
@@ -70,3 +73,9 @@
   - is_same
   - unify
   - do_variable_declaration_node
+
+## ASK
+
+- type_checker:
+  - [ ] No `do_sequence_node` é suposto adicionarmos o +2 no `lvl`?
+  - [ ] O do_block_node é suposto estar vazio?
