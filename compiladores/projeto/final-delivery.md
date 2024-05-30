@@ -20,7 +20,7 @@
 
 ## TODO
 
-- [ ] type_checker.cpp
+- [x] type_checker.cpp
   - [ ] verificar as funções add e sub porque neste momento estão iguais mas não sei se podem estar
   - [x] do_sequence_node
   - [x] do_integer_node
@@ -34,8 +34,8 @@
     - `do_unary_minus_node` este ano
   - [x] do_identity_node
     - `do_unary_plus_node`
-  - [ ] do_sizeof_node
-  - [ ] do_alloc_node
+  - [x] do_sizeof_node
+  - [x] do_alloc_node
   - [x] do_add_node
   - [x] do_sub_node
   - [x] do_mul_node
@@ -49,22 +49,30 @@
   - [x] do_eq_node
   - [x] do_and_node
   - [x] do_or_node
-  - [ ] do_variable_node
-  - [ ] do_rvalue_node
-  - [ ] do_assignment_node
+  - [x] do_variable_node
+    - Não alterei nada nem tenho a certeza se tenho de fazer alguma coisa
+  - [x] do_rvalue_node
+    - Não alterei nada nem tenho a certeza se tenho de fazer alguma coisa
+  - [x] do_assignment_node
+    - Não percebi o que é que estava a acontecer
   - [ ] do_block_node
     - [ ] Diogos deixaram nulos mas o antunes não
-  - [ ] do_index_node
-  - [ ] do_address_of_node
-  - [ ] do_evaluation_node
-  - [ ] do_print_node
-  - [ ] do_input_node
-  - [ ] do_function_node
-  - [ ] do_call_node
-  - [ ] do_return_node
-  - [ ] do_while_node
-  - [ ] do_if_node
-  - [ ] do_if_else_node
+  - [x] do_index_node
+  - [x] do_address_of_node
+    - No idea se está certo
+  - [x] do_evaluation_node
+  - [x] do_print_node
+  - [x] do_read_node
+    - do_input_node
+  - [x] do_function_node
+    - Fiz mas só copiei do correia
+  - [x] do_call_node
+    - Fiz mas só copiei do correia
+  - [x] do_return_node
+  - [x] do_input_node
+    - antigo do_while_node
+  - [x] do_if_node
+  - [x] do_if_else_node
   - Should be empty
     - [x] do_nil_node
     - [x] do_data_node
