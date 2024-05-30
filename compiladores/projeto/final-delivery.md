@@ -79,6 +79,49 @@
     - [x] do_stop_node
     - [x] do_next_node
 - [ ] postfix_writer.cpp
+  - [ ] do_nil_node
+  - [ ] do_data_node
+  - [ ] do_double_node
+  - [ ] do_not_node
+  - [ ] do_and_node
+  - [ ] do_or_node
+  - [ ] do_sequence_node
+  - [ ] do_integer_node
+  - [ ] do_string_node
+  - [ ] do_unary_minus_node
+  - [ ] do_unary_plus_node
+  - [ ] do_add_node
+  - [ ] do_sub_node
+  - [ ] do_mul_node
+  - [ ] do_div_node
+  - [ ] do_mod_node
+  - [ ] do_lt_node
+  - [ ] do_le_node
+  - [ ] do_ge_node
+  - [ ] do_gt_node
+  - [ ] do_ne_node
+  - [ ] do_eq_node
+  - [ ] do_variable_node
+  - [ ] do_rvalue_node
+  - [ ] do_assignment_node
+  - [ ] do_evaluation_node
+  - [ ] do_print_node
+  - [ ] do_read_node
+  - [ ] do_loop_node
+  - [ ] do_stop_node
+  - [ ] do_sizeof_node
+  - [ ] do_return_node
+  - [ ] do_next_node
+  - [ ] do_block_node
+  - [ ] do_index_node
+  - [ ] do_null_node
+  - [ ] do_address_node
+  - [ ] do_alloc_node
+  - [ ] do_declaration_node
+  - [ ] do_function_definition_node
+  - [ ] do_function_call_node
+  - [ ] do_if_node
+  - [ ] do_if_else_node
 
 ## Funções dos anos passados
 
